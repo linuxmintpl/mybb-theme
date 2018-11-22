@@ -1,1 +1,1 @@
-# mybb-theme
+# Style mybb dla LinuxMintPl
