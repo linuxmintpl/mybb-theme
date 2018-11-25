@@ -1,0 +1,2516 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<theme name="Glowing" version="1801">
+	<properties>
+		<templateset><![CDATA[6]]></templateset>
+		<editortheme><![CDATA[mybb.css]]></editortheme>
+		<imgdir><![CDATA[images/audentio/glowing]]></imgdir>
+		<logo><![CDATA[images/audentio/glowing/logo.png]]></logo>
+		<tablespace><![CDATA[5]]></tablespace>
+		<borderwidth><![CDATA[0]]></borderwidth>
+		<color><![CDATA[]]></color>
+		<disporder><![CDATA[a:7:{s:10:"global.css";i:1;s:8:"css3.css";i:2;s:10:"usercp.css";i:3;s:9:"modcp.css";i:4;s:16:"star_ratings.css";i:5;s:14:"showthread.css";i:6;s:17:"thread_status.css";i:7;}]]></disporder>
+	</properties>
+	<stylesheets>
+		<stylesheet name="global.css" version="1801"><![CDATA[body {
+  background: #f0f0f0 url(images/audentio/glowing/bg.png);
+  color: #2c2c2c;
+  text-align: center;
+  margin: 0;
+  font: normal 14px/1.5 'Open Sans',sans-serif;
+  overflow-y: scroll;
+}
+
+a:link,
+a:visited {
+  color: #86b412;
+  text-decoration: none;
+}
+
+a:hover,
+a:active {
+  color: #608404;
+  text-decoration: none !important;
+}
+
+.lighttext {
+  color: #999;
+}
+
+.footerLogo {
+  background: url(images/audentio/glowing/logo.png) no-repeat center center;
+  opacity: .5;
+  height: 100px;
+  width: 187px;
+  float: right;
+}
+
+.pageWidth {
+  width: 960px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.logo {
+  float: left;
+  height: 100px;
+  background: url(images/audentio/glowing/logo.png) no-repeat center center;
+  display: block;
+  text-indent: -1000px;
+  overflow: hidden;
+  width: 187px;
+  -webkit-transition: opacity ease .7s;
+  -moz-transition: opacity ease .7s;
+  -o-transition: opacity ease .7s;
+  transition: opacity ease .7s;
+  opacity: 1;
+}
+
+.logo:hover {
+  opacity: .7;
+}
+
+.header {
+  background: #262626;
+  background: -moz-linear-gradient(top,#262626 0%,#181818 49%,#151515 50%,#151515 100%);
+  background: -webkit-gradient(linear,left top,left bottom,color-stop(0%,#262626),color-stop(49%,#181818),color-stop(50%,#151515),color-stop(100%,#151515));
+  background: -webkit-linear-gradient(top,#262626 0%,#181818 49%,#151515 50%,#151515 100%);
+  background: -o-linear-gradient(top,#262626 0%,#181818 49%,#151515 50%,#151515 100%);
+  background: -ms-linear-gradient(top,#262626 0%,#181818 49%,#151515 50%,#151515 100%);
+  background: linear-gradient(to bottom,#262626 0%,#181818 49%,#151515 50%,#151515 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#262626',endColorstr='#151515',GradientType=0);
+  height: 100px;
+}
+
+.logobg {
+  background: url(images/audentio/glowing/bokeh.png) no-repeat center center;
+  height: 100px;
+  width: 402px;
+}
+
+.navigation {
+  background: #86b413;
+  height: 48px;
+  border-bottom: 1px solid #78a20d;
+  box-shadow: inset 0 1px 0 #92c318;
+  clear: both;
+}
+
+.navigation .pageWidth {
+  background: url(images/audentio/glowing/bokeh.png) no-repeat center left;
+  height: 48px;
+}
+
+.menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.menu li {
+  display: block;
+  float: left;
+}
+
+.menu li:hover {
+  background: rgba(0,0,0,0.1);
+}
+
+.menu a {
+  display: block;
+  padding: 0 15px;
+  font-size: 14px;
+  font-weight: 700;
+  color: #fff;
+  height: 48px;
+  line-height: 48px;
+  text-shadow: 1px 1px 0 #467f01;
+}
+
+.menu i,.guestBit i {
+  display: inline-block;
+  margin-right: 7px;
+  color: #151515;
+  text-shadow: 1px 1px 0 rgba(255,255,255,.1);
+}
+
+.usermenu {
+  float: right;
+  position: relative;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 14px;
+}
+
+.usermenu > li {
+  height: 48px;
+}
+
+.usermenu > li > a {
+  display: block;
+  height: 48px;
+  line-height: 48px;
+  color: #FFF;
+  padding: 0 15px;
+  text-shadow: 1px 1px 0 #467f01;
+  font-weight: bold;
+}
+
+.usermenu > li > ul {
+  z-index: 342;
+  box-shadow: 0 3px 3px rgba(0,0,0,.2);
+  display: none;
+  list-style: none;
+  width: 200px;
+  background: #FFF;
+  padding: 0;
+  border-radius: 3px 0 3px 3px;
+  border: 4px solid rgba(0, 0, 0, 0.05);
+  position: relative;
+}
+
+.usermenu > li > ul:before {
+  content: "";
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 7.5px 10px 7.5px;
+  border-color: transparent transparent #ffffff transparent;
+  position: absolute;
+  top: -10px;
+  right: 11px;
+}
+
+.usermenu > li > ul > li > a {
+  text-align: left;
+  display: block;
+  padding: 7px;
+  border-bottom: 1px solid #e9e9e9;
+  font-weight: bold;
+}
+
+.usermenu > li > ul > li:last-child > a {
+  border-bottom: 0;
+}
+
+.usermenu:hover > li > ul {
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 48px;
+}
+
+.usermenu:hover > li > ul > li > a:hover {
+  background-color: #fafafa;
+}
+
+.usermenu > li > ul > li:first-child a {
+  border-radius: 3px 3px 0 0;
+}
+
+.usermenu > li > ul > li:last-child a {
+  border-radius: 0 0 3px 3px;
+}
+
+.search {
+  float: right;
+  background: #FFF;
+  width: 219px;
+  border-radius: 3px;
+  padding: 6px 10px;
+  margin-top: 30px;
+}
+
+.search .textbox {
+  background: none;
+  border: none;
+  outline: none;
+  margin: 0;
+  width: 160px;
+  color: #BBB;
+}
+
+.search .button {
+  background: none;
+  border: none;
+  outline: none;
+  padding: 0;
+  margin: 0;
+  width: 35px;
+  height: 20px;
+  overflow: hidden;
+  position: relative;
+  right: -15px;
+  text-align: right;
+}
+
+.search .button:hover {
+  cursor: pointer;
+}
+
+.guestBit {
+  float: right;
+  font-size: 14px;
+}
+
+.guestBit a {
+  text-transform: uppercase;
+  color: #FFF;
+  display: inline-block;
+  height: 48px;
+  line-height: 48px;
+  font-weight: bold;
+  text-shadow: 1px 1px 0 #467f01;
+  padding: 0 15px;
+}
+
+.stats {
+  list-style: none;
+  padding: 0;
+  line-height: 18px;
+  clear: both;
+  margin: 0;
+}
+
+.stats li {
+  font-style: normal;
+  color: #171717;
+  float: left;
+  font-size: 14px;
+}
+
+.stats li:first-child em {
+  margin-right: 15px;
+  display: inline-block;
+}
+
+.stats i {
+  color: #CCC;
+}
+
+#debug {
+  float: right;
+  text-align: right;
+  margin-top: 20px;
+  font-size: 11px;
+}
+
+.scaleimages img {
+  max-width: 100%;
+  height: auto;
+  width: auto;
+}
+
+.subforumList {
+  margin: 5px 0 0 0;
+  padding-left: 10px;
+}
+
+.forum_stats {
+	color: #333;
+}
+
+.forum_status, .forum_stats {
+	height: 30px;
+	width: 30px;
+	font-size: 30px;
+	text-align: center;
+	margin-left: 10px;
+}
+
+.forum_status i {
+	display: inline-block;
+	line-height: 30px;
+}
+
+.forum_on {
+	color: #86b412;
+}
+
+.forum_off, .forum_offlock, .forum_offlink {
+	color: #333;
+}
+
+.forum_off i {
+	opacity: .4;
+}
+
+.forum_offlock i:before {
+	content: "\f023";
+}
+
+.forum_offlink i:before {
+	content: "\f0c1";
+}
+
+.subforumicon {
+	height: 10px;
+	width: 10px;
+	display: inline-block;
+  	margin: 0 5px;
+}
+
+.subforum_minion {
+	color: #86b412;
+}
+
+.subforum_minioff, .subforum_miniofflock, .subforum_miniofflink {
+	color: #333;
+}
+
+.subforum_minioff {
+	opacity: .4;
+}
+
+.subforum_miniofflock i:before {
+	content: "\f023";
+}
+
+.subforum_miniofflink i:before {
+	content: "\f0c1";
+}
+
+table {
+  color: #333;
+  font-size: 13px;
+}
+
+.tborder {
+  width: 100%;
+  margin: auto auto;
+  background: #f0f0f0;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  -moz-border-radius: 3px;
+}
+
+.tfixed {
+  table-layout: fixed;
+  word-wrap: break-word;
+}
+
+.thead, .tfoot {
+  background: #86b413 url(images/audentio/glowing/bokeh.png) no-repeat top left;
+  color: #fff;
+  border: 1px solid #83a413;
+  border-bottom: 1px solid #86a90b;
+  text-shadow: 1px 1px 0 #467f01;
+  font-size: 14px;
+  padding: 8px 10px 7px;
+}
+
+.thead a:link {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.thead a:visited {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.thead a:hover,
+.thead a:active {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+.tcat {
+  background: #171717;
+  color: #fff;
+  padding: 5px 10px;
+}
+
+.tcat a:link,
+.tcat a:visited,
+.tcat a:hover,
+.tcat a:active {
+  color: #fff;
+}
+
+.trow1, .trow2 {
+  background-color: #f3f3f3;
+  border-bottom: 1px solid #e9e9e9;
+  padding: 10px;
+}
+
+tr .trow1:first-child,tr .trow2:first-child {
+  border-left: 1px solid #e9e9e9;
+}
+
+tr .trow1:last-child,tr .trow2:last-child {
+  border-right: 1px solid #e9e9e9;
+}
+
+.trow_shaded {
+  background: #ffdde0;
+  border: 1px solid;
+  border-color: #fff #ffb8be #ffb8be #fff;
+}
+
+.post.unapproved_post {
+  background: #ffdde0;
+}
+
+.post.unapproved_post .post_author {
+  border-bottom-color: #ffb8be;
+}
+
+.post.classic.unapproved_post .post_author {
+  border-color: #ffb8be;
+}
+
+.post.unapproved_post .post_controls {
+  border-top-color: #ffb8be;
+}
+
+.trow_deleted,
+.post.deleted_post {
+  background: #E8DEFF;
+}
+
+.trow_selected,
+tr.trow_selected td {
+  background: #FFFBD9;
+  color: #333;
+  border-right-color: #F7E86A;
+  border-bottom-color: #F7E86A;
+}
+
+.trow_selected a:link,
+.trow_selected a:visited,
+.trow_selected a:hover,
+.trow_selected a:active {
+  color: #333;
+}
+
+.trow_sep {
+  background: #ddd;
+  color: #333;
+  border-bottom: 1px solid #c5c5c5;
+  padding: 6px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.tfoot {
+  background-position: center 0;
+  border-radius: 0 0 3px 3px;
+  padding: 5px 10px;
+}
+
+.tfoot a:link,
+.tfoot a:visited,
+.tfoot a:hover,
+.tfoot a:active {
+  color: #FFF;
+  text-decoration: none;
+}
+
+.thead input.textbox,
+.thead select {
+  border: 1px solid #263c30;
+}
+
+.navigation {
+  color: #333;
+  font-size: 12px;
+}
+
+.navigation a:link {
+  text-decoration: none;
+}
+
+.navigation a:visited {
+  text-decoration: none;
+}
+
+.navigation a:hover,
+.navigation a:active {
+  text-decoration: underline;
+}
+
+.navigation .active {
+  color: #333;
+  font-size: small;
+  font-weight: bold;
+}
+
+.smalltext {
+  font-size: 11px;
+}
+
+.largetext {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+fieldset {
+  padding: 12px;
+  border: 1px solid #ddd;
+  margin: 0;
+}
+
+fieldset.trow1,
+fieldset.trow2 {
+  border-color: #bbb;
+}
+
+fieldset.align_right {
+  text-align: right;
+}
+
+input.textbox {
+  background: #ffffff;
+  color: #333;
+  border: 1px solid #ccc;
+  padding: 3px;
+  outline: 0;
+  font-size: 13px;
+  font-family: Tahoma, Verdana, Arial, Sans-Serif;
+}
+
+textarea {
+  background: #ffffff;
+  color: #333;
+  border: 1px solid #ccc;
+  padding: 2px;
+  line-height: 1.4;
+  outline: 0;
+  font-family: Tahoma, Verdana, Arial, Sans-Serif;
+  font-size: 13px;
+}
+
+select {
+  background: #ffffff;
+  padding: 3px;
+  border: 1px solid #ccc;
+  outline: 0;
+  font-family: Tahoma, Verdana, Arial, Sans-Serif;
+  font-size: 13px;
+}
+
+input.button {
+  padding: 3px 8px;
+  cursor: pointer;
+  font-family: Tahoma, Verdana, Arial, Sans-Serif;
+  font-size: 13px;
+  background: #eee url(images/buttons_bg.png) repeat-x;
+  border: 1px solid #bbb;
+  color: #333;
+  outline: 0;
+}
+
+input.button:hover {
+  border-color: #aaa;
+}
+
+form {
+  margin: 0;
+  padding: 0;
+}
+
+form input.error {
+  border: 1px solid #f30;
+  color: #f30;
+  background: #ffffff;
+  padding: 3px;
+  outline: 0;
+  font-size: 13px;
+  font-family: Tahoma, Verdana, Arial, Sans-Serif;
+}
+
+form input.valid {
+  border: 1px solid #0c0;
+  background: #ffffff;
+  padding: 3px;
+  outline: 0;
+  font-size: 13px;
+  font-family: Tahoma, Verdana, Arial, Sans-Serif;
+}
+
+form label.error {
+  color: #f30;
+  margin: 5px 0;
+  padding: 5px;
+  font-weight: bold;
+  font-size: 11px;
+  padding-left: 22px;
+}
+
+form #message {
+  width: 500px;
+}
+
+.editor {
+  background: #f1f1f1;
+  border: 1px solid #ccc;
+}
+
+.editor_control_bar {
+  background: #fff;
+  border: 1px solid #ccc;
+}
+
+.post .editor_control_bar {
+  background: #f5f5f5;
+}
+
+.popup_menu {
+  background: #fff;
+  border: 1px solid #ccc;
+}
+
+.popup_menu .popup_item {
+  background: #efefef;
+  color: #333;
+}
+
+.popup_menu .popup_item:hover {
+  background: #e7e7e7;
+  color: #000;
+}
+
+.trow_reputation_positive {
+  background: #ccffcc;
+}
+
+.trow_reputation_negative {
+  background: #ffcccc;
+}
+
+.reputation_positive {
+  color: green;
+}
+
+.reputation_neutral {
+  color: #444;
+}
+
+.reputation_negative {
+  color: red;
+}
+
+.repbox {
+  font-size: 16px;
+  font-weight: bold;
+  padding: 5px 7px 5px 7px;
+}
+
+._neutral {
+  background-color: #FAFAFA;
+  color: #999999;
+  border: 1px solid #CCCCCC;
+}
+
+._minus {
+  background-color: #FDD2D1;
+  color: #CB0200;
+  border: 1px solid #980201;
+}
+
+._plus {
+  background-color: #E8FCDC;
+  color: #008800;
+  border: 1px solid #008800;
+}
+
+img {
+  border: none;
+}
+
+img.attachment {
+  border: 1px solid #E9E5D7;
+  padding: 2px;
+}
+
+hr {
+  background-color: #000000;
+  color: #000000;
+  height: 1px;
+  border: 0px;
+}
+
+.clear {
+  clear: both;
+}
+
+.float_left {
+  float: left;
+}
+
+.float_right {
+  float: right;
+}
+
+.hidden {
+  display: none;
+  float: none;
+  width: 1%;
+}
+
+.hiddenrow {
+  display: none;
+}
+
+.selectall {
+  background: #FFFBD9;
+  border-bottom: 1px solid #F7E86A;
+  color: #333;
+  text-align: center;
+}
+
+.expcolimage {
+  float: right;
+  width: auto;
+  vertical-align: middle;
+  margin-top: 3px;
+}
+
+.tcat_menu > .expcolimage {
+  margin-top: 0;
+}
+
+blockquote {
+  border: 1px solid #ccc;
+  margin: 0;
+  background: #fff;
+  padding: 10px;
+}
+
+blockquote cite {
+  font-weight: bold;
+  border-bottom: 1px solid #ccc;
+  font-style: normal;
+  display: block;
+  padding-bottom: 3px;
+  margin: 0 0 10px 0;
+}
+
+blockquote cite span {
+  float: right;
+  font-weight: normal;
+  font-size: 12px;
+  color: #666;
+}
+
+blockquote cite span.highlight {
+  float: none;
+  font-weight: bold;
+  padding-bottom: 0;
+}
+
+.codeblock {
+  background: #fff;
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+
+.codeblock .title {
+  border-bottom: 1px solid #ccc;
+  font-weight: bold;
+  padding-bottom: 3px;
+  margin: 0 0 10px 0;
+}
+
+.codeblock code {
+  overflow: auto;
+  height: auto;
+  max-height: 200px;
+  display: block;
+  font-family: Monaco, Consolas, Courier, monospace;
+  font-size: 13px;
+}
+
+.smilie {
+  vertical-align: middle;
+}
+
+.smilie_pointer {
+  cursor: pointer;
+}
+
+.separator {
+  margin: 5px;
+  padding: 0;
+  height: 0px;
+  font-size: 1px;
+  list-style-type: none;
+}
+
+.popup_menu .popup_item_container {
+  margin: 1px;
+  text-align: left;
+}
+
+.popup_menu .popup_item {
+  display: block;
+  padding: 4px;
+  white-space: nowrap;
+  text-decoration: none;
+}
+
+.popup_menu a.popup_item:hover {
+  text-decoration: none;
+}
+
+.subject_new {
+  font-weight: bold;
+}
+
+.highlight {
+  background: #FFFFCC;
+  padding-top: 3px;
+  padding-bottom: 3px;
+}
+
+.pm_alert {
+  background: #FFF6BF;
+  border: 1px solid #FFD324;
+  text-align: center;
+  padding: 5px 20px;
+  margin-bottom: 15px;
+  font-size: 11px;
+}
+
+.red_alert {
+  background: #FBE3E4;
+  border: 1px solid #A5161A;
+  color: #A5161A;
+  text-align: center;
+  padding: 5px 20px;
+  margin-bottom: 15px;
+  font-size: 11px;
+  word-wrap: break-word;
+}
+
+.red_alert a:link,
+.red_alert a:visited,
+.red_alert a:hover,
+.red_alert  a:active {
+  color: #A5161A;
+}
+
+.high_warning {
+  color: #CC0000;
+}
+
+.moderate_warning {
+  color: #F3611B;
+}
+
+.low_warning {
+  color: #AE5700;
+}
+
+.online {
+  color: #15A018;
+}
+
+.offline {
+  color: #C7C7C7;
+}
+
+div.error {
+  padding: 5px 10px;
+  border-top: 2px solid #FFD324;
+  border-bottom: 2px solid #FFD324;
+  background: #FFF6BF;
+  font-size: 12px;
+}
+
+div.error p {
+  margin: 0;
+  color: #333;
+  font-weight: normal;
+}
+
+div.error p em {
+  font-style: normal;
+  font-weight: bold;
+  padding-left: 24px;
+  display: block;
+  color: #C00;
+  background: url(images/error.png) no-repeat 0;
+}
+
+div.error ul {
+  margin-left: 24px;
+}
+
+.pagination {
+  font-size: 11px;
+  padding-top: 10px;
+  margin-bottom: 5px;
+}
+
+.tfoot .pagination,
+.tcat .pagination {
+  padding-top: 0;
+}
+
+.pagination .pages {
+  font-weight: bold;
+}
+
+.pagination .pagination_current,
+.pagination a {
+  padding: 3px 6px;
+  margin-bottom: 3px;
+}
+
+.pagination a {
+  background: #f5f5f5;
+  border: 1px solid #ccc;
+}
+
+.pagination .pagination_current {
+  background: none;
+  color: #333;
+  border: none;
+  font-weight: bold;
+}
+
+.pagination a:hover {
+  background: #0072BC;
+  color: #fff;
+  border-color: #263c30;
+  text-decoration: none;
+}
+
+.pagination .go_page img {
+  margin-bottom: -4px;
+}
+
+.drop_go_page {
+  background: #f5f5f5;
+  padding: 4px;
+}
+
+.pagination_breadcrumb {
+  background-color: #efefef;
+  border: 1px solid #fff;
+  outline: 1px solid #ccc;
+  padding: 5px;
+  margin-top: 5px;
+  font-weight: normal;
+}
+
+.pagination_breadcrumb_link {
+  vertical-align: middle;
+  cursor: pointer;
+}
+
+.thread_legend,
+.thread_legend dd {
+  margin: 0;
+  padding: 0;
+}
+
+.thread_legend dd {
+  padding-bottom: 4px;
+  margin-right: 15px;
+}
+
+.thread_legend img {
+  margin-right: 4px;
+  vertical-align: bottom;
+}
+
+.forum_legend,
+.forum_legend dt,
+.forum_legend dd {
+  margin: 0;
+  padding: 0;
+}
+
+.forum_legend dd {
+  float: left;
+  margin-right: 10px;
+  margin-top: 7px;
+}
+
+.forum_legend dt {
+  margin-right: 10px;
+  float: left;
+}
+
+.success_message {
+  color: #00b200;
+  font-weight: bold;
+  font-size: 10px;
+  margin-bottom: 10px;
+}
+
+.error_message {
+  color: #C00;
+  font-weight: bold;
+  font-size: 10px;
+  margin-bottom: 10px;
+}
+
+#posts_container {
+  padding: 0;
+}
+
+.ignored_post {
+  border-top: 3px solid #333;
+  padding: 15px;
+}
+
+.ignored_post .show_ignored_post {
+  margin-top: -15px;
+}
+
+.ignored_post .show_ignored_post a.button span {
+  background-position: 0 -400px;
+}
+
+.post {
+  margin-bottom: 15px;
+  overflow: hidden;
+}
+
+.post:last-child {
+  margin-bottom: 0;
+}
+
+.post.classic {
+  border-top: 3px solid #333;
+  padding-top: 15px;
+}
+
+.post .post_author {
+  border-bottom: 1px solid #bbb;
+  border-top: 3px solid #333;
+  background: #f5f5f5;
+  padding: 5px;
+  overflow: hidden;
+}
+
+.post.classic .post_author {
+  border: 1px solid #ddd;
+  float: left;
+  width: 15%;
+  margin: 0 1% 15px 0;
+  border-left: 0;
+}
+
+.post .post_author .buddy_status {
+  vertical-align: middle;
+  margin-top: -4px;
+}
+
+.post .post_author div.author_avatar {
+  float: left;
+  margin-right: 3px;
+}
+
+.post.classic .post_author div.author_avatar {
+  float: none;
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+.post .post_author div.author_avatar img {
+  padding: 5px;
+  border: 1px solid #ddd;
+  background: #fff;
+}
+
+.post .post_author div.author_information {
+  float: left;
+  padding: 6px 8px;
+}
+
+.post.classic .post_author div.author_information {
+  float: none;
+  padding: 0;
+  text-align: center;
+}
+
+.post .post_author div.author_statistics {
+  float: right;
+  font-size: 11px;
+  padding: 3px 10px 3px 5px;
+  color: #666;
+  line-height: 1.3;
+}
+
+.post.classic .post_author div.author_statistics {
+  border-top: 1px dotted #ccc;
+  margin: 6px 0 0 0;
+  padding: 6px 6px 3px 6px;
+  float: none;
+}
+
+.post .post_head {
+  font-size: 11px;
+  padding-bottom: 4px;
+  border-bottom: 1px dotted #ddd;
+  margin-bottom: 4px;
+}
+
+.post .post_head span.post_date {
+  color: #666;
+}
+
+.post .post_head span.edited_post {
+  font-size: 10px;
+  color: #999;
+}
+
+.post .post_head span.edited_post a {
+  color: #666;
+}
+
+.post_body {
+  font-size: 14px;
+  padding: 12px 0;
+}
+
+.post.classic .post_content {
+  float: left;
+  width: 80%;
+  padding-top: 0;
+}
+
+.post_content {
+  padding: 9px 10px 5px 10px;
+}
+
+.post_content .signature {
+  margin-top: 5px;
+  border-top: 1px dotted #ddd;
+  padding: 10px 0 4px 0;
+}
+
+.post .post_meta {
+  margin: 4px 0;
+  font-size: 11px;
+  color: #999;
+}
+
+.post .post_meta a:link,
+.post .post_meta a:visited {
+  color: #777;
+}
+
+.post .post_meta a:hover,
+.post .post_meta a:active {
+  color: #777;
+}
+
+.post_controls {
+  clear: both;
+  background: #f5f5f5;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  padding: 5px;
+  overflow: hidden;
+}
+
+.showthread_page .tfixed {
+  background: transparent;
+}
+
+.showthread_page .tfixed .thead, .showthread_page .tfixed .tfoot {
+  border-radius: 3px;
+}
+
+.showthread_page .post_controls {
+  border-bottom: 0;
+  border-top: 1px solid #EEE;
+}
+
+.showthread_page .post .post_author {
+  border-top: 0;
+}
+
+.showthread_page .post.classic .post_author {
+  border: 1px solid #EEE;
+  border-left: 0;
+}
+
+.showthread_page .post {
+  background-color: #fefefe;
+  border-radius: 3px;
+  border: 1px solid #DDD;
+  margin: 10px 0;
+}
+
+.postbit_buttons > a:link,
+.postbit_buttons > a:hover,
+.postbit_buttons > a:visited,
+.postbit_buttons > a:active {
+  display: inline-block;
+  padding: 2px 5px;
+  margin: 2px;
+  font-size: 11px;
+  color: #555;
+}
+
+.postbit_buttons i {
+  opacity: .4;
+  display: inline-block;
+  margin-right: 3px;
+}
+
+.postbit_buttons .multiquote_on i {
+  color: #3FC700;
+  opacity: 1;
+}
+
+.postbit_buttons .multiquote_on i:before {
+  content: "\f058";
+}
+
+.postbit_buttons .multiquote_on:hover i {
+  color: #D61818;
+  opacity: 1;
+}
+
+.postbit_buttons .multiquote_on:hover i:before {
+  content: "\f05c";
+}
+
+.postbit_buttons > a:hover {
+  color: #000;
+}
+
+.postbit_buttons > a:hover i {
+  opacity: 1;
+}
+
+.postbit_buttons a span {
+  display: inline-block;
+  height: 16px;
+}
+
+a.button:link,
+a.button:hover,
+a.button:visited,
+a.button:active {
+  background: #0f0f0f url(images/tcat.png) repeat-x;
+  color: #fff;
+  display: inline-block;
+  padding: 4px 8px;
+  margin: 2px 2px 6px 2px;
+  border: 1px solid #000;
+  font-size: 14px;
+}
+
+a.button.small_button {
+  font-size: 13px;
+  margin: 0;
+  padding: 3px 6px;
+}
+
+a.button span {
+  display: inline-block;
+}
+
+.quick_jump {
+  background: url(images/jump.png) no-repeat 0;
+  width: 13px;
+  height: 13px;
+  padding-left: 13px;
+ /* amount of padding needed for image to fully show */
+  margin-top: -3px;
+  border: none;
+}
+
+.pollbar {
+  background: url(images/pollbar.png) top left repeat-x;
+  border: 1px solid #3f3f3f;
+  height: 10px;
+}
+
+.pollbar .percent {
+  display: none;
+}
+
+/** jGrowl Start **/
+
+/** Special IE6 Style Positioning **/
+.ie6 {
+  position: absolute;
+}
+
+.ie6.top-right {
+  right: auto;
+  bottom: auto;
+  left: expression( ( 0 - jGrowl.offsetWidth + ( document.documentElement.clientWidth ? document.documentElement.clientWidth : document.body.clientWidth ) + ( ignoreMe2 = document.documentElement.scrollLeft ? document.documentElement.scrollLeft : document.body.scrollLeft ) ) + 'px' );
+  top: expression( ( 0 + ( ignoreMe = document.documentElement.scrollTop ? document.documentElement.scrollTop : document.body.scrollTop ) ) + 'px' );
+}
+
+.ie6.top-left {
+  left: expression( ( 0 + ( ignoreMe2 = document.documentElement.scrollLeft ? document.documentElement.scrollLeft : document.body.scrollLeft ) ) + 'px' );
+  top: expression( ( 0 + ( ignoreMe = document.documentElement.scrollTop ? document.documentElement.scrollTop : document.body.scrollTop ) ) + 'px' );
+}
+
+.ie6.bottom-right {
+  left: expression( ( 0 - jGrowl.offsetWidth + ( document.documentElement.clientWidth ? document.documentElement.clientWidth : document.body.clientWidth ) + ( ignoreMe2 = document.documentElement.scrollLeft ? document.documentElement.scrollLeft : document.body.scrollLeft ) ) + 'px' );
+  top: expression( ( 0 - jGrowl.offsetHeight + ( document.documentElement.clientHeight ? document.documentElement.clientHeight : document.body.clientHeight ) + ( ignoreMe = document.documentElement.scrollTop ? document.documentElement.scrollTop : document.body.scrollTop ) ) + 'px' );
+}
+
+.ie6.bottom-left {
+  left: expression( ( 0 + ( ignoreMe2 = document.documentElement.scrollLeft ? document.documentElement.scrollLeft : document.body.scrollLeft ) ) + 'px' );
+  top: expression( ( 0 - jGrowl.offsetHeight + ( document.documentElement.clientHeight ? document.documentElement.clientHeight : document.body.clientHeight ) + ( ignoreMe = document.documentElement.scrollTop ? document.documentElement.scrollTop : document.body.scrollTop ) ) + 'px' );
+}
+
+.ie6.center {
+  left: expression( ( 0 + ( ignoreMe2 = document.documentElement.scrollLeft ? document.documentElement.scrollLeft : document.body.scrollLeft ) ) + 'px' );
+  top: expression( ( 0 + ( ignoreMe = document.documentElement.scrollTop ? document.documentElement.scrollTop : document.body.scrollTop ) ) + 'px' );
+  width: 100%;
+}
+
+/** jGrowl Styling **/
+.jGrowl {
+  z-index: 9999;
+  color: #fff;
+  font-size: 12px;
+  position: fixed;
+}
+
+.jGrowl.top-left {
+  left: 0px;
+  top: 0px;
+}
+
+.jGrowl.top-right {
+  right: 0px;
+  top: 0px;
+}
+
+.jGrowl.bottom-left {
+  left: 0px;
+  bottom: 0px;
+}
+
+.jGrowl.bottom-right {
+  right: 0px;
+  bottom: 0px;
+}
+
+.jGrowl.center {
+  top: 0px;
+  width: 50%;
+  left: 25%;
+}
+
+/** Cross Browser Styling **/
+
+.center .jGrowl-notification,
+.center .jGrowl-closer {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.jGrowl .jGrowl-notification,
+.jGrowl .jGrowl-closer {
+  background-color: #000;
+  opacity: .85;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=85)";
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=85);
+  zoom: 1;
+  width: 235px;
+  padding: 10px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  font-family: Tahoma, Arial, Helvetica, sans-serif;
+  font-size: 1em;
+  text-align: left;
+  display: none;
+  border-radius: 5px;
+}
+
+.jGrowl .jGrowl-notification {
+  min-height: 40px;
+}
+
+.jGrowl .jGrowl-notification,
+.jGrowl .jGrowl-closer {
+  margin: 10px;
+}
+
+.jGrowl .jGrowl-notification .jGrowl-header {
+  font-weight: bold;
+  font-size: .85em;
+}
+
+.jGrowl .jGrowl-notification .jGrowl-close {
+  z-index: 99;
+  float: right;
+  font-weight: bold;
+  font-size: 1em;
+  cursor: pointer;
+}
+
+.jGrowl .jGrowl-closer {
+  padding-top: 4px;
+  padding-bottom: 4px;
+  cursor: pointer;
+  font-size: .9em;
+  font-weight: bold;
+  text-align: center;
+}
+
+/** Hide jGrowl when printing **/
+@media print {
+  .jGrowl {
+    display: none;
+  };
+}
+
+/** jGrowl End **/
+
+/** Modal Start **/
+
+.modal {
+  display: none;
+  width: 400px;
+  text-align: left;
+  background: #fff;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -o-border-radius: 8px;
+  -ms-border-radius: 8px;
+  border-radius: 8px;
+  -webkit-box-shadow: 0 0 10px #000;
+  -moz-box-shadow: 0 0 10px #000;
+  -o-box-shadow: 0 0 10px #000;
+  -ms-box-shadow: 0 0 10px #000;
+  box-shadow: 0 0 10px #000;
+}
+
+.modal a.close-modal {
+  position: absolute;
+  top: -12.5px;
+  right: -12.5px;
+  display: block;
+  width: 30px;
+  height: 30px;
+  text-indent: -9999px;
+  background: url(images/close.png) no-repeat 0 0;
+}
+
+.modal-spinner {
+  display: none;
+  width: 64px;
+  height: 64px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin-right: -32px;
+  margin-top: -32px;
+  background: url(images/spinner.gif) #111 no-repeat center center;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -o-border-radius: 8px;
+  -ms-border-radius: 8px;
+  border-radius: 8px;
+}
+
+/** Modal End **/
+
+/** Impromptu Start **/
+
+/*! jQuery-Impromptu - v5.2.4 - 2014-05-26
+* http://trentrichardson.com/Impromptu
+* Copyright (c) 2014 Trent Richardson; Licensed MIT */
+
+.jqifade {
+  position: absolute;
+  background-color: #777777;
+}
+
+div.jqi {
+  width: 400px;
+  max-width: 90%;
+  font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+  position: absolute;
+  background-color: #ffffff;
+  font-size: 11px;
+  text-align: left;
+  border: solid 1px #eeeeee;
+  border-radius: 6px;
+  -moz-border-radius: 6px;
+  -webkit-border-radius: 6px;
+  padding: 7px;
+}
+
+div.jqi .jqiclose {
+  position: absolute;
+  top: 4px;
+  right: -2px;
+  width: 18px;
+  cursor: default;
+  color: #bbbbbb;
+  font-weight: bold;
+}
+
+div.jqi .jqistate {
+  background-color: #fff;
+}
+
+div.jqi .jqititle {
+  padding: 5px 10px;
+  font-size: 16px;
+  line-height: 20px;
+  border-bottom: solid 1px #eeeeee;
+}
+
+div.jqi .jqimessage {
+  padding: 10px;
+  line-height: 20px;
+  color: #444444;
+}
+
+div.jqi .jqibuttons {
+  text-align: right;
+  margin: 0 -7px -7px -7px;
+  border-top: solid 1px #e4e4e4;
+  background-color: #f4f4f4;
+  border-radius: 0 0 6px 6px;
+  -moz-border-radius: 0 0 6px 6px;
+  -webkit-border-radius: 0 0 6px 6px;
+}
+
+div.jqi .jqibuttons button {
+  margin: 0;
+  padding: 15px 20px;
+  background-color: transparent;
+  font-weight: normal;
+  border: none;
+  border-left: solid 1px #e4e4e4;
+  color: #777;
+  font-weight: bold;
+  font-size: 12px;
+}
+
+div.jqi .jqibuttons button.jqidefaultbutton {
+  color: #489afe;
+}
+
+div.jqi .jqibuttons button:hover,
+div.jqi .jqibuttons button:focus {
+  color: #287ade;
+  outline: none;
+}
+
+.jqiwarning .jqi .jqibuttons {
+  background-color: #b95656;
+}
+
+/* sub states */
+
+div.jqi .jqiparentstate::after {
+  background-color: #777;
+  opacity: 0.6;
+  filter: alpha(opacity=60);
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  border-radius: 6px;
+  -moz-border-radius: 6px;
+  -webkit-border-radius: 6px;
+}
+
+div.jqi .jqisubstate {
+  position: absolute;
+  top: 0;
+  left: 20%;
+  width: 60%;
+  padding: 7px;
+  border: solid 1px #eeeeee;
+  border-top: none;
+  border-radius: 0 0 6px 6px;
+  -moz-border-radius: 0 0 6px 6px;
+  -webkit-border-radius: 0 0 6px 6px;
+}
+
+div.jqi .jqisubstate .jqibuttons button {
+  padding: 10px 18px;
+}
+
+/* arrows for tooltips/tours */
+
+.jqi .jqiarrow {
+  position: absolute;
+  height: 0;
+  width: 0;
+  line-height: 0;
+  font-size: 0;
+  border: solid 10px transparent;
+}
+
+.jqi .jqiarrowtl {
+  left: 10px;
+  top: -20px;
+  border-bottom-color: #ffffff;
+}
+
+.jqi .jqiarrowtc {
+  left: 50%;
+  top: -20px;
+  border-bottom-color: #ffffff;
+  margin-left: -10px;
+}
+
+.jqi .jqiarrowtr {
+  right: 10px;
+  top: -20px;
+  border-bottom-color: #ffffff;
+}
+
+.jqi .jqiarrowbl {
+  left: 10px;
+  bottom: -20px;
+  border-top-color: #ffffff;
+}
+
+.jqi .jqiarrowbc {
+  left: 50%;
+  bottom: -20px;
+  border-top-color: #ffffff;
+  margin-left: -10px;
+}
+
+.jqi .jqiarrowbr {
+  right: 10px;
+  bottom: -20px;
+  border-top-color: #ffffff;
+}
+
+.jqi .jqiarrowlt {
+  left: -20px;
+  top: 10px;
+  border-right-color: #ffffff;
+}
+
+.jqi .jqiarrowlm {
+  left: -20px;
+  top: 50%;
+  border-right-color: #ffffff;
+  margin-top: -10px;
+}
+
+.jqi .jqiarrowlb {
+  left: -20px;
+  bottom: 10px;
+  border-right-color: #ffffff;
+}
+
+.jqi .jqiarrowrt {
+  right: -20px;
+  top: 10px;
+  border-left-color: #ffffff;
+}
+
+.jqi .jqiarrowrm {
+  right: -20px;
+  top: 50%;
+  border-left-color: #ffffff;
+  margin-top: -10px;
+}
+
+.jqi .jqiarrowrb {
+  right: -20px;
+  bottom: 10px;
+  border-left-color: #ffffff;
+}
+
+/** Impromptu End */
+
+#footer {
+  background: #262626;
+  background: -moz-linear-gradient(top,#262626 0%,#181818 49%,#151515 50%,#151515 100%);
+  background: -webkit-gradient(linear,left top,left bottom,color-stop(0%,#262626),color-stop(49%,#181818),color-stop(50%,#151515),color-stop(100%,#151515));
+  background: -webkit-linear-gradient(top,#262626 0%,#181818 49%,#151515 50%,#151515 100%);
+  background: -o-linear-gradient(top,#262626 0%,#181818 49%,#151515 50%,#151515 100%);
+  background: -ms-linear-gradient(top,#262626 0%,#181818 49%,#151515 50%,#151515 100%);
+  background: linear-gradient(to bottom,#262626 0%,#181818 49%,#151515 50%,#151515 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#262626',endColorstr='#151515',GradientType=0);
+  color: #949494;
+}
+
+#footer .pageWidth {
+  clear: both;
+  overflow: hidden;
+  background: url(images/glowing/bokeh.png) no-repeat center left;
+}
+
+.bottommenu {
+  padding: 10px 0;
+}
+
+.bottommenu a {
+  display: inline-block;
+  margin-right: 15px;
+  font-size: 14px;
+  color: #AAA;
+  font-weight: 700;
+}
+
+.bottommenu a:hover {
+  color: #171717;
+}
+
+.bottommenu a:last-child {
+  margin-right: 0;
+}
+
+body.index .breadcrumb {
+  display: none;
+}
+
+.breadcrumb {
+  font-size: 11px;
+  background: #FFF;
+  border: 1px solid #e9e9e9;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  margin-top: 21px;
+}
+
+.breadcrumb i {
+  line-height: inherit;
+  font-size: 15px;
+}
+
+.breadcrumb .crust {
+  display: block;
+  float: left;
+  position: relative;
+}
+
+.breadcrumb .crust:first-child a.crumb {
+  padding-left: 10px;
+  padding-right: 10px;
+  -moz-border-radius-topleft: 3px;
+  -moz-border-radius-bottomleft: 3px;
+  -webkit-border-top-left-radius: 3px;
+  -webkit-border-bottom-left-radius: 3px;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+}
+
+.breadcrumb .crust:nth-child(2) {
+  display: none;
+}
+
+.breadcrumb .crust a.crumb,.breadcrumb .crust b.lastcrumb {
+  text-decoration: none;
+  background-color: #FFF;
+  padding: 0 15px 0 25px;
+  border-bottom: 1px solid #e9e9e9;
+  margin-bottom: -1px;
+  outline: 0 none;
+  -moz-outline-style: 0 none;
+  display: block;
+  line-height: 35px;
+  _border-bottom: none;
+  color: #171717;
+  text-decoration: none;
+}
+
+.breadcrumb .crust b.lastcrumb {
+  background: transparent none;
+  font-weight: 700;
+  color: #86B413!important;
+}
+
+.breadcrumb .crust a.crumb,.breadcrumb .crust b.lastcrumb {
+  line-height: 35px;
+}
+
+.breadcrumb .crust .arrow {
+  border: 18px solid transparent;
+  border-right: 1px none #000;
+  border-left-color: #e9e9e9;
+  border-width: 19px 0 19px 10px;
+  display: block;
+  position: absolute;
+  right: -10px;
+  top: -1px;
+  z-index: 1;
+  width: 0;
+  height: 0;
+}
+
+.breadcrumb .crust .arrow span {
+  border: 18px solid transparent;
+  border-right: 1px none #000;
+  border-left-color: #FFF;
+  border-width: 19px 0 19px 10px;
+  display: block;
+  position: absolute;
+  left: -11px;
+  top: -19px;
+  z-index: 2;
+  white-space: nowrap;
+  overflow: hidden;
+  text-indent: 9999px;
+  width: 0;
+  height: 0;
+}
+
+.breadcrumb .refresh:hover {
+  background-position: 0 -16px;
+}
+
+.breadcrumb .crust:last-child a.crumb {
+  font-weight: 700;
+}
+
+.breadcrumb .crust:hover a.crumb {
+  background-color: #f3f3f3;
+  text-decoration: none;
+}
+
+.breadcrumb .crust:hover .arrow span {
+  border-left-color: #f3f3f3;
+}
+
+#mask {
+  position: absolute;
+  z-index: 9010;
+  background-color: #000;
+  display: none;
+  top: 0;
+  left: 0;
+}
+
+.modalBox {
+  border-radius: 3px 3px 0 0;
+  position: fixed;
+  width: 440px;
+  display: none;
+  z-index: 9015;
+  background: #fff;
+  border: 1px solid #000;
+  -webkit-box-shadow: 0 7px 10px 0 rgba(0,0,0,0.81);
+  -moz-box-shadow: 0 7px 10px 0 rgba(0,0,0,0.81);
+  box-shadow: 0 7px 10px 0 rgba(0,0,0,0.81);
+}
+
+.modalBox .thead {
+  font-weight: 700;
+}
+
+.modalBox .modalContent {
+  padding: 5px 10px;
+}
+
+#copyright {
+  font: 14px Arial,Sans-Serif;
+  margin: 25px 0 0;
+  line-height: 24px;
+}
+
+#copyright a {
+  font-weight: 700;
+}
+
+.theme {
+  float: right;
+  margin-top: 35px;
+}
+		
+		
+		
+		]]>
+		</stylesheet>
+		<stylesheet name="css3.css" version="1801"><![CDATA[.tborder {
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+}
+
+.tborder tbody tr:last-child td:first-child {
+	-moz-border-radius-bottomleft: 3px;
+	-webkit-border-bottom-left-radius: 3px;
+	border-bottom-left-radius: 3px;
+}
+
+.tborder tbody tr:last-child td:last-child {
+	-moz-border-radius-bottomright: 3px;
+	-webkit-border-bottom-right-radius: 3px;
+	border-bottom-right-radius: 3px;
+}
+
+.thead {
+	-moz-border-radius-topleft: 3px;
+	-moz-border-radius-topright: 3px;
+	-webkit-border-top-left-radius: 3px;
+	-webkit-border-top-right-radius: 3px;
+	border-top-left-radius: 3px;
+	border-top-right-radius: 3px;
+}
+
+.thead_collapsed {
+	-moz-border-radius-bottomleft: 3px;
+	-moz-border-radius-bottomright: 3px;
+	-webkit-border-bottom-left-radius: 3px;
+	-webkit-border-bottom-right-radius: 3px;
+	border-bottom-left-radius: 3px;
+	border-bottom-right-radius: 3px;
+}
+
+.thead_left {
+	-moz-border-radius-topright: 0;
+	-webkit-border-top-right-radius: 0;
+    border-top-right-radius: 0;
+}
+
+.thead_right {
+	-moz-border-radius-topleft: 0;
+	-webkit-border-top-left-radius: 0;
+    border-top-left-radius: 0;
+}
+
+.tcat_menu {
+	-moz-border-radius: 0 !important;
+	-webkit-border-radius: 0 !important;
+  	border-radius: 0 !important;
+}
+
+.tborder tbody:nth-last-child(2) .tcat_collapse_collapsed {
+	-moz-border-radius-bottomleft: 3px !important;
+	-moz-border-radius-bottomright: 3px !important;
+	-webkit-border-bottom-left-radius: 3px !important;
+	-webkit-border-bottom-right-radius: 3px !important;
+	border-bottom-left-radius: 3px !important;
+	border-bottom-right-radius: 3px !important;
+}
+
+input.button,
+input.textbox,
+input.invalid_field,
+input.valid_field,
+select,
+textarea,
+.editor_control_bar,
+blockquote,
+.codeblock,
+fieldset,
+.pm_alert,
+.red_alert,
+.popup_menu,
+.postbit_buttons > a,
+a.button {
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+}
+
+.post.classic .post_author {
+	-moz-border-radius: 0 3px 3px 0;
+	-webkit-border-radius: 0 3px 3px 0;
+	border-radius: 0 3px 3px 0;
+}
+
+.popup_menu .popup_item_container:first-child .popup_item {
+	-moz-border-radius-topleft: 3px;
+	-moz-border-radius-topright: 3px;
+	-webkit-border-top-left-radius: 3px;
+	-webkit-border-top-right-radius: 3px;
+	border-top-left-radius: 3px;
+	border-top-right-radius: 3px;
+}
+
+.popup_menu .popup_item_container:last-child .popup_item {
+	-moz-border-radius-bottomleft: 3px;
+	-moz-border-radius-bottomright: 3px;
+	-webkit-border-bottom-left-radius: 3px;
+	-webkit-border-bottom-right-radius: 3px;
+	border-bottom-left-radius: 3px;
+	border-bottom-right-radius: 3px;
+}
+
+.pagination a {
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+}
+
+.pollbar {
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+}
+		
+		
+		
+		]]>
+		</stylesheet>
+	</stylesheets>
+	<templates>
+		<template name="footer" version="1702"><![CDATA[<br />
+<div class="bottommenu">
+				<div>
+					<span class="smalltext"><a href="{$mybb->settings['contactlink']}">{$lang->bottomlinks_contactus}</a> <a href="{$mybb->settings['homeurl']}">{$mybb->settings['homename']}</a> <a href="#top">{$lang->bottomlinks_returntop}</a> <a href="#content">{$lang->bottomlinks_returncontent}</a> <a href="<archive_url>">{$lang->bottomlinks_litemode}</a> <a href="{$mybb->settings['bburl']}/misc.php?action=syndication">{$lang->bottomlinks_syndication}</a></span>
+				</div>
+			</div>
+<br />
+		</div>
+	</div>
+	<div id="footer">
+		<div class="pageWidth">
+          {$theme_select}
+<div class="footerLogo"></div>
+			<div id="copyright">
+				<!-- MyBB is free software developed and maintained by a volunteer community. 
+					 It would be much appreciated by the MyBB Group if you left the full copyright and "powered by" notice intact, 
+					 to show your support for MyBB.  If you choose to remove or modify the copyright below, 
+					 you may be refused support on the MyBB Community Forums.
+					 
+					 This is free software, support us and we'll support you. -->
+{$lang->powered_by} <a href="http://mybb.com/" target="_blank">MyBB{$mybbversion}</a>, &copy; 2002-{$copy_year} <a href="http://mybb.com/" target="_blank">MyBB Group</a>.<br />
+				<!-- End powered by -->
+Crafted with <i class="fa fa-heart"></i> by <a href="http://www.audentio.com/" title="Quality MyBB themes">Audentio Design</a>
+				<br />
+<br class="clear" />
+<!-- The following piece of code allows MyBB to run scheduled tasks. DO NOT REMOVE -->{$task_image}<!-- End task image code -->
+{$auto_dst_detection}
+		</div>
+		</div>]]></template>
+		<template name="forumbit_depth1_cat" version="1800"><![CDATA[<table border="0" cellspacing="{$theme['borderwidth']}" cellpadding="{$theme['tablespace']}" class="tborder">
+<thead>
+<tr>
+<td class="thead{$expthead}" colspan="3">
+<div class="expcolimage"><img src="{$theme['imgdir']}/{$expcolimage}" id="cat_{$forum['fid']}_img" class="expander" alt="{$expaltext}" title="{$expaltext}" /></div>
+<div><strong><a href="{$forum_url}">{$forum['name']}</a></strong><br /><div class="smalltext">{$forum['description']}</div></div>
+</td>
+</tr>
+</thead>
+<tbody style="{$expdisplay}" id="cat_{$forum['fid']}_e">
+<tr>
+<td class="tcat" colspan="2"><span class="smalltext"><strong>{$lang->forumbit_forum}</strong></span></td>
+<td class="tcat" width="200" align="right"><span class="smalltext"><strong>{$lang->forumbit_lastpost}</strong></span></td>
+</tr>
+{$sub_forums}
+</tbody>
+</table>
+<br />]]></template>
+		<template name="forumbit_depth2_cat" version="1800"><![CDATA[<tr>
+<td class="{$bgcolor}" align="center" valign="middle" width="1"><div class="forum_status forum_{$lightbulb['folder']} ajax_mark_read" title="{$lightbulb['altonoff']}" id="mark_read_{$forum['fid']}"><i class="fa fa-comment"></i></div></td>
+<td class="{$bgcolor}" valign="middle">
+<strong><a href="{$forum_url}">{$forum['name']}</a></strong>{$forum_viewers_text}<div class="smalltext">
+<span class="lighttext">{$lang->forumbit_threads}:</span> {$threads}{$unapproved['unapproved_threads']} &nbsp; &nbsp; <span class="lighttext">{$lang->forumbit_posts}:</span> {$posts}{$unapproved['unapproved_posts']}
+<br />
+  
+{$forum['description']}{$subforums}</div>
+</td>
+<td class="{$bgcolor}" valign="middle" align="right" style="white-space: nowrap">{$lastpost}</td>
+</tr>]]></template>
+		<template name="forumbit_depth2_forum" version="1800"><![CDATA[<tr>
+<td class="{$bgcolor}" align="center" valign="middle" width="1"><div class="forum_status forum_{$lightbulb['folder']} ajax_mark_read" title="{$lightbulb['altonoff']}" id="mark_read_{$forum['fid']}"><i class="fa fa-comment"></i></div></td>
+<td class="{$bgcolor}" valign="middle">
+<strong><a href="{$forum_url}">{$forum['name']}</a></strong>{$forum_viewers_text}<div class="smalltext">
+<span class="lighttext">{$lang->forumbit_threads}:</span> {$threads}{$unapproved['unapproved_threads']} &nbsp; &nbsp; <span class="lighttext">{$lang->forumbit_posts}:</span> {$posts}{$unapproved['unapproved_posts']}
+<br />
+  
+{$forum['description']}{$modlist}{$subforums}</div>
+</td>
+<td class="{$bgcolor}" valign="middle" align="right" style="white-space: nowrap">{$lastpost}</td>
+</tr>]]></template>
+		<template name="forumbit_depth2_forum_lastpost" version="1800"><![CDATA[<span class="smalltext">
+<a href="{$lastpost_link}" title="{$full_lastpost_subject}"><strong>{$lastpost_subject}</strong></a>
+<br />{$lastpost_date} {$lang->by} {$lastpost_profilelink}</span>]]></template>
+		<template name="forumbit_depth3_statusicon" version="1702"><![CDATA[<div title="{$lightbulb['altonoff']}" class="subforumicon subforum_{$lightbulb['folder']} ajax_mark_read" id="mark_read_{$forum['fid']}"><i class="fa fa-comment"></i></div>]]></template>
+		<template name="forumbit_subforums" version="1800"><![CDATA[<div class="subforumList">{$lang->subforums} {$sub_forums}</div>]]></template>
+		<template name="forumdisplay_newthread" version="1800"><![CDATA[<a href="newthread.php?fid={$fid}" class="button new_thread_button"><span><i class="fa fa-comments"></i> {$lang->post_thread}</span></a>]]></template>
+		<template name="header" version="1800"><![CDATA[<div class="header">
+<div class="pageWidth">
+{$quicksearch}
+  
+<div class="logobg">
+<a href="{$mybb->settings['bburl']}/index.php" class="logo">{$mybb->settings['bbname']}</a>
+</div>
+</div>
+</div>
+<div class="navigation">
+<div class="pageWidth">
+{$welcomeblock}
+		<ul class="menu">
+			<li><a href="{$mybb->settings['bburl']}/memberlist.php"><i class="fa fa-users"></i> {$lang->toplinks_memberlist}</a></li>
+			<li><a href="{$mybb->settings['bburl']}/calendar.php"><i class="fa fa-calendar"></i> {$lang->toplinks_calendar}</a></li>
+			<li><a href="{$mybb->settings['bburl']}/misc.php?action=help"><i class="fa fa-info"></i> {$lang->toplinks_help}</a></li>
+		</ul>
+</div>
+</div>
+<div class="pageWidth">
+	<a name="top" id="top"></a>
+				<navigation>
+	<div id="content">
+				{$pm_notice}
+				{$bannedwarning}
+				{$bbclosedwarning}
+				{$unreadreports}
+				{$pending_joinrequests}
+				{$awaitingusers}
+				<br />]]></template>
+		<template name="headerinclude" version="1800"><![CDATA[<link rel="alternate" type="application/rss+xml" title="{$lang->latest_threads} (RSS 2.0)" href="{$mybb->settings['bburl']}/syndication.php" />
+<link rel="alternate" type="application/atom+xml" title="{$lang->latest_threads} (Atom 1.0)" href="{$mybb->settings['bburl']}/syndication.php?type=atom1.0" />
+<meta http-equiv="Content-Type" content="text/html; charset={$charset}" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<script type="text/javascript">
+WebFontConfig = {
+    google: { families: [ 'Open+Sans:400,700,700italic,400italic:latin' ] }
+};
+(function() {
+    var wf = document.createElement('script');
+    wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
+        '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+    wf.type = 'text/javascript';
+    wf.async = 'true';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(wf, s);
+})(); 
+</script>
+<script type="text/javascript" src="{$mybb->asset_url}/jscripts/jquery.js?ver=1800"></script>
+<script type="text/javascript" src="{$mybb->asset_url}/jscripts/jquery.plugins.min.js?ver=1800"></script>
+<script type="text/javascript" src="{$mybb->asset_url}/jscripts/general.js?ver=1800"></script>
+<link rel="stylesheet" type="text/css" href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css">
+{$stylesheets}
+<script type="text/javascript">
+<!--
+	lang.unknown_error = "{$lang->unknown_error}";
+
+	var cookieDomain = "{$mybb->settings['cookiedomain']}";
+	var cookiePath = "{$mybb->settings['cookiepath']}";
+	var cookiePrefix = "{$mybb->settings['cookieprefix']}";
+	var deleteevent_confirm = "{$lang->deleteevent_confirm}";
+	var removeattach_confirm = "{$lang->removeattach_confirm}";
+	var loading_text = '{$lang->ajax_loading}';
+	var saving_changes = '{$lang->saving_changes}';
+	var use_xmlhttprequest = "{$mybb->settings['use_xmlhttprequest']}";
+	var my_post_key = "{$mybb->post_code}";
+	var rootpath = "{$mybb->settings['bburl']}";
+	var imagepath = "{$theme['imgdir']}";
+  	var yes_confirm = "{$lang->yes}";
+	var no_confirm = "{$lang->no}";
+	var MyBBEditor = null;
+	var spinner_image = "{$theme['imgdir']}/spinner.gif";
+// -->
+</script>
+<script src="{$mybb->settings['bburl']}/images/audentio/glowing/functions.js" type="text/javascript"></script>]]></template>
+		<template name="header_quicksearch" version="1702"><![CDATA[		<div class="search">
+		<form method="post" action="{$mybb->settings['bburl']}/search.php">
+			<input class="textbox" type="text" name="keywords" value="Search..." onfocus="if(this.value == 'Search...') { this.value = ''; }" onblur="if(this.value=='') { this.value='Search...'; }" size="25" />
+			<button class="button"><i class="fa fa-search"></i></button>
+          <input type="hidden" name="action" value="do_search" />
+          			<br class="clear">
+			</form>
+		</div>]]></template>
+		<template name="header_welcomeblock_guest" version="1702"><![CDATA[<div id="login-form" style="display: none;">
+  <form method="post" action="member.php">
+    <table class="tborder" cellspacing="0">
+      <tr>
+        <td class="thead" colspan="2">
+          <strong>Login at {$mybb->settings['bbname']}</strong>
+        </td>
+      </tr>
+      <tr>
+        <td class="trow1">
+          <label for="login_username">
+            Username:
+          </label>
+        </td>
+        <td class="trow1">
+          <input type="text" value="" style="width: 200px;" maxlength="30" size="25" name="username" class="textbox" id="login_username" />
+        </td>
+      </tr>
+      <tr>
+        <td class="trow2">
+          <label for="login_password">
+            Password:
+          </label>
+        </td>
+        <td class="trow2">
+          <input type="password" value="" style="width: 200px;" size="25" name="password" class="textbox" id="login_password" />
+        </td>
+      </tr>
+      <tr>
+        <td class="tfoot" colspan="2">
+          <label class="smalltext" title="If ticked, your login details will be remembered on this computer, otherwise, you will be logged out as soon as you close your browser.">
+            <input type="checkbox" value="yes" checked="checked" name="remember" class="checkbox">
+            Remember?
+          </label>
+          <input type="submit" value="Login" name="submit" class="button" style="float: right;" />
+        </td>
+      </tr>
+    </table>
+    <input type="hidden" value="do_login" name="action" />
+    <input type="hidden" value="" name="url" />
+  </form>
+</div> 
+
+<div class="guestBit">
+<a href="{$mybb->settings['bburl']}/member.php?action=register" class="register"><i class="fa fa-pencil"></i> {$lang->welcome_register}</a><a href="{$mybb->settings['bburl']}/member.php?action=login" onclick="$('#login-form').modal({ fadeDuration: 250, keepelement: true }); return false;" class="login"><i class="fa fa-sign-in"></i> {$lang->welcome_login}</a>
+</div>]]></template>
+		<template name="header_welcomeblock_member" version="1702"><![CDATA[<ul class="usermenu">
+   <li>
+      <a href="#">{$mybb->user['username']} <i class="fa fa-chevron-down"></i></a>
+      <ul>
+         <li><a href="{$mybb->settings['bburl']}/usercp.php">{$lang->welcome_usercp}</a></li>
+         {$modcplink}
+         {$admincplink}
+         <li><a href="{$mybb->settings['bburl']}/member.php?action=logout&amp;logoutkey={$mybb->user['logoutkey']}">{$lang->welcome_logout}</a></li>
+         <li><a href="{$mybb->settings['bburl']}/search.php?action=getnew">{$lang->welcome_newposts}</a></li>
+         <li><a href="{$mybb->settings['bburl']}/search.php?action=getdaily">{$lang->welcome_todaysposts}</a></li>
+         <li><a href="{$mybb->settings['bburl']}/private.php">PMs {$lang->welcome_pms_usage}</a></li>
+      </ul>
+   </li>
+</ul>]]></template>
+		<template name="index" version="1800"><![CDATA[<html>
+<head>
+<title>{$mybb->settings['bbname']}</title>
+{$headerinclude}
+<script type="text/javascript">
+<!--
+	lang.no_new_posts = "{$lang->no_new_posts}";
+	lang.click_mark_read = "{$lang->click_mark_read}";
+// -->
+</script>
+</head>
+<body class="index">
+{$header}
+{$forums}
+{$boardstats}
+{$footer}
+</body>
+</html>]]></template>
+		<template name="index_birthdays" version="1800"><![CDATA[<tr><td class="tcat" colspan="2"><span class="smalltext"><strong>{$lang->todays_birthdays}</strong></span></td></tr>
+<tr>
+  <td class="trow1" width="37"><div class="forum_stats"><i class="fa fa-calendar"></i></div></td>
+<td class="trow1"><span class="smalltext">{$bdays}</span></td>
+</tr>]]></template>
+		<template name="index_boardstats" version="1800"><![CDATA[<table border="0" cellspacing="{$theme['borderwidth']}" cellpadding="{$theme['tablespace']}" class="tborder" colspan="2">
+<thead>
+<tr>
+<td class="thead{$collapsedthead['boardstats']}" colspan="2">
+<div class="expcolimage"><img src="{$theme['imgdir']}/collapse{$collapsedimg['boardstats']}.png" id="boardstats_img" class="expander" alt="[-]" title="[-]" /></div>
+<div><strong>{$lang->boardstats}</strong></div>
+</td>
+</tr>
+</thead>
+<tbody style="{$collapsed['boardstats_e']}" id="boardstats_e">
+{$whosonline}
+{$birthdays}
+{$forumstats}
+<tr>
+	<td class="tfoot" style="text-align: right" colspan="2">
+		<span class="smalltext">
+			{$logoutlink}
+			<a href="misc.php?action=markread{$post_code_string}">{$lang->markread}</a> |
+			<a href="showteam.php">{$lang->forumteam}</a>
+			{$statspage}
+		</span>
+	</td>
+</tr>
+</tbody>
+</table>]]></template>
+		<template name="index_stats" version="1800"><![CDATA[<tr><td class="tcat" colspan="2"><span class="smalltext"><strong>{$lang->boardstats}</strong></span></td></tr>
+<tr>
+  <td class="trow1" width="37"><div class="forum_stats"><i class="fa fa-bar-chart-o"></i></div></td>
+<td class="trow1"><span class="smalltext">
+{$lang->stats_posts_threads}<br />
+{$lang->stats_numusers}<br />
+{$lang->stats_newestuser}<br />
+{$lang->stats_mostonline}
+</span>
+</td>
+</tr>]]></template>
+		<template name="index_whosonline" version="1800"><![CDATA[<tr>
+<td class="tcat" colspan="2"><span class="smalltext"><strong>{$lang->whos_online}</strong> [<a href="online.php">{$lang->complete_list}</a>]</span></td>
+</tr>
+<tr>
+  <td class="trow1" width="37"><div class="forum_stats"><i class="fa fa-globe"></i></div></td>
+<td class="trow1"><span class="smalltext">{$lang->online_note}<br />{$onlinemembers}</span></td>
+</tr>]]></template>
+		<template name="nav" version="1800"><![CDATA[<fieldset class="breadcrumb"><span class="crumbs">
+<span class="crust" itemscope="itemscope" itemtype="http://data-vocabulary.org/Breadcrumb">
+        <a href="index.php" class="crumb" rel="up" itemprop="url">
+            <i class="fa fa-home"></i>
+        </a>
+        <span class="arrow">
+            <span>&gt;</span>
+        </span>
+</span>
+  
+  
+  
+  {$nav}{$activesep}
+<span class="crust" itemscope="itemscope" itemtype="http://data-vocabulary.org/Breadcrumb">
+{$activebit}</span></span></fieldset>]]></template>
+		<template name="nav_bit" version="1800"><![CDATA[<span class="crust" itemscope="itemscope" itemtype="http://data-vocabulary.org/Breadcrumb">
+        <a href="{$navbit['url']}" class="crumb" rel="up" itemprop="url">
+            {$navbit['name']}
+        </a>
+        <span class="arrow">
+            <span>&gt;</span>
+        </span>
+</span>]]></template>
+		<template name="nav_bit_active" version="1702"><![CDATA[<a href="{$navbit['url']}" class="crumb" rel="up" itemprop="url">
+{$navbit['name']}
+</a>
+<span class="arrow">
+<span>&gt;</span>
+</span>]]></template>
+		<template name="nav_sep" version="1702"><![CDATA[]]></template>
+		<template name="nav_sep_active" version="1702"><![CDATA[]]></template>
+		<template name="postbit_delete_pm" version="1800"><![CDATA[<a href="private.php?action=delete&amp;pmid={$id}&amp;my_post_key={$mybb->post_code}" title="{$lang->delete_title}" class="postbit_delete_pm"><span><i class="fa fa-times"></i> {$lang->postbit_button_delete_pm}</span></a>]]></template>
+		<template name="postbit_edit" version="1800"><![CDATA[<a href="editpost.php?pid={$post['pid']}" id="edit_post_{$post['pid']}" title="{$lang->postbit_edit}" class="postbit_edit"><span><i class="fa fa-pencil"></i> {$lang->postbit_button_edit}</span></a>
+<div id="edit_post_{$post['pid']}_popup" class="popup_menu" style="display: none;"><div class="popup_item_container"><a href="javascript:;" class="popup_item quick_edit_button" id="quick_edit_post_{$post['pid']}">{$lang->postbit_quick_edit}</a></div><div class="popup_item_container"><a href="editpost.php?pid={$post['pid']}" class="popup_item">{$lang->postbit_full_edit}</a></div></div>
+<script type="text/javascript">
+// <!--
+	if(use_xmlhttprequest == "1")
+	{
+		$("#edit_post_{$post['pid']}").popupMenu();
+	}
+// -->
+</script>]]></template>
+		<template name="postbit_email" version="1800"><![CDATA[<a href="member.php?action=emailuser&amp;uid={$post['uid']}" title="{$lang->postbit_email}" class="postbit_email"><span><i class="fa fa-envelope"></i> {$lang->postbit_button_email}</span></a>]]></template>
+		<template name="postbit_find" version="1800"><![CDATA[<a href="search.php?action=finduser&amp;uid={$post['uid']}" title="{$lang->postbit_find}" class="postbit_find"><span><i class="fa fa-search"></i> {$lang->postbit_button_find}</span></a>]]></template>
+		<template name="postbit_forward_pm" version="1800"><![CDATA[<a href="private.php?action=send&amp;pmid={$id}&amp;do=forward" title="{$lang->forward_title}" class="postbit_forward_pm"><span><i class="fa fa-share"></i> {$lang->postbit_button_forward}</span></a>]]></template>
+		<template name="postbit_multiquote" version="1800"><![CDATA[<a href="javascript:Thread.multiQuote({$post['pid']});" style="display: none;" id="multiquote_link_{$post['pid']}" title="{$lang->postbit_multiquote}" class="postbit_multiquote"><span id="multiquote_{$post['pid']}"><i class="fa fa-circle-o"></i> {$lang->postbit_button_multiquote}</span></a>
+<script type="text/javascript">
+//<!--
+	$('#multiquote_link_{$post['pid']}').css("display", "");
+// -->
+</script>]]></template>
+		<template name="postbit_pm" version="1800"><![CDATA[<a href="private.php?action=send&amp;uid={$post['uid']}" title="{$lang->postbit_pm}" class="postbit_pm"><span><i class="fa fa-comment"></i> {$lang->postbit_button_pm}</span></a>]]></template>
+		<template name="postbit_quickdelete" version="1800"><![CDATA[<a href="editpost.php?pid={$post['pid']}" onclick="Thread.deletePost({$post['pid']}); return false;" style="display: none;" id="quick_delete_{$post['pid']}" title="{$postbit_qdelete}" class="postbit_qdelete"><span><i class="fa fa-times"></i> {$lang->postbit_button_qdelete}</span></a>
+<script type="text/javascript">
+// <!--
+	$('#quick_delete_{$post['pid']}').css('display', '{$display}');
+// -->
+</script>]]></template>
+		<template name="postbit_quote" version="1800"><![CDATA[<a href="newreply.php?tid={$tid}&amp;replyto={$post['pid']}" title="{$lang->postbit_quote}" class="postbit_quote"><span><i class="fa fa-quote-right"></i> {$lang->postbit_button_quote}</span></a>]]></template>
+		<template name="postbit_replyall_pm" version="1800"><![CDATA[<a href="private.php?action=send&amp;pmid={$id}&amp;do=replyall" title="{$lang->reply_to_all}" class="postbit_reply_all"><span><i class="fa fa-main-reply-all"></i> {$lang->postbit_button_reply_all}</span></a>]]></template>
+		<template name="postbit_reply_pm" version="1800"><![CDATA[<a href="private.php?action=send&amp;pmid={$id}&amp;do=reply" title="{$lang->reply_title}" class="postbit_reply_pm"><span><i class="fa fa-mail-reply"></i> {$lang->postbit_button_reply_pm}</span></a>]]></template>
+		<template name="postbit_report" version="1800"><![CDATA[<a href="javascript:Report.reportPost({$post['pid']});" title="{$lang->postbit_report}" class="postbit_report"><span><i class="fa fa-exclamation-triangle"></i> {$lang->postbit_button_report}</span></a>]]></template>
+		<template name="postbit_rep_button" version="1800"><![CDATA[<a href="javascript:MyBB.reputation({$post['uid']},{$post['pid']});" title="{$lang->postbit_reputation_add}" class="postbit_reputation_add"><span><i class="fa fa-thumbs-up"></i> {$lang->postbit_button_reputation_add}</span></a>]]></template>
+		<template name="postbit_warn" version="1800"><![CDATA[<a href="warnings.php?action=warn&amp;uid={$post['uid']}&amp;pid={$post['pid']}" title="{$lang->postbit_warn}" class="postbit_warn"><span><i class="fa fa-gavel"></i> {$lang->postbit_button_warn}</span></a>]]></template>
+		<template name="postbit_www" version="1800"><![CDATA[<a href="{$post['website']}" target="_blank" title="{$lang->postbit_website}" class="postbit_website"><span><i class="fa fa-globe"></i> {$lang->postbit_button_website}</span></a>]]></template>
+		<template name="reputation_addlink" version="1800"><![CDATA[<div class="float_right" style="padding-bottom: 4px;"><a href="javascript:MyBB.reputation({$user['uid']});" class="button rate_user_button"><span><i class="fa fa-plus-circle"></i> {$lang->rate_user}</span></a></div>]]></template>
+		<template name="showthread" version="1800"><![CDATA[<html>
+<head>
+<title>{$thread['subject']}</title>
+{$headerinclude}
+<script type="text/javascript">
+<!--
+	var quickdelete_confirm = "{$lang->quickdelete_confirm}";
+	var quickrestore_confirm = "{$lang->quickrestore_confirm}";
+	var allowEditReason = "{$mybb->settings['alloweditreason']}";
+	lang.save_changes = "{$lang->save_changes}";
+	lang.cancel_edit = "{$lang->cancel_edit}";
+	lang.quick_edit_update_error = "{$lang->quick_edit_update_error}";
+	lang.quick_reply_post_error = "{$lang->quick_reply_post_error}";
+	lang.quick_delete_error = "{$lang->quick_delete_error}";
+	lang.quick_delete_success = "{$lang->quick_delete_success}";
+	lang.quick_delete_thread_success = "{$lang->quick_delete_thread_success}";
+	lang.quick_restore_error = "{$lang->quick_restore_error}";
+	lang.quick_restore_success = "{$lang->quick_restore_success}";
+	lang.editreason = "{$lang->postbit_editreason}";
+// -->
+</script>
+<!-- jeditable (jquery) -->
+<script type="text/javascript" src="{$mybb->asset_url}/jscripts/report.js?ver=1800"></script>
+<script src="{$mybb->asset_url}/jscripts/jeditable/jeditable.min.js"></script>
+<script type="text/javascript" src="{$mybb->asset_url}/jscripts/thread.js?ver=1800"></script>
+</head>
+<body class="showthread_page">
+	{$header}
+	{$threadnotesbox}
+	{$pollbox}
+	<div class="float_left">
+		{$multipage}
+	</div>
+	<div class="float_right">
+		{$newreply}
+	</div>
+	{$ratethread}
+	<table border="0" cellspacing="{$theme['borderwidth']}" cellpadding="{$theme['tablespace']}" class="tborder tfixed clear">
+		<tr>
+			<td class="thead">
+				<div class="float_right">
+					<span class="smalltext"><strong><a href="javascript:;" id="thread_modes">{$lang->thread_modes}</a>{$threadnoteslink}</strong></span>
+				</div>
+				<div>
+					<strong>{$thread['threadprefix']}{$thread['subject']}</strong>
+				</div>
+			</td>
+		</tr>
+<tr><td id="posts_container">
+	<div id="posts">
+		{$posts}
+	</div>
+</td></tr>
+		<tr>
+			<td class="tfoot">
+				{$search_thread}
+				<div>
+					<strong>&laquo; <a href="{$next_oldest_link}">{$lang->next_oldest}</a> | <a href="{$next_newest_link}">{$lang->next_newest}</a> &raquo;</strong>
+				</div>
+			</td>
+		</tr>
+	</table>
+	<div class="float_left">
+		{$multipage}
+	</div>
+	<div style="padding-top: 4px;" class="float_right">
+		{$newreply}
+	</div>
+	<br class="clear" />
+	{$quickreply}
+	{$threadexbox}
+	{$similarthreads}
+	<br />
+	<div class="float_left">
+		<ul class="thread_tools">
+			<li class="printable"><a href="printthread.php?tid={$tid}">{$lang->view_printable}</a></li>
+			{$sendthread}
+			<li class="subscription_{$add_remove_subscription}"><a href="usercp2.php?action={$add_remove_subscription}subscription&amp;tid={$tid}&amp;my_post_key={$mybb->post_code}">{$add_remove_subscription_text}</a></li>
+			{$addpoll}
+		</ul>
+	</div>
+
+	<div class="float_right" style="text-align: right;">
+		{$moderationoptions}
+		{$forumjump}
+	</div>
+	<br class="clear" />
+	{$usersbrowsing}
+	{$footer}
+	<div id="thread_modes_popup" class="popup_menu" style="display: none;"><div class="popup_item_container"><a href="showthread.php?mode=linear&amp;tid={$tid}&amp;pid={$pid}#pid{$pid}" class="popup_item">{$lang->linear}</a></div><div class="popup_item_container"><a href="showthread.php?mode=threaded&amp;tid={$tid}&amp;pid={$pid}#pid{$pid}" class="popup_item">{$lang->threaded}</a></div></div>
+	<script type="text/javascript">
+	// <!--
+		if(use_xmlhttprequest == "1")
+		{
+			$("#thread_modes").popupMenu();
+		}
+	// -->
+	</script>
+	<script type="text/javascript">
+		$(".author_avatar img").error(function () {
+			$(this).unbind("error").closest('.author_avatar').remove();
+		});
+	</script>
+</body>
+</html>]]></template>
+		<template name="showthread_newreply" version="1800"><![CDATA[<a href="newreply.php?tid={$tid}" class="button new_reply_button"><span><i class="fa fa-comment"></i> {$lang->new_reply}</span></a>&nbsp;]]></template>
+		<template name="showthread_newreply_closed" version="1800"><![CDATA[<a href="newreply.php?tid={$tid}" class="button closed_button"><span><i class="fa fa-times-circle"></i> {$lang->thread_closed}</span></a>&nbsp;]]></template>
+	</templates>
+</theme>

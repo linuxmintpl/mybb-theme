@@ -1,0 +1,4063 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<theme name="myhub" version="1812">
+	<properties>
+		<templateset><![CDATA[276]]></templateset>
+		<editortheme><![CDATA[mybb.css]]></editortheme>
+		<imgdir><![CDATA[images/myhub]]></imgdir>
+		<logo><![CDATA[images/myhub/logo.png]]></logo>
+		<tablespace><![CDATA[5]]></tablespace>
+		<borderwidth><![CDATA[0]]></borderwidth>
+		<color><![CDATA[]]></color>
+		<disporder><![CDATA[a:8:{s:9:"extra.css";i:1;s:8:"css3.css";i:2;s:10:"global.css";i:3;s:17:"thread_status.css";i:4;s:16:"star_ratings.css";i:5;s:10:"usercp.css";i:6;s:9:"modcp.css";i:7;s:14:"showthread.css";i:8;}]]></disporder>
+	</properties>
+	<stylesheets>
+		<stylesheet name="showthread.css" attachedto="showthread.php" version="1812"><![CDATA[ul.thread_tools,
+ul.thread_tools li {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+ul.thread_tools li {
+	padding-left: 24px;
+	padding-bottom: 4px;
+	margin-bottom: 3px;
+	font-size: 11px;
+	background-image: url(images/showthread_sprite.png);
+	background-repeat: no-repeat;
+}
+
+ul.thread_tools li.printable {
+	background-position: 0 0;
+}
+
+ul.thread_tools li.sendthread {
+	background-position: 0 -20px;
+}
+
+ul.thread_tools li.subscription_add {
+	background-position: 0 -40px;
+}
+
+ul.thread_tools li.subscription_remove {
+	background-position: 0 -60px;
+}
+
+ul.thread_tools li.poll {
+	background-position: 0 -80px;
+}
+
+.showthread_spinner {
+	width: 100%;
+	margin: 0 auto;
+	display: block;
+	text-align: center;
+	padding: 20px;
+}
+
+
+		]]>
+		</stylesheet>
+		<stylesheet name="star_ratings.css" attachedto="forumdisplay.php|showthread.php" version="1812"><![CDATA[.star_rating,
+.star_rating li a:hover,
+.star_rating .current_rating {
+	background: url(images/star_rating.png) left -1000px repeat-x;
+	vertical-align: middle;
+}
+
+.star_rating {
+	position: relative;
+	width:80px;
+	height:16px;
+	overflow: hidden;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	background-position: left top;
+}
+
+td .star_rating {
+	margin: auto;
+}
+
+.star_rating li {
+	display: inline;
+}
+
+.star_rating li a,
+.star_rating .current_rating {
+	position: absolute;
+	text-indent: -1000px;
+	height: 16px;
+	line-height: 16px;
+	outline: none;
+	overflow: hidden;
+	border: none;
+	top:0;
+	left:0;
+}
+
+.star_rating_notrated li a:hover {
+	background-position: left bottom;
+}
+
+.star_rating li a.one_star {
+	width:20%;
+	z-index:6;
+}
+
+.star_rating li a.two_stars {
+	width:40%;
+	z-index:5;
+}
+
+.star_rating li a.three_stars {
+	width:60%;
+	z-index:4;
+}
+
+.star_rating li a.four_stars {
+	width:80%;
+	z-index:3;
+}
+
+.star_rating li a.five_stars {
+	width:100%;
+	z-index:2;
+}
+
+.star_rating .current_rating {
+	z-index:1;
+	background-position: left center;
+}
+
+.star_rating_success,
+.success_message {
+	color: #00b200;
+	font-weight: bold;
+	font-size: 10px;
+	margin-bottom: 10px;
+}
+
+.inline_rating {
+	background: url(images/star_rating.png) left -1000px repeat-x;
+	float: left;
+	vertical-align: middle;
+	padding-right: 5px;
+}
+		]]>
+		</stylesheet>
+		<stylesheet name="modcp.css" attachedto="modcp.php" version="1812"><![CDATA[.modcp_nav_item {
+	display: block;
+	padding: 1px 0 1px 5px;
+}
+
+.modcp_nav_home {
+	background-position: 0 0;
+}
+
+.modcp_nav_announcements {
+	background-position: 0 -20px;
+}
+
+.modcp_nav_reports {
+	background-position: 0 -40px;
+}
+
+.modcp_nav_modqueue {
+	background-position: 0 -60px;
+}
+
+.modcp_nav_modlogs {
+	background-position: 0 -80px;
+}
+
+.modcp_nav_editprofile {
+	background-position: 0 -100px;
+}
+
+.modcp_nav_banning {
+	background-position: 0 -120px;
+}
+
+.modcp_nav_warninglogs {
+	background-position: 0 -140px;
+}
+
+.modcp_nav_ipsearch {
+	background-position: 0 -160px;
+}
+
+.modqueue_message {
+	overflow: auto;
+	max-height: 250px;
+}
+
+.modqueue_controls {
+	width: 270px;
+	float: right;
+	text-align: center;
+	border: 1px solid #ccc;
+	background: #fff;
+	padding: 6px;
+	font-weight: bold;
+}
+
+.modqueue_controls label {
+	margin-right: 8px;
+}
+
+.label_radio_ignore,
+.label_radio_delete,
+.label_radio_approve {
+	font-weight: bold;
+}
+
+.modqueue_meta {
+	color: #444;
+	font-size: 95%;
+	margin-bottom: 8px;
+}
+
+.modqueue_mass {
+	list-style: none;
+	margin: 0;
+	width: 150px;
+	padding: 0;
+}
+
+.modqueue_mass li {
+	margin-bottom: 4px;
+	padding: 0;
+}
+
+.modqueue_mass li a {
+	display: block;
+	padding: 4px;
+	border: 1px solid transparent;
+}
+
+.modqueue_mass li a:hover {
+	background: #efefef;
+	border: 1px solid #ccc;
+	text-decoration: none;
+}
+		]]>
+		</stylesheet>
+		<stylesheet name="usercp.css" attachedto="usercp.php|usercp2.php|private.php" version="1812"><![CDATA[.usercp_nav_item {
+	display: block;
+	padding: 1px 0 1px 5px;
+}
+
+.usercp_nav_composepm {
+	background-position: 0 0;
+}
+
+.usercp_nav_pmfolder {
+	background-position: 0 -20px;
+}
+
+.usercp_nav_sub_pmfolder {
+	padding-left: 40px;
+	background-position: 0 -40px;
+}
+
+.usercp_nav_trash_pmfolder {
+	padding-left: 40px;
+	background-position: 0 -60px;
+}
+
+.usercp_nav_pmtracking {
+	background-position: 0 -80px;
+}
+
+.usercp_nav_pmfolders {
+	background-position: 0 -100px;
+}
+
+.usercp_nav_profile {
+	background-position: 0 -120px;
+}
+
+.usercp_nav_email {
+	padding-left: 40px;
+	background-position: 0 -140px;
+}
+
+.usercp_nav_password {
+	padding-left: 40px;
+	background-position: 0 -160px;
+}
+
+.usercp_nav_username {
+	padding-left: 40px;
+	background-position: 0 -180px;
+}
+
+.usercp_nav_editsig {
+	padding-left: 40px;
+	background-position: 0 -200px;
+}
+
+.usercp_nav_avatar {
+	padding-left: 40px;
+	background-position: 0 -220px;
+}
+
+.usercp_nav_options {
+	background-position: 0 -240px;
+}
+
+.usercp_nav_usergroups {
+	background-position: 0 -260px;
+}
+
+.usercp_nav_editlists {
+	background-position: 0 -280px;
+}
+
+.usercp_nav_attachments {
+	background-position: 0 -300px;
+}
+
+.usercp_nav_drafts {
+	background-position: 0 -320px;
+}
+
+.usercp_nav_subscriptions {
+	background-position: 0 -340px;
+}
+
+.usercp_nav_fsubscriptions {
+	background-position: 0 -360px;
+}
+
+.usercp_nav_viewprofile {
+	background-position: 0 -380px;
+}
+
+.usercp_nav_home {
+	background-position: 0 -400px;
+}
+
+.usercp_notepad {
+	width: 99%;
+}
+
+.usercp_container {
+	margin: 5px;
+	padding: 8px;
+	border:1px solid #CCCCCC;
+}
+
+.pmspace {
+	float: right;
+	margin: -3px 5px;
+}
+
+.pmspace_container {
+	background: #fff;
+	border: 1px solid #ccc;
+	width: 100px;
+	display: inline-block;
+}
+
+.pmspace_used {
+	display: inline-block;
+	color: #fff;
+	margin: -1px;
+}
+
+.pmspace_used.low {
+	border: 1px solid #0c5a01;
+	background: #167203;
+}
+
+.pmspace_used.medium {
+	background: #ff862b;
+	border: 1px solid #d7611e;
+}
+
+.pmspace_used.high {
+	background: #e73c3c;
+	border: 1px solid #c00;
+}
+
+.pmspace_unused {
+	display: inline-block;
+}
+
+.pmspace_text {
+	padding: 1px 5px;
+	display: inline-block;
+}
+
+.new_pm {
+	font-weight: bold;
+}
+		]]>
+		</stylesheet>
+		<stylesheet name="thread_status.css" attachedto="forumdisplay.php|usercp.php|search.php" version="1812"><![CDATA[.thread_status {
+	display: inline-block;
+  	width: 16px;
+	height: 16px;
+	background-repeat: no-repeat;
+}
+
+.thread_status.dot_folder {
+    position:relative;
+}
+
+.thread_status.dot_folder:before {
+	color: #22242d;
+	position: absolute;
+	background-position: 0 0;
+	content: "\f114";
+	text-shadow: #fff 0px 1px 1px;
+	font-family: FontAwesome;
+	font-size: 16px;
+}
+
+.thread_status.dot_hotfolder {
+    position:relative;
+}
+
+.thread_status.dot_hotfolder:before {
+	color: #22242d;
+	position: absolute;
+	background-position: 0 -20px;
+	content: "\f07b";
+	text-shadow: #fff 0px 1px 1px;
+	font-family: FontAwesome;
+	font-size: 16px;
+}
+
+.thread_status.dot_hotlockfolder {
+    position:relative;
+}
+
+.thread_status.dot_hotlockfolder:before {
+	color: #22242d;
+	position: absolute;
+	background-position: 0 -40px;
+	content: "\f023";
+	text-shadow: #fff 0px 1px 1px;
+	font-family: FontAwesome;
+	font-size: 16px;
+}
+
+.thread_status.dot_lockfolder {
+    position:relative;
+}
+
+.thread_status.dot_lockfolder:before {
+	color: #22242d;
+	position: absolute;
+	background-position: 0 -60px;
+	content: "\f023";
+	text-shadow: #fff 0px 1px 1px;
+	font-family: FontAwesome;
+	font-size: 16px;
+}
+
+.thread_status.dot_newfolder {
+    position:relative;
+}
+
+.thread_status.dot_newfolder:before {
+	color: #22242d;
+	position: absolute;
+	background-position: 0 -80px;
+	content: "\f14a";
+	text-shadow: #fff 0px 1px 1px;
+	font-family: FontAwesome;
+	font-size: 16px;
+}
+
+.thread_status.dot_newhotfolder {
+    position:relative;
+}
+
+.thread_status.dot_newhotfolder:before {
+	color: #22242d;
+	position: absolute;
+	background-position: 0 -100px;
+	content: "\f08a";
+	text-shadow: #fff 0px 1px 1px;
+	font-family: FontAwesome;
+	font-size: 16px;
+}
+
+.thread_status.dot_newhotlockfolder {
+    position:relative;
+}
+
+.thread_status.dot_newhotlockfolder:before {
+	color: #22242d;
+	position: absolute;
+	background-position: 0 -120px;
+	content: "\f08a";
+	text-shadow: #fff 0px 1px 1px;
+	font-family: FontAwesome;
+	font-size: 16px;
+}
+
+.thread_status.dot_newlockfolder {
+    position:relative;
+}
+
+.thread_status.dot_newlockfolder:before {
+	color: #22242d;
+	position: absolute;
+	background-position: 0 -140px;
+	content: "\f023";
+	text-shadow: #fff 0px 1px 1px;
+	font-family: FontAwesome;
+	font-size: 16px;
+}
+
+.thread_status.folder {
+    position:relative;
+}
+
+.thread_status.folder:before {
+	color: #22242d;
+	position: absolute;
+	background-position: 0 -160px;
+	content: "\f115";
+	text-shadow: #fff 0px 1px 1px;
+	font-family: FontAwesome;
+	font-size: 16px;
+}
+
+.thread_status.hotfolder {
+    position:relative;
+}
+
+.thread_status.hotfolder:before {
+	color: #22242d;
+	position: absolute;
+	background-position: 0 -180px;
+	content: "\f08a";
+	text-shadow: #fff 0px 1px 1px;
+	font-family: FontAwesome;
+	font-size: 16px;
+}
+
+.thread_status.hotlockfolder {
+    position:relative;
+}
+
+.thread_status.hotlockfolder:before {
+	color: #22242d;
+	position: absolute;
+	background-position: 0 -200px;
+	content: "\f004";
+	text-shadow: #fff 0px 1px 1px;
+	font-family: FontAwesome;
+	font-size: 16px;
+}
+
+.thread_status.lockfolder {
+    position:relative;
+}
+
+.thread_status.lockfolder:before {
+	color: #22242d;
+	position: absolute;
+	background-position: 0 -220px;
+	content: "\f023";
+	text-shadow: #fff 0px 1px 1px;
+	font-family: FontAwesome;
+	font-size: 16px;
+}
+
+.thread_status.movefolder {
+    position:relative;
+}
+
+.thread_status.movefolder:before {
+	color: #22242d;
+	position: absolute;
+	background-position: 0 -240px;
+	content: "\f079";
+	text-shadow: #fff 0px 1px 1px;
+	font-family: FontAwesome;
+	font-size: 16px;
+}
+
+.thread_status.newfolder {
+    position:relative;
+}
+
+.thread_status.newfolder:before {
+	color: #22242d;
+	position: absolute;
+	background-position: 0 -260px;
+	content: "\f07c";
+	text-shadow: #fff 0px 1px 1px;
+	font-family: FontAwesome;
+	font-size: 16px;
+}
+
+.thread_status.newhotfolder {
+    position:relative;
+}
+
+.thread_status.newhotfolder:before {
+	color: #22242d;
+	position: absolute;
+	background-position: 0 -280px;
+	content: "\f004";
+	text-shadow: #fff 0px 1px 1px;
+	font-family: FontAwesome;
+	font-size: 16px;
+}
+
+.thread_status.newhotlockfolder {
+    position:relative;
+}
+
+.thread_status.newhotlockfolder:before {
+	color: #22242d;
+	position: absolute;
+	background-position: 0 -300px;
+	content: "\f023";
+	text-shadow: #fff 0px 1px 1px;
+	font-family: FontAwesome;
+	font-size: 16px;
+}
+
+.thread_status.newlockfolder {
+    position:relative;
+}
+
+.thread_status.newlockfolder:before {
+	color: #22242d;
+	position: absolute;
+	background-position: 0 -320px;
+	content: "\f023";
+	text-shadow: #fff 0px 1px 1px;
+	font-family: FontAwesome;
+	font-size: 16px;
+}
+
+		]]>
+		</stylesheet>
+		<stylesheet name="extra.css" version="1812"><![CDATA[.textlogo {
+    color: #fff !important;
+    text-shadow: none !important;
+    -webkit-font-smoothing: antialiased;
+    font-family:-apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-size: 16px;
+}
+
+.tborder2 {
+    background: #fff;
+    width: 100%;
+    margin: auto auto;
+    border: 1px solid #e1e4e8;
+    padding: 0px;
+	border-bottom: none;
+}
+
+.theadm {
+    color: #24292e;
+    background-color: #f6f8fa;
+	padding: 8px;
+	border-bottom: 1px solid #e1e4e8;
+}
+
+.theadm a:link {
+    color: #24292e;
+	text-decoration: none;
+}
+
+.theadm a:visited {
+    color: #24292e;
+	text-decoration: none;
+}
+
+.theadm a:hover,
+.theadm a:active {
+    color: #24292e;
+	text-decoration: none;
+}
+
+.trows {
+	background: #fff;
+	padding: 8px;
+	border-bottom: 1px solid #e1e4e8;
+}
+
+.trowl {
+	background: #fff;
+	padding: 1px;
+}
+
+a.env:link,
+a.env:visited,
+a.env:hover,
+a.env:active {
+	color: #fff;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+	display: inline-block;
+	padding: 6px 8px;
+	margin: 2px 2px 6px 2px;
+	text-shadow: 0px 1px 1px #555151;
+	background-color: #666262;
+	border: 1px solid rgba(0,0,0,0.1);
+	background-image: linear-gradient(to bottom, rgba(255,255,255,0.08) 0%,rgba(255,255,255,0) 100%);
+	box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
+}
+
+a.goo:link,
+a.goo:visited,
+a.goo:hover,
+a.goo:active {
+	color: #fff;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+	display: inline-block;
+	padding: 6px 8px;
+	margin: 2px 2px 6px 2px;
+	text-shadow: 0px 1px 1px #a03326;
+	background-color: #bc3b2c;
+	border: 1px solid rgba(0,0,0,0.1);
+	background-image: linear-gradient(to bottom, rgba(255,255,255,0.08) 0%,rgba(255,255,255,0) 100%);
+	box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
+}
+
+a.insta:link,
+a.insta:visited,
+a.insta:hover,
+a.insta:active {
+	color: #fff;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+	display: inline-block;
+	padding: 6px 8px;
+	margin: 2px 2px 6px 2px;
+	text-shadow: 0px 1px 1px #21436d;
+	background-color: #264e80;
+	border: 1px solid rgba(0,0,0,0.1);
+	background-image: linear-gradient(to bottom, rgba(255,255,255,0.08) 0%,rgba(255,255,255,0) 100%);
+	box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
+}
+
+a.rss:link,
+a.rss:visited,
+a.rss:hover,
+a.rss:active {
+	color: #fff;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+	display: inline-block;
+	padding: 6px 8px;
+	margin: 2px 2px 6px 2px;
+	text-shadow: 0px 1px 1px #ff6600;
+	background-color: #ff6600;
+	border: 1px solid rgba(0,0,0,0.1);
+	background-image: linear-gradient(to bottom, rgba(255,255,255,0.08) 0%,rgba(255,255,255,0) 100%);
+	box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
+}
+
+a.yt:link,
+a.yt:visited,
+a.yt:hover,
+a.yt:active {
+	color: #fff;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+	display: inline-block;
+	padding: 6px 8px;
+	margin: 2px 2px 6px 2px;
+	text-shadow: 0px 1px 1px #e52c27;
+	background-color: #e52c27;
+	border: 1px solid rgba(0,0,0,0.1);
+	background-image: linear-gradient(to bottom, rgba(255,255,255,0.08) 0%,rgba(255,255,255,0) 100%);
+	box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
+}
+
+a.tw:link,
+a.tw:visited,
+a.tw:hover,
+a.tw:active {
+	color: #fff;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+	display: inline-block;
+	padding: 6px 8px;
+	margin: 2px 2px 6px 2px;
+	text-shadow: 0px 1px 1px #288bb6;
+	background-color: #00ACED;
+	border: 1px solid rgba(0,0,0,0.1);
+	background-image: linear-gradient(to bottom, rgba(255,255,255,0.08) 0%,rgba(255,255,255,0) 100%);
+	box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
+}
+
+a.fb:link,
+a.fb:visited,
+a.fb:hover,
+a.fb:active {
+	color: #fff;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+	display: inline-block;
+	padding: 6px 8px;
+	margin: 2px 2px 6px 2px;
+	text-shadow: 0px 1px 1px #3B5998;
+	background-color: #3B5998;
+	border: 1px solid rgba(0,0,0,0.1);
+	background-image: linear-gradient(to bottom, rgba(255,255,255,0.08) 0%,rgba(255,255,255,0) 100%);
+	box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
+}
+
+.pagination2 a:link, .pagination2 a:visited {
+	background: #929292;
+	color: #fff;
+	font: 9px Verdana,Arial,Tahoma,Calibri,Geneva,sans-serif;
+	cursor: pointer;
+	padding: 2px 4px;
+	-moz-border-radius: 2px;
+	-webkit-border-radius: 2px;
+	border-radius: 2px;
+	text-shadow: 1px 1px 1px  #929292;
+	border: 1px solid #929292;
+	opacity: .6;	
+	font-style: normal;
+}
+
+.pagination2 a:hover {
+	background: #777777;
+	color: #fff;
+	font: 9px Verdana,Arial,Tahoma,Calibri,Geneva,sans-serif;
+	cursor: pointer;
+	padding: 2px 4px;
+	-moz-border-radius: 2px;
+	-webkit-border-radius: 2px;
+	border-radius: 2px;
+	text-shadow: 1px 1px 1px  #777777;
+	border: 1px solid #777777;
+	opacity: .9;	
+	font-style: normal;
+}
+
+.thead_collapsed{
+opacity:0.4;
+}
+
+.thead{
+-webkit-transition:all 250ms ease-in-out;-moz-transition:all 250ms ease-in-out;-o-transition:all 250ms ease-in-out;transition:all 250ms ease-in-out;
+}
+
+:focus{
+outline:none;
+}
+
+legend{
+	color:#fff;
+	-moz-border-radius:2px;
+	-webkit-border-radius:2px;
+	border-radius:2px;
+	padding:0.2em 0.5em;
+	text-align:left;
+	-webkit-transition:all 0.5s ease;
+    background-color: #006b75;
+    border: 1px solid rgba(0,0,0,0.1);
+    background-image: linear-gradient(to bottom, rgba(255,255,255,0.08) 0%,rgba(255,255,255,0) 100%);
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
+	font-size:9px;
+}
+
+fieldset{
+    background:rgba(0,0,0,0.5);
+	color:#fff;
+	-webkit-border-radius:3px;
+	-moz-border-radius:3px;
+	border-radius:3px;
+	text-align:left;
+	border: 1px solid #e1e4e8;
+	padding: 5px;
+}
+
+
+		]]>
+		</stylesheet>
+		<stylesheet name="css3.css" version="1812"><![CDATA[tr td.trow1:first-child,
+tr td.trow2:first-child,
+tr td.trow_shaded:first-child {
+	border-left: 0;
+}
+
+tr td.trow1:last-child,
+tr td.trow2:last-child,
+tr td.trow_shaded:last-child {
+	border-right: 0;
+}
+
+.tborder {
+	-moz-border-radius: 2px;
+	-webkit-border-radius: 2px;
+	border-radius: 2px;
+}
+
+.tborder tbody tr:last-child > td {
+	border-bottom: 0;
+}
+
+.tborder tbody tr:last-child > td:first-child {
+	-moz-border-radius-bottomleft: 2px;
+	-webkit-border-bottom-left-radius: 2px;
+	border-bottom-left-radius: 2px;
+}
+
+.tborder tbody tr:last-child > td:last-child {
+	-moz-border-radius-bottomright: 2px;
+	-webkit-border-bottom-right-radius: 2px;
+	border-bottom-right-radius: 2px;
+}
+
+.thead {
+	-moz-border-radius-topleft: 2px;
+	-moz-border-radius-topright: 2px;
+	-webkit-border-top-left-radius: 2px;
+	-webkit-border-top-right-radius: 2px;
+	border-top-left-radius: 2px;
+	border-top-right-radius: 2px;
+}
+
+.thead_collapsed {
+	-moz-border-radius-bottomleft: 2px;
+	-moz-border-radius-bottomright: 2px;
+	-webkit-border-bottom-left-radius: 2px;
+	-webkit-border-bottom-right-radius: 2px;
+	border-bottom-left-radius: 2px;
+	border-bottom-right-radius: 2px;
+}
+
+.thead_left {
+	-moz-border-radius-topright: 0;
+	-webkit-border-top-right-radius: 0;
+	border-top-right-radius: 0;
+}
+
+.thead_right {
+	-moz-border-radius-topleft: 0;
+	-webkit-border-top-left-radius: 0;
+	border-top-left-radius: 0;
+}
+
+.tcat_menu {
+	-moz-border-radius: 0 !important;
+	-webkit-border-radius: 0 !important;
+	border-radius: 0 !important;
+}
+
+.tborder tbody:nth-last-child(2) .tcat_collapse_collapsed {
+	-moz-border-radius-bottomleft: 2px !important;
+	-moz-border-radius-bottomright: 2px !important;
+	-webkit-border-bottom-left-radius: 2px !important;
+	-webkit-border-bottom-right-radius: 2px !important;
+	border-bottom-left-radius: 2px !important;
+	border-bottom-right-radius: 2px !important;
+}
+
+button,
+input.button,
+input.textbox,
+input.invalid_field,
+input.valid_field,
+select,
+textarea,
+.editor_control_bar,
+blockquote,
+.codeblock,
+fieldset,
+.pm_alert,
+.red_alert,
+.popup_menu,
+.postbit_buttons > a,
+a.button {
+	-moz-border-radius: 2px;
+	-webkit-border-radius: 2px;
+	border-radius: 2px;
+}
+
+.post.classic .post_author {
+	-moz-border-radius: 0 2px 2px 0;
+	-webkit-border-radius: 0 2px 2px 0;
+	border-radius: 0 2px 2px 0;
+}
+
+.popup_menu .popup_item_container:first-child .popup_item {
+	-moz-border-radius-topleft: 2px;
+	-moz-border-radius-topright: 2px;
+	-webkit-border-top-left-radius: 2px;
+	-webkit-border-top-right-radius: 2px;
+	border-top-left-radius: 2px;
+	border-top-right-radius: 2px;
+}
+
+.popup_menu .popup_item_container:last-child .popup_item {
+	-moz-border-radius-bottomleft: 2px;
+	-moz-border-radius-bottomright: 2px;
+	-webkit-border-bottom-left-radius: 2px;
+	-webkit-border-bottom-right-radius: 2px;
+	border-bottom-left-radius: 2px;
+	border-bottom-right-radius: 2px;
+}
+
+.pagination a {
+	-moz-border-radius: 2px;
+	-webkit-border-radius: 2px;
+	border-radius: 2px;
+}
+
+.pollbar {
+	-moz-border-radius: 2px;
+	-webkit-border-radius: 2px;
+	border-radius: 2px;
+}
+
+div.error {
+	-moz-border-radius: 2px;
+    	-webkit-border-radius: 2px;
+   	 border-radius: 2px;
+}
+		]]>
+		</stylesheet>
+		<stylesheet name="global.css" version="1812"><![CDATA[
+body {
+	background: #fff;
+	color: #333;
+	text-align: center;
+	line-height: 1.4;
+	margin: 0;
+	font-family:-apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+	font-size: 13px;
+	overflow-y: scroll;
+}
+
+a:link {
+	color: #24292e;
+	text-decoration: none;
+}
+
+a:visited {
+	color: #24292e;
+	text-decoration: none;
+}
+
+a:hover,
+a:active {
+	color: #0366d6;
+	text-decoration: none;
+}
+
+#container {
+	color: #333;
+	text-align: left;
+	line-height: 1.4;
+	margin: 0;
+	font-family:-apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+	font-size: 13px;
+	min-width: 990px;
+}
+
+.wrapper {
+	width: 85%;
+	min-width: 970px;
+	max-width: 1500px;
+	margin: auto auto;
+}
+
+#logo {
+	padding: 0px 0;
+}
+
+#content {
+	background: #fff;
+	width: auto !important;
+	padding: 20px 0px;
+	overflow: hidden;
+}
+
+#header {
+	padding: 10px;	
+	color: rgba(255,255,255,0.75);
+    background-color: #24292e;
+}
+
+#header ul.menu {
+	color: #ccc;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+#header ul.menu li {
+	color: #ccc;
+	margin: 0 7px;
+	display: inline;
+}
+
+#header ul.menu li a {
+	color: #fff;
+	display: inline-block;
+	line-height: 16px;
+	
+	text-decoration: none;
+}
+
+#logo ul.top_links {
+	text-align: right;
+	margin: -10px 5px 0 0;
+	
+	text-decoration: none;
+	font-weight: bold;
+}
+
+#logo ul.top_links a.search {
+	background-position: 0 0;
+}
+
+#logo ul.top_links a.memberlist {
+	background-position: 0 -20px;
+}
+
+#logo ul.top_links a.calendar {
+	background-position: 0 -40px;
+}
+
+#logo ul.top_links a.help {
+	background-position: 0 -60px;
+}
+
+#logo ul.top_links a.portal {
+	background-position: 0 -180px;
+}
+
+#panel .upper a.logout {
+	font-weight: bold;
+	padding-right: 10px;
+	margin-left: 5px;
+}
+
+#panel .upper a.login,
+#panel .upper a.lost_password {
+	font-weight: bold;
+}
+
+#panel .upper a.register {
+	font-weight: bold;
+}
+
+#panel .lower ul.panel_links {
+	float: left;
+}
+
+#panel .lower ul.panel_links a.usercp {
+	background-position: 0 -120px;
+}
+
+#panel .lower ul.panel_links a.modcp {
+	background-position: 0 -140px;
+}
+
+#panel .lower ul.panel_links a.admincp {
+	background-position: 0 -160px;
+}
+
+#panel .lower ul.user_links {
+	float: right;
+}
+
+#panel .lower ul.user_links li a {
+	padding: 0;
+	background-image: none;
+}
+
+#panel .upper {
+	color: #fff;
+	padding: 7px;
+	clear: both;
+}
+
+#panel .upper a:link,
+#panel .upper a:visited,
+#panel .upper a:hover,
+#panel .upper a:active {
+	color: #fff;
+}
+
+#panel .lower {
+	color: #ccc;
+	padding: 5px;
+}
+
+#panel .lower a:link,
+#panel .lower a:visited,
+#panel .lower a:hover,
+#panel .lower a:active {
+	color: #fff;
+}
+
+#search {
+	border: 0;
+	padding: 0;
+	margin: 0;
+	float: right;
+	vertical-align: middle;
+}
+
+#search input.button,
+#search input.textbox {
+	border-color: #000;
+}
+
+#search input.button {
+	background: #0066a2 url(images/thead.png) top left repeat-x;
+	color: #fff;
+}
+
+#search input {
+	margin: -3px 0;
+}
+
+#quick_login .remember_me input {
+	vertical-align: middle;
+	margin: -3px 0 0 5px;
+}
+
+#footer {
+	clear: both;
+}
+
+#footer ul.menu {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+#footer ul.menu li {
+	margin: 0 5px;
+	display: inline;
+}
+
+#footer .upper {
+	border-top: 1px solid #e1e4e8;
+	padding: 6px;
+	overflow: hidden;
+	background-color: #fafbfc;
+	font-size: 12px;
+}
+
+#footer a:link,
+#footer a:visited,
+#footer a:hover,
+#footer a:active {
+	color: #777;
+}
+
+#footer .upper .language {
+	float: right;
+	margin: -1px;
+	margin-left: 15px;
+}
+
+#footer .upper .language select {
+	border-color: #ccc;
+}
+
+#footer .upper .theme {
+	float: right;
+	margin: -1px;
+	margin-left: 15px;
+}
+
+#footer .upper .theme select {
+	border-color: #ccc;
+}
+
+#footer .upper ul.bottom_links {
+	float: left;
+	margin: 4px 0 0 0;
+}
+
+#footer .lower {
+	color: #666;
+	padding: 6px 6px 12px 6px;
+	overflow: hidden;
+	background-color: #fafbfc;
+	font-size: 11px;
+}
+
+#footer .lower a:link,
+#footer .lower a:visited {
+	color: #444;
+	font-weight: bold;
+}
+
+#footer .lower a:hover,
+#footer .lower a:active {
+	color: #333;
+	text-decoration: underline;
+	font-weight: bold;
+}
+
+#footer .lower #current_time {
+	float: right;
+	color: #888;
+}
+
+#debug {
+	float: center;
+	text-align: center;
+	margin-top: 10px;
+	
+	font-size: 12px;
+}
+
+.scaleimages img {
+	max-width: 100%;
+}
+
+.forum_status {
+	width: 30px;
+	height: 25px;
+	display: inline-block;
+	font-size: 22px;
+}
+
+.forum_status i {
+    display: inline-block;
+    padding: 5px 5px
+}
+
+.forum_on {
+    color: #24292e;
+}
+
+.forum_off,
+.forum_offlock,
+.forum_offlink {
+    color: #28a745;
+}
+
+.forum_off i {
+    opacity: .4;
+}
+
+.forum_offlock i:before {
+    color: #24292e;
+    content: "\f05e";
+}
+
+.forum_offlink i:before {
+    content: "\f079"
+}
+
+.subforumicon {
+    height: 10px;
+    width: 10px;
+    display: inline-block;
+    margin: 0 5px
+}
+
+.subforum_minion {
+    color: #ccc
+}
+
+.subforum_minioff,
+.subforum_miniofflock,
+.subforum_miniofflink {
+    color: #ccc
+}
+
+.subforum_minioff {
+    opacity: .4
+}
+
+.subforum_miniofflock i:before {
+    content: "\f023"
+}
+
+.subforum_miniofflink i:before {
+    content: "\f0c1"
+}
+
+table {
+	color: #333;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+	font-size: 13px;
+}
+
+.tborder {
+	background: #fff;
+	width: 100%;
+	margin: auto auto;
+	border: 1px solid #e1e4e8;
+	padding: 1px;
+}
+
+.tfixed {
+	table-layout: fixed;
+	word-wrap: break-word;
+}
+
+.thead {
+	color: #24292e;
+	background-color: #f6f8fa;
+	padding: 10px;
+	border-bottom: 1px solid #e1e4e8;
+}
+
+.thead a:link {
+	color: #24292e;
+	text-decoration: none;
+}
+
+.thead a:visited {
+	color: #24292e;
+	text-decoration: none;
+}
+
+.thead a:hover,
+.thead a:active {
+	color: #24292e;
+	text-decoration: none;
+}
+
+.tcat {
+	color: #24292e;
+	border-bottom: 1px solid #e1e4e8;
+	padding: 6px;
+	
+	font-size: 12px;
+}
+
+.tcat a:link {
+	color: #24292e;
+}
+
+.tcat a:visited {
+	color: #24292e;
+}
+
+.tcat a:hover,
+.tcat a:active {
+	color: #24292e;
+}
+
+.trow1 {
+	background: #fff;
+	border-bottom: 1px solid #e1e4e8;
+	padding: 8px;
+    font-family:-apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+.trow2 {
+	background: #fff;
+	border-bottom: 1px solid #e1e4e8;
+	padding: 8px;
+    font-family:-apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+.trow_shaded {
+	background: #fff;
+	border-bottom: 1px solid #e1e4e8;
+	padding: 8px;
+}
+
+.no_bottom_border {
+	border-bottom: 0;
+}
+
+.post.unapproved_post {
+	background: #ffdde0;
+}
+
+.post.unapproved_post .post_author {
+	border-bottom-color: #ffb8be;
+}
+
+.post.classic.unapproved_post .post_author {
+	border-color: #ffb8be;
+}
+
+.post.unapproved_post .post_controls {
+	border-top-color: #ffb8be;
+}
+
+.trow_deleted,
+.post.deleted_post {
+	background: #fff;
+	border-bottom: 1px solid #e1e4e8;
+	padding: 8px;
+}
+
+.trow_selected,
+tr.trow_selected td {
+	padding: 8px;
+	background-color: #fcf8e3;
+}
+
+.trow_selected a:link,
+.trow_selected a:visited,
+.trow_selected a:hover,
+.trow_selected a:active {
+	color: #333;
+}
+
+.trow_sep {
+	color: #24292e;
+	background-color: #f6f8fa;
+	padding: 10px;
+	border-bottom: 1px solid #e1e4e8;
+	
+	font-weight: bold;
+}
+
+.tfoot {
+	background: #fff;
+	color: #666;
+	border-top: 1px solid #fff;
+	padding: 6px;
+}
+
+.tfoot a:link {
+	color: #444;
+	text-decoration: none;
+}
+
+.tfoot a:visited {
+	color: #444;
+	text-decoration: none;
+}
+
+.tfoot a:hover,
+.tfoot a:active {
+	color: #444;
+	text-decoration: underline;
+}
+
+.thead input.textbox,
+.thead select {
+	border: 1px solid #263c30;
+}
+
+.bottommenu {
+	background: #efefef;
+	color: #333;
+	border: 1px solid #4874a3;
+	padding: 10px;
+}
+
+.navigation {
+	color: #333;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+	font-size: 12px;
+}
+
+.navigation a:link {
+	text-decoration: none;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+.navigation a:visited {
+	text-decoration: none;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+.navigation a:hover,
+.navigation a:active {
+	text-decoration: none;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+.navigation .active {
+	color: #333;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+	font-size: 16px;
+	font-weight: bold;
+}
+
+.smalltext {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+	font-size: 12px;
+}
+
+.largetext {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+	font-size: 18px;
+	font-weight: bold;
+}
+
+fieldset {
+	padding: 12px;
+	margin: 0;
+	border: 1px solid #e1e4e8;
+	color: #3c763d;
+	background-color: #dff0d8;
+	border: 1px solid #d6e9c6;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+fieldset.trow1,
+fieldset.trow2 {
+	border: 1px solid #e1e4e8;
+	
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+fieldset.align_right {
+	text-align: right;
+}
+
+input.textbox {
+	outline: 0;
+	padding: 3px 4px;
+	color: #24292e;
+	background-color: #fff;
+	border: 1px solid #d1d5da;
+	box-shadow: inset 0 1px 2px rgba(27,31,35,0.075);
+	font-size: 13px;
+}
+
+input.textbox.portal_search {
+    width: 68%;
+}
+
+textarea {
+	line-height: 1.4;
+	outline: 0;
+	padding: 3px 4px;
+	color: #24292e;
+	background-color: #fff;
+	border: 1px solid #d1d5da;
+	box-shadow: inset 0 1px 2px rgba(27,31,35,0.075);
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+	font-size: 13px;
+}
+
+select {
+	outline: 0;
+	padding: 3px 4px;
+	color: #24292e;
+	background-color: #fff;
+	border: 1px solid #d1d5da;
+	box-shadow: inset 0 1px 2px rgba(27,31,35,0.075);
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+	font-size: 13px;
+}
+
+button,
+input.button {
+	background: #eee url(images/buttons_bg.png) repeat-x;
+	color: #333;
+	padding: 3px 8px;
+	cursor: pointer;
+	border: 1px solid #bbb;
+	outline: 0;
+	
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+	font-size: 13px;
+}
+
+button:hover,
+input.button:hover {
+	border-color: #aaa;
+}
+
+form {
+	margin: 0;
+	padding: 0;
+}
+
+input.error, textarea.error, select.error {
+	border: 1px solid #f30;
+	color: #f30;
+}
+
+input.valid, textarea.valid, select.valid {
+	border: 1px solid #0c0;
+}
+
+label.error {
+	color: #f30;
+	margin: 5px;
+	padding: 0px;
+	display: block;
+	font-weight: bold;
+	font-size: 11px;
+}
+
+form #message {
+	width: 500px;
+}
+
+.editor {
+	background: #f1f1f1;
+	border: 1px solid #ccc;
+}
+
+.editor_control_bar {
+	background: #fff;
+	border: 1px solid #ccc;
+}
+
+.post .editor_control_bar {
+	background: #f5f5f5;
+}
+
+.popup_menu {
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid rgba(27,31,35,0.15);
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    box-shadow: 0 3px 12px rgba(27,31,35,0.15);
+	padding: 5px;
+	color: #333;
+}
+
+.popup_menu .popup_item {
+	color: #333;
+}
+
+.popup_menu .popup_item:hover {
+	color: #0366d6;
+}
+
+.trow_reputation_positive {
+	color: #3c763d;
+	background-color: #dff0d8;
+	border: 1px solid #d6e9c6;
+}
+
+.trow_reputation_negative {
+	color: #a94442;
+	background-color: #f2dede;
+	border: 1px solid #ebccd1;
+}
+
+.reputation_positive {
+	color: green;
+}
+
+.reputation_neutral {
+	color: #444;
+}
+
+.reputation_negative {
+	color: red;
+}
+
+.repbox {
+	font-size:16px;
+	font-weight: bold;
+	padding:5px 7px 5px 7px;
+}
+
+._neutral {
+	background-color:#FAFAFA;
+	color: #999999;
+	border:1px solid #CCCCCC;
+}
+
+._minus {
+	background-color: #FDD2D1;
+	color: #CB0200;
+	border:1px solid #980201;
+}
+
+._plus {
+	background-color:#E8FCDC;
+	color: #008800;
+	border:1px solid #008800;
+}
+
+img {
+	border: none;
+}
+
+img.attachment {
+	border: 1px solid #E9E5D7;
+	padding: 2px;
+}
+
+hr {
+	background-color: #000000;
+	color: #000000;
+	height: 1px;
+	border: 0px;
+}
+
+.clear {
+	clear: both;
+}
+
+.float_left {
+	float: left;
+}
+
+.float_right {
+	float: right;
+}
+
+.hidden {
+	display: none;
+	float: none;
+	width: 1%;
+}
+
+.hiddenrow {
+	display: none;
+}
+
+.selectall {
+	background: #FFFBD9;
+	border-bottom: 1px solid #F7E86A;
+	color: #333;
+	text-align: center;
+}
+
+.expcolimage {
+	float: right;
+	width: auto;
+	vertical-align: middle;
+	margin-top: 3px;
+}
+
+.tcat_menu > .expcolimage {
+	margin-top: 0;
+}
+
+blockquote {
+	margin: 0;
+	padding: 15px;
+	color: #735c0f;
+	background-color: #fffbdd;
+	border: 1px solid rgba(27,31,35,0.15);
+	border-left: 4px solid rgba(27,31,35,0.15);
+	-moz-border-radius: 2px;
+	-webkit-border-radius: 2px;
+	border-radius: 2px;
+	
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+blockquote cite {
+	display: block;
+	padding-bottom: 3px;
+	margin: 0 0 10px 0;
+	
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+	font-style: normal;
+	font-weight: bold;
+}
+
+blockquote cite span {
+	color: #666;
+	float: right;
+	
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+	font-size: 12px;
+	font-weight: normal;
+}
+
+blockquote cite span.highlight {
+	float: none;
+	padding-bottom: 0;
+	
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+	font-weight: bold;
+}
+
+.codeblock {
+	padding: 15px;
+	color: #735c0f;
+	background-color: #fffbdd;
+	border: 1px solid rgba(27,31,35,0.15);
+	border-left: 4px solid rgba(27,31,35,0.15);
+	-moz-border-radius: 2px;
+	-webkit-border-radius: 2px;
+	border-radius: 2px;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+.codeblock .title {
+	padding-bottom: 3px;
+	margin: 0 0 10px 0;
+	
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+	font-weight: bold;
+}
+
+.codeblock code {
+	overflow: auto;
+	height: auto;
+	max-height: 200px;
+	display: block;
+	
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+	font-size: 13px;
+}
+
+.smilie {
+	vertical-align: middle;
+}
+
+.smilie_pointer {
+	cursor: pointer;
+}
+
+.separator {
+	margin: 5px;
+	padding: 0;
+	height: 0px;
+	font-size: 1px;
+	list-style-type: none;
+}
+
+.popup_menu .popup_item_container {
+	margin: 1px;
+	text-align: left;
+}
+
+.popup_menu .popup_item {
+	display: block;
+	padding: 4px;
+	white-space: nowrap;
+	text-decoration: none;
+}
+
+.popup_menu a.popup_item:hover {
+	text-decoration: none;
+}
+
+.subject_new {
+	font-weight: bold;
+}
+
+.highlight {
+	background: #FFFFCC;
+	padding-top: 3px;
+	padding-bottom: 3px;
+}
+
+.pm_alert {
+	text-align: center;
+	padding: 10px 20px;
+	margin-bottom: 15px;
+	color: #31708f;
+	background-color: #d9edf7;
+	border: 1px solid #bce8f1;
+	font-size: 11px;
+}
+
+.red_alert {
+	text-align: center;
+	padding: 10px 20px;
+	margin-bottom: 15px;
+	word-wrap: break-word;
+	
+	color: #a94442;
+	background-color: #f2dede;
+	border: 1px solid #ebccd1;
+	font-size: 11px;
+}
+
+.red_alert a:link,
+.red_alert a:visited,
+.red_alert a:hover,
+.red_alert a:active {
+	color: #A5161A;
+}
+
+.high_warning {
+	color: #CC0000;
+}
+
+.moderate_warning {
+	color: #F3611B;
+}
+
+.low_warning {
+	color: #AE5700;
+}
+
+.imminent_banned {
+	color: #880000;
+}
+
+.high_banned {
+	color: #FF0000;
+}
+
+.moderate_banned {
+	color: #FF6600;
+}
+
+.low_banned {
+	color: #008000;
+}
+
+.online {
+	color: #15A018;
+}
+
+.offline {
+	color: #C7C7C7;
+}
+
+div.error {
+	padding: 5px 10px;
+	border: 2px solid #FFD324;
+	background: #FFF6BF;
+	font-size: 12px;
+}
+
+div.error p {
+	margin: 0;
+	color: #333;
+	font-weight: normal;
+}
+
+div.error p em {
+	font-style: normal;
+	font-weight: bold;
+	padding-left: 24px;
+	display: block;
+	color: #C00;
+	background: url(images/error.png) no-repeat 0;
+}
+
+div.error ul {
+	margin-left: 24px;
+}
+
+.pagination {
+	font-size: 11px;
+	padding-top: 10px;
+	margin-bottom: 5px;
+}
+
+.tfoot .pagination,
+.tcat .pagination {
+	padding-top: 0;
+}
+
+.pagination .pages {
+	font-weight: bold;
+}
+
+.pagination .pagination_current,
+.pagination a {
+	padding: 4px 6px;
+	margin-bottom: 3px;
+}
+
+.pagination a {
+	background: #f5f5f5;
+	border: 1px solid #ccc;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
+}
+
+.pagination .pagination_current {
+    color: #fff;
+    background-color: #0366d6;
+    border: 1px solid #0366d6;
+	font-weight: bold;
+	padding: 5px 6px;	
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 600;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
+}
+
+.pagination a:hover {
+	background: #0072BC;
+	color: #fff;
+	border-color: #263c30;
+	text-decoration: none;
+}
+
+.pagination .go_page img {
+	margin-bottom: -4px;
+}
+
+.drop_go_page {
+	background: #f5f5f5;
+	padding: 4px;
+}
+
+.pagination_breadcrumb {
+	background-color: #efefef;
+	border: 1px solid #fff;
+	outline: 1px solid #ccc;
+	padding: 5px;
+	margin-top: 5px;
+	font-weight: normal;
+}
+
+.pagination_breadcrumb_link {
+	vertical-align: middle;
+	cursor: pointer;
+}
+
+.thread_legend,
+.thread_legend dd {
+	margin: 0;
+	padding: 0;
+}
+
+.thread_legend dd {
+	padding-bottom: 4px;
+	margin-right: 15px;
+}
+
+.thread_legend img {
+	margin-right: 4px;
+	vertical-align: bottom;
+}
+
+.forum_legend,
+.forum_legend dt,
+.forum_legend dd {
+	margin: 0;
+	padding: 0;
+}
+
+.forum_legend dd {
+	float: left;
+	margin-right: 10px;
+	margin-top: 7px;
+}
+
+.forum_legend dt {
+	margin-right: 10px;
+	float: left;
+}
+
+.success_message {
+	color: #00b200;
+	font-weight: bold;
+	font-size: 10px;
+	margin-bottom: 10px;
+}
+
+.error_message {
+	color: #C00;
+	font-weight: bold;
+	font-size: 10px;
+	margin-bottom: 10px;
+}
+
+#posts_container {
+	padding: 0;
+}
+
+.ignored_post {
+	border-top: 3px solid #333;
+	padding: 15px;
+}
+
+.ignored_post .show_ignored_post {
+	margin-top: -15px;
+}
+
+.ignored_post .show_ignored_post a.button span {
+	background-position: 0 -400px;
+}
+
+.deleted_post_hidden {
+	border-top: 2px solid #ccc;
+	padding: 15px;
+}
+
+.deleted_post_collapsed {
+	border-top: 3px solid #333;
+	padding: 15px;
+}
+
+.deleted_post_collapsed .show_deleted_post {
+	margin-top: -15px;
+}
+
+.deleted_post_collapsed .show_deleted_post a.button span {
+	background-position: 0 -400px;
+}
+
+.post {
+	overflow: hidden;
+}
+
+.post.classic {
+	padding-top: 15px;
+	margin: 5px 5px 5px 5px;
+	border: 1px soild #e1e4e8;
+}
+
+.post .post_author {
+	border-bottom: 1px solid #ccc;
+	border-top: 2px solid #ccc;
+	background: #f5f5f5;
+	padding: 5px;
+	overflow: hidden;
+}
+
+.post.classic .post_author {
+	border: 1px solid #ddd;
+	float: left;
+	width: 15%;
+	margin: 0 1% 15px 0;
+	border-left: 0;
+	padding: 5px 1%;
+}
+
+.post .post_author .buddy_status {
+	vertical-align: middle;
+	margin-top: -4px;
+}
+
+.post .post_author div.author_avatar {
+	float: left;
+	margin-right: 3px;
+}
+
+.post.classic .post_author div.author_avatar {
+	float: none;
+	text-align: center;
+	margin-bottom: 8px;
+}
+
+.post .post_author div.author_avatar img {
+	padding: 5px;
+	border: 1px solid #ddd;
+	background: #fff;
+}
+
+.post .post_author div.author_information {
+	float: left;
+	padding: 6px 8px;
+}
+
+.post.classic .post_author div.author_information {
+	float: none;
+	padding: 0;
+	text-align: center;
+}
+
+.post .post_author div.author_statistics {
+	color: #666;
+	float: right;
+	padding: 3px 10px 3px 5px;
+	line-height: 1.3;
+	
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+	font-size: 13px;
+}
+
+.post.classic .post_author div.author_statistics {
+	border-top: 1px dotted #ccc;
+	margin: 6px 0 0 0;
+	padding: 6px 6px 3px 6px;
+	float: none;
+	
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+	font-size: 13px;
+}
+
+.post .post_head {
+	padding-bottom: 4px;
+	border-bottom: 1px dotted #ddd;
+	margin-bottom: 4px;
+	
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+	font-size: 13px;
+}
+
+.post .post_head span.post_date {
+	color: #666;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+	font-size: 13px;
+}
+
+.post .post_head span.edited_post {
+	color: #999;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+	font-size: 13px;
+}
+
+.post .post_head span.edited_post a {
+	color: #666;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+	font-size: 13px;
+}
+
+.post_body {
+	padding: 12px 0;
+	
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+	font-size: 14px;
+}
+
+.post.classic .post_content {
+	float: left;
+	width: 79%;
+	padding: 0 1% 5px 1%;
+}
+
+.post_content {
+	width: 98% !important;
+	padding: 9px 10px 5px 10px;
+	padding-right: 10px !important;
+}
+
+.post_content .signature {
+	margin-top: 5px;
+	border-top: 1px dotted #ddd;
+	padding: 10px 0 4px 0;
+}
+
+.post .post_meta {
+	color: #999;
+	margin: 4px 0;
+	
+	font-size: 13px;
+}
+
+.post .post_meta a:link,
+.post .post_meta a:visited {
+	color: #777;
+}
+
+.post .post_meta a:hover,
+.post .post_meta a:active {
+	color: #777;
+}
+
+.post_controls {
+	clear: both;
+	padding: 5px;
+	overflow: hidden;
+}
+
+.postbit_buttons > a:link,
+.postbit_buttons > a:hover,
+.postbit_buttons > a:visited,
+.postbit_buttons > a:active {
+	display: inline-block;
+	padding: 2px 5px;
+	margin: 2px;
+	border: 1px solid #e1e4e8;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+	color: #333;
+	background-color: #fff;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+	font-size: 11px;
+}
+
+.postbit_buttons > a:hover {
+	color: #000;
+}
+
+.postbit_buttons a span:before {
+   content: "";
+   display: inline-block;
+   font-family: FontAwesome;
+   font-weight: normal;
+   font-size: inherit;
+   text-rendering: auto;
+   -webkit-font-smoothing: antialiased;
+   -moz-osx-font-smoothing: grayscale;
+   margin-right: 5px;
+   font-size: 12px;
+}
+
+.postbit_buttons a.postbit_find span:before {
+content: "\f002";
+}
+
+.postbit_buttons a.postbit_reputation_add span:before {
+content: "\f067";
+}
+
+.postbit_buttons a.postbit_email span:before {
+content: "\f0e0";
+}
+
+.postbit_buttons a.postbit_website span:before {
+content: "\f0ac";
+}
+
+.postbit_buttons a.postbit_pm span:before {
+content: "\f199";
+}
+
+.postbit_buttons a.postbit_quote span:before {
+content: "\f10e";
+}
+
+.postbit_buttons a.postbit_multiquote span:before {
+content: "\f055";
+}
+
+.postbit_buttons a.postbit_multiquote_on span:before {
+content: "\f056";
+   color: #DB1304;
+}
+
+.postbit_buttons a.postbit_edit span:before {
+content: "\f044";
+}
+
+.postbit_buttons a.postbit_qdelete span:before {
+content: "\f00d";
+}
+
+.postbit_buttons a.postbit_qrestore span:before {
+content: "\f067";
+}
+
+.postbit_buttons a.postbit_report span:before {
+content: "\f0a1";
+}
+
+.postbit_buttons a.postbit_warn span:before {
+content: "\f0e3";
+}
+
+.postbit_buttons a.postbit_purgespammer span:before {
+content: "\f071";
+}
+
+.postbit_buttons a.postbit_reply_pm span:before {
+content: "\f112";
+}
+
+.postbit_buttons a.postbit_reply_all span:before {
+content: "\f122";
+}
+
+.postbit_buttons a.postbit_forward_pm span:before {
+content: "\f064";
+}
+
+.postbit_buttons a.postbit_delete_pm span:before {
+content: "\f00d";
+}
+
+a.button:link,
+a.button:hover,
+a.button:visited,
+a.button:active {
+	color: #fff;
+	display: inline-block;
+	padding: 4px 8px;
+	margin: 2px 2px 6px 2px;
+	background-color: #28a745;
+	background-image: linear-gradient(-180deg, #34d058 0%, #28a745 90%);
+	vertical-align: middle;
+	cursor: pointer;
+	background-repeat: repeat-x;
+	background-position: -1px -1px;
+	background-size: 110% 110%;
+	border: 1px solid rgba(27,31,35,0.2);
+	
+	font-size: 13px;
+}
+
+a.button.small_button {
+font-size: 13px;
+margin: 0;
+padding: 3px 6px;
+}
+
+a.button span:before {
+   content: "";
+   display: inline-block;
+   font-family: FontAwesome;
+   font-weight: normal;
+   font-size: inherit;
+   text-rendering: auto;
+   -webkit-font-smoothing: antialiased;
+   -moz-osx-font-smoothing: grayscale;
+   margin-right: 5px;
+}
+
+a.button.new_thread_button span:before {
+content: "\f086";
+}
+
+a.button.new_reply_button span:before {
+content: "\f075";
+}
+
+a.button.closed_button span:before {
+content: "\f00d";
+}
+
+a.button.rate_user_button span:before {
+content: "\f123";
+}
+
+a.button.add_buddy_button span:before {
+content: "\f007";
+}
+
+a.button.remove_buddy_button span:before {
+content: "\f00d";
+}
+
+a.button.add_ignore_button span:before {
+content: "\f1f6";
+}
+
+a.button.remove_ignore_button span:before {
+content: "\f0f3";
+}
+
+a.button.report_user_button span:before {
+content: "\f0a1";
+}
+
+.quick_jump {
+	background: url(images/jump.png) no-repeat 0;
+	width: 13px;
+	height: 13px;
+	padding-left: 13px; /* amount of padding needed for image to fully show */
+	margin-top: -3px;
+	border: none;
+}
+
+.pollbar {
+	background: url(images/pollbar.png) top left repeat-x;
+	border: 1px solid #3f3f3f;
+	height: 10px;
+}
+
+.pollbar .percent {
+	display: none;
+}
+
+.posticons_label {
+	white-space: nowrap;
+}
+
+/** jGrowl Start **/
+
+/** Special IE6 Style Positioning **/
+.ie6 {
+	position: absolute;
+}
+
+.ie6.top-right {
+	right: auto;
+	bottom: auto;
+	left: expression( ( 0 - jGrowl.offsetWidth + ( document.documentElement.clientWidth ? document.documentElement.clientWidth : document.body.clientWidth ) + ( ignoreMe2 = document.documentElement.scrollLeft ? document.documentElement.scrollLeft : document.body.scrollLeft ) ) + 'px' );
+	top: expression( ( 0 + ( ignoreMe = document.documentElement.scrollTop ? document.documentElement.scrollTop : document.body.scrollTop ) ) + 'px' );
+}
+
+.ie6.top-left {
+	left: expression( ( 0 + ( ignoreMe2 = document.documentElement.scrollLeft ? document.documentElement.scrollLeft : document.body.scrollLeft ) ) + 'px' );
+	top: expression( ( 0 + ( ignoreMe = document.documentElement.scrollTop ? document.documentElement.scrollTop : document.body.scrollTop ) ) + 'px' );
+}
+
+.ie6.bottom-right {
+	left: expression( ( 0 - jGrowl.offsetWidth + ( document.documentElement.clientWidth ? document.documentElement.clientWidth : document.body.clientWidth ) + ( ignoreMe2 = document.documentElement.scrollLeft ? document.documentElement.scrollLeft : document.body.scrollLeft ) ) + 'px' );
+	top: expression( ( 0 - jGrowl.offsetHeight + ( document.documentElement.clientHeight ? document.documentElement.clientHeight : document.body.clientHeight ) + ( ignoreMe = document.documentElement.scrollTop ? document.documentElement.scrollTop : document.body.scrollTop ) ) + 'px' );
+}
+
+.ie6.bottom-left {
+	left: expression( ( 0 + ( ignoreMe2 = document.documentElement.scrollLeft ? document.documentElement.scrollLeft : document.body.scrollLeft ) ) + 'px' );
+	top: expression( ( 0 - jGrowl.offsetHeight + ( document.documentElement.clientHeight ? document.documentElement.clientHeight : document.body.clientHeight ) + ( ignoreMe = document.documentElement.scrollTop ? document.documentElement.scrollTop : document.body.scrollTop ) ) + 'px' );
+}
+
+.ie6.center {
+	left: expression( ( 0 + ( ignoreMe2 = document.documentElement.scrollLeft ? document.documentElement.scrollLeft : document.body.scrollLeft ) ) + 'px' );
+	top: expression( ( 0 + ( ignoreMe = document.documentElement.scrollTop ? document.documentElement.scrollTop : document.body.scrollTop ) ) + 'px' );
+	width: 100%;
+}
+
+/** jGrowl Styling **/
+.jGrowl {
+	z-index: 9999;
+	color: #ffffff;
+	font-size: 12px;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	position: fixed;
+}
+
+.jGrowl.top-left {
+	left: 0px;
+	top: 0px;
+}
+
+.jGrowl.top-right {
+	right: 0px;
+	top: 0px;
+}
+
+.jGrowl.bottom-left {
+	left: 0px;
+	bottom: 0px;
+}
+
+.jGrowl.bottom-right {
+	right: 0px;
+	bottom: 0px;
+}
+
+.jGrowl.center {
+	top: 0px;
+	width: 50%;
+	left: 25%;
+}
+
+/** Cross Browser Styling **/
+
+.jGrowl.center .jGrowl-notification,
+.jGrowl.center .jGrowl-closer {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.jGrowl-notification {
+	background-color: transparent;
+	opacity: 0.9;
+	filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=(0.9*100));
+	-ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=(0.9*100));
+	zoom: 1;
+	width: 250px;
+	padding: 10px;
+	margin: 10px;
+	text-align: left;
+	display: none;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	word-break: break-all;
+}
+
+.jGrowl .jGrowl-notification {
+	min-height: 40px;
+}
+
+.jGrowl-notification .ui-state-highlight,
+.jGrowl-notification .ui-widget-content .ui-state-highlight,
+.jGrowl-notification .ui-widget-header .ui-state-highlight {
+	border: 1px solid #000;
+	background: #000;
+	color: #fff;
+}
+
+.jGrowl-notification .jGrowl-header {
+	font-weight: bold;
+	font-size: .85em;
+}
+
+.jGrowl-notification .jGrowl-close {
+	background-color: transparent;
+	color: inherit;
+	border: none;
+	z-index: 99;
+	float: right;
+	font-weight: bold;
+	font-size: 1em;
+	cursor: pointer;
+}
+
+.jGrowl-closer {
+	background-color: #000000;
+	opacity: 0.9;
+	filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=(0.9*100));
+	-ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=(0.9*100));
+	zoom: 1;
+	width: 250px;
+	padding: 10px;
+	margin: 10px;
+	text-align: left;
+	display: none;
+	border-radius: 5px;
+	word-break: break-all;
+	padding-top: 4px;
+	padding-bottom: 4px;
+	cursor: pointer;
+	font-size: .9em;
+	font-weight: bold;
+	text-align: center;
+}
+
+.jGrowl-closer .ui-state-highlight,
+.jGrowl-closer .ui-widget-content .ui-state-highlight,
+.jGrowl-closer .ui-widget-header .ui-state-highlight {
+	border: 1px solid #000;
+	background: #000;
+	color: #fff;
+}
+
+.jGrowl .jGrowl-notification.jgrowl_success {
+    background: lightgreen;
+    border: 1px solid lightgreen;
+    color: #333;
+}
+
+.jGrowl .jGrowl-notification.jgrowl_error {
+    background: red;
+    border: 1px solid red;
+    color: #333;
+}
+
+.jGrowl .jGrowl-notification.jgrowl_process, .jGrowl .jGrowl-closer {
+    background: yellow;
+    border: 1px solid yellow;
+	color: #333;
+}
+
+/** Hide jGrowl when printing **/
+@media print {
+	.jGrowl {
+		display: none;
+}
+
+
+}
+
+/** jGrowl End **/
+
+/** Modal Start **/
+
+.modal {
+	display: none;
+	width: 400px;
+	text-align: left;
+	background: #fff;
+	-webkit-border-radius: 8px;
+	-moz-border-radius: 8px;
+	-o-border-radius: 8px;
+	-ms-border-radius: 8px;
+	border-radius: 8px;
+	-webkit-box-shadow: 0 0 10px #000;
+	-moz-box-shadow: 0 0 10px #000;
+	-o-box-shadow: 0 0 10px #000;
+	-ms-box-shadow: 0 0 10px #000;
+	box-shadow: 0 0 10px #000;
+}
+
+.modal a.close-modal {
+	position: absolute;
+	top: -12.5px;
+	right: -12.5px;
+	display: block;
+	width: 30px;
+	height: 30px;
+	text-indent: -9999px;
+	background: url(images/close.png) no-repeat 0 0;
+}
+
+.modal-spinner {
+	display: none;
+	width: 64px;
+	height: 64px;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	margin-right: -32px;
+	margin-top: -32px;
+	background: url(images/spinner_big.gif) no-repeat center center;
+	-webkit-border-radius: 8px;
+	-moz-border-radius: 8px;
+	-o-border-radius: 8px;
+	-ms-border-radius: 8px;
+	border-radius: 8px;
+}
+
+/** Modal End **/
+
+/** Impromptu Start **/
+
+/*! jQuery-Impromptu - v6.2.1 - 2015-05-10
+* http://trentrichardson.com/Impromptu
+* Copyright (c) 2015 Trent Richardson; Licensed MIT */
+
+.jqifade{
+	position: absolute;
+	background-color: #777777;
+}
+
+iframe.jqifade{
+	display:block;
+	z-index:-1;
+}
+
+div.jqi{
+	width: 400px;
+	max-width:90%;
+	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+	position: absolute;
+	background-color: #ffffff;
+	font-size: 11px;
+	text-align: left;
+	border: solid 1px #eeeeee;
+	border-radius: 6px;
+	-moz-border-radius: 6px;
+	-webkit-border-radius: 6px;
+	padding: 7px;
+}
+
+div.jqi .jqicontainer{
+}
+
+div.jqi .jqiclose{
+	position: absolute;
+	top: 4px; right: -2px;
+	width: 18px;
+	cursor: default;
+	color: #bbbbbb;
+	font-weight: bold;
+}
+
+div.jqi .jqistate{
+	background-color: #fff;
+}
+
+div.jqi .jqititle{
+	padding: 5px 10px;
+	font-size: 16px;
+	line-height: 20px;
+	border-bottom: solid 1px #eeeeee;
+}
+
+div.jqi .jqimessage{
+	padding: 10px;
+	line-height: 20px;
+	color: #444444;
+	overflow: auto;
+}
+
+div.jqi .jqibuttonshide{
+	display: none;
+}
+
+div.jqi .jqibuttons{
+	text-align: right;
+	margin: 0 -7px -7px -7px;
+	border-top: solid 1px #e4e4e4;
+	background-color: #f4f4f4;
+	border-radius: 0 0 6px 6px;
+	-moz-border-radius: 0 0 6px 6px;
+	-webkit-border-radius: 0 0 6px 6px;
+}
+
+div.jqi .jqibuttons button{
+	margin: 0;
+	padding: 15px 20px;
+	background-color: transparent;
+	font-weight: normal;
+	border: none;
+	border-left: solid 1px #e4e4e4;
+	color: #777;
+	font-weight: bold;
+	font-size: 12px;
+}
+
+div.jqi .jqibuttons button.jqidefaultbutton{
+	color: #489afe;
+}
+
+div.jqi .jqibuttons button:hover,
+div.jqi .jqibuttons button:focus{
+	color: #287ade;
+	outline: none;
+}
+
+div.jqi .jqibuttons button[disabled]{
+	color: #aaa;
+}
+
+.jqiwarning .jqi .jqibuttons{
+	background-color: #b95656;
+}
+
+/* sub states */
+div.jqi .jqiparentstate::after{
+	background-color: #777;
+	opacity: 0.6;
+	filter: alpha(opacity=60);
+	content: '';
+	position: absolute;
+	top:0;left:0;bottom:0;right:0;
+	border-radius: 6px;
+	-moz-border-radius: 6px;
+	-webkit-border-radius: 6px;
+}
+
+div.jqi .jqisubstate{
+	position: absolute;
+	top:0;
+	left: 20%;
+	width: 60%;
+	padding: 7px;
+	border: solid 1px #eeeeee;
+	border-top: none;
+	border-radius: 0 0 6px 6px;
+	-moz-border-radius: 0 0 6px 6px;
+	-webkit-border-radius: 0 0 6px 6px;
+}
+
+div.jqi .jqisubstate .jqibuttons button{
+	padding: 10px 18px;
+}
+
+/* arrows for tooltips/tours */
+.jqi .jqiarrow{
+ position: absolute; height: 0; width:0; line-height: 0; font-size: 0; border: solid 10px transparent;
+}
+
+.jqi .jqiarrowtl{
+ left: 10px; top: -20px; border-bottom-color: #ffffff;
+}
+
+.jqi .jqiarrowtc{
+ left: 50%; top: -20px; border-bottom-color: #ffffff; margin-left: -10px;
+}
+
+.jqi .jqiarrowtr{
+ right: 10px; top: -20px; border-bottom-color: #ffffff;
+}
+
+.jqi .jqiarrowbl{
+ left: 10px; bottom: -20px; border-top-color: #ffffff;
+}
+
+.jqi .jqiarrowbc{
+ left: 50%; bottom: -20px; border-top-color: #ffffff; margin-left: -10px;
+}
+
+.jqi .jqiarrowbr{
+ right: 10px; bottom: -20px; border-top-color: #ffffff;
+}
+
+.jqi .jqiarrowlt{
+ left: -20px; top: 10px; border-right-color: #ffffff;
+}
+
+.jqi .jqiarrowlm{
+ left: -20px; top: 50%; border-right-color: #ffffff; margin-top: -10px;
+}
+
+.jqi .jqiarrowlb{
+ left: -20px; bottom: 10px; border-right-color: #ffffff;
+}
+
+.jqi .jqiarrowrt{
+ right: -20px; top: 10px; border-left-color: #ffffff;
+}
+
+.jqi .jqiarrowrm{
+ right: -20px; top: 50%; border-left-color: #ffffff; margin-top: -10px;
+}
+
+.jqi .jqiarrowrb{
+ right: -20px; bottom: 10px; border-left-color: #ffffff;
+}
+
+/** Impromptu End */
+
+		]]>
+		</stylesheet>
+	</stylesheets>
+	<templates>
+		<template name="footer" version="1812"><![CDATA[<debugstuff>
+	</div>
+</div>
+<div id="footer">
+	<div class="upper">
+		<div class="wrapper">
+			{$lang_select}
+			{$theme_select}
+			<ul class="menu bottom_links">
+				{$contact_us}
+				<li><a title="Home" href="{$mybb->settings['homeurl']}"><i style="font-size: 13px;" class="fa fa-home"></i></a></li>
+				<li><a title="Return to top" href="#top"><i style="font-size: 13px;" class="fa fa-chevron-circle-up"></i></a></li>
+				<li><a title="Archive mode" href="<archive_url>"><i style="font-size: 13px;" class="fa fa-desktop"></i></a></li>
+				<li><a title="Mark all forums read" href="{$mybb->settings['bburl']}/misc.php?action=markread{$post_code_string}"><i  style="font-size: 13px;" class="fa fa-check"></i></a></li>
+				<li><a title="RSS" href="{$mybb->settings['bburl']}/misc.php?action=syndication"><i style="font-size: 13px;" class="fa fa-rss"></i></a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="lower">
+		<div class="wrapper">
+			<span id="current_time">{$lang->welcome_current_time}</span>
+			<span id="copyright">
+				<!-- MyBB is free software developed and maintained by a volunteer community.
+					It would be much appreciated by the MyBB Group if you left the full copyright and "powered by" notice intact,
+					to show your support for MyBB.  If you choose to remove or modify the copyright below,
+					you may be refused support on the MyBB Community Forums.
+
+					This is free software, support us and we'll support you. -->
+				<a href="http://iandrew.org" target="_blank">Theme &copy; iAndrew 2017 <i style="font-size: 9px;" class="fa fa-angle-right fa-fw"></i>   </a> <a href="http://www.mybb.com" target="_blank">Forum software by &copy; MyBB {$mybbversion} </a>
+				<!-- End powered by -->
+			</span>
+		</div>
+	</div>
+</div>
+<!-- The following piece of code allows MyBB to run scheduled tasks. DO NOT REMOVE -->{$task_image}<!-- End task image code -->
+{$auto_dst_detection}
+</div>]]></template>
+		<template name="footer_contactus" version="1812"><![CDATA[<li><a title="Contact Us" href="{$mybb->settings['contactlink']}"><i style="font-size: 13px;" class="fa fa-envelope-o"></i></a></li>]]></template>
+		<template name="forumbit_depth1_cat" version="1812"><![CDATA[<table border="0" cellspacing="{$theme['borderwidth']}" cellpadding="{$theme['tablespace']}" class="tborder">
+<thead>
+<tr>
+<td class="thead{$expthead}" colspan="5">
+<div class="expcolimage"><img src="{$theme['imgdir']}/{$expcolimage}" id="cat_{$forum['fid']}_img" class="expander" alt="{$expaltext}" title="{$expaltext}" /></div>
+<div><strong><a href="{$forum_url}">{$forum['name']}</a></strong><br /><div class="smalltext">{$forum['description']}</div></div>
+</td>
+</tr>
+</thead>
+<tbody style="{$expdisplay}" id="cat_{$forum['fid']}_e">
+{$sub_forums}
+</tbody>
+</table>
+<br />]]></template>
+		<template name="forumbit_depth2_cat" version="1812"><![CDATA[<tr>
+<td class="{$bgcolor}" align="center" width="1"><div class=" forum_status forum_{$lightbulb['folder']} ajax_mark_read" title="{$lightbulb['altonoff']}" id="mark_read_{$forum['fid']}"><i class="fa fa-exclamation-circle"></i></div></td>
+<td class="{$bgcolor}">
+<div class="float_left">	
+<strong><a href="{$forum_url}">{$forum['name']}</a></strong>{$forum_viewers_text}
+<div class="smalltext">{$forum['description']}{$modlist}{$subforums}</div>
+</div>	
+<div class="float_right">
+{$threads}{$unapproved['unapproved_threads']} / {$posts}{$unapproved['unapproved_posts']}
+</div><br />
+<div>{$lastpost}</div>
+</td>
+</tr>]]></template>
+		<template name="forumbit_depth2_forum" version="1812"><![CDATA[<tr>
+<td class="{$bgcolor}" align="center" width="1"><div class=" forum_status forum_{$lightbulb['folder']} ajax_mark_read" title="{$lightbulb['altonoff']}" id="mark_read_{$forum['fid']}"><i class="fa fa-exclamation-circle"></i></div></td>
+<td class="{$bgcolor}">
+<div class="float_left">	
+<strong><a href="{$forum_url}">{$forum['name']}</a></strong>{$forum_viewers_text}
+<div class="smalltext">{$forum['description']}</div>
+</div>
+
+<div class="float_right">
+{$threads}{$unapproved['unapproved_threads']} / {$posts}{$unapproved['unapproved_posts']}
+</div><br />
+<div>{$lastpost}</div>
+</td>
+</tr>]]></template>
+		<template name="forumbit_depth2_forum_lastpost" version="1812"><![CDATA[<br />
+
+<span class="smalltext">
+<a href="{$lastpost_link}" title="{$full_lastpost_subject}"><strong><span class="lastlink" style="-moz-border-radius: 3px; -webkit-border-radius: 3px; border-radius: 3px; background-color: #5319e7; color: #fff !important; padding: 2px 3px; font-size: 10px; font-weight: 600;box-shadow: inset 0 -1px 0 rgba(27,31,35,0.12);"> {$lastpost_subject} </span></strong></a>
+	
+&nbsp; 
+	
+<span style="-moz-border-radius: 3px; -webkit-border-radius: 3px; border-radius: 3px; background-color: #006b75; color: #fff; padding: 2px 3px; font-size: 10px; font-weight: 600;box-shadow: inset 0 -1px 0 rgba(27,31,35,0.12);"> {$lastpost_date} </span> 
+	
+&nbsp; 
+	
+<span class="redlink" style="-moz-border-radius: 3px; -webkit-border-radius: 3px; border-radius: 3px; background-color: #fc2929; color: #fff !important; padding: 2px 3px; font-size: 10px; font-weight: 600;box-shadow: inset 0 -1px 0 rgba(27,31,35,0.12);"> {$lang->by} {$lastpost_profilelink}</span> 
+
+</span>
+
+
+
+<style>
+.lastlink a:link,
+.lastlink a:visited,
+.lastlink a:hover,
+.lastlink a:active {
+	color: #fff;
+}
+	
+.redlink a:link,
+.redlink a:visited,
+.redlink a:hover,
+.redlink a:active {
+	color: #fff;
+}
+</style>]]></template>
+		<template name="forumdisplay" version="1812"><![CDATA[<html>
+<head>
+<title>{$mybb->settings['bbname']} - {$foruminfo['name']} </title>
+{$headerinclude}
+{$rssdiscovery}
+<script type="text/javascript">
+<!--
+	lang.no_new_posts = "{$lang->no_new_posts}";
+	lang.click_mark_read = "{$lang->click_mark_read}";
+	lang.inline_edit_description = "{$lang->inline_edit_description}";
+	lang.post_fetch_error = "{$lang->post_fetch_error}";
+// -->
+</script>
+<!-- jeditable (jquery) -->
+<script type="text/javascript" src="{$mybb->asset_url}/jscripts/jeditable/jeditable.min.js"></script>
+<script type="text/javascript" src="{$mybb->asset_url}/jscripts/inline_edit.js?ver=1808"></script>
+</head>
+<body>
+{$header}
+{$rules}
+{$subforums}
+{$threadslist}
+{$moderatedby}
+{$usersbrowsing}	
+{$footer}
+</body>
+</html>]]></template>
+		<template name="forumdisplay_subforums" version="1812"><![CDATA[<table border="0" cellspacing="{$theme['borderwidth']}" cellpadding="{$theme['tablespace']}" class="tborder">
+<tr>
+<td class="thead" colspan="5" align="center"><strong>{$lang->sub_forums_in}</strong></td>
+</tr>
+
+{$forums}
+</table>
+<br />]]></template>
+		<template name="forumdisplay_thread" version="1812"><![CDATA[<tr class="inline_row">
+	<td align="center" class="{$bgcolor}{$thread_type_class}" width="2%"><span class="thread_status {$folder}" title="{$folder_label}">&nbsp;</span></td>
+	<td align="center" class="{$bgcolor}{$thread_type_class}" width="2%">{$icon}</td>
+	<td class="{$bgcolor}{$thread_type_class}">
+		{$attachment_count}
+		<div>
+          <span>{$prefix} {$gotounread}{$thread['threadprefix']}<span class="{$inline_edit_class} {$new_class}" id="tid_{$inline_edit_tid}"><a href="{$thread['threadlink']}">{$thread['subject']}</a></span></span>
+			<span class="author smalltext"><br />Topic started by {$thread['profilelink']} </span> &nbsp; {$thread['multipage']}
+		</div>
+	</td>
+	<td align="center" class="{$bgcolor}{$thread_type_class}"><a href="javascript:void(0)" onclick="MyBB.whoPosted({$thread['tid']}); return false;">{$thread['replies']}</a>{$unapproved_posts}</td>
+	<td align="center" class="{$bgcolor}{$thread_type_class}">{$thread['views']}</td>
+	{$rating}
+	<td class="{$bgcolor}{$thread_type_class}" style="white-space: nowrap; text-align: right;">
+		<span class="lastpost smalltext">{$lastpostdate}<br />
+		<a href="{$thread['lastpostlink']}">{$lang->lastpost}</a>: {$lastposterlink}</span>
+	</td>
+{$modbit}
+</tr>]]></template>
+		<template name="forumdisplay_threadlist" version="1812"><![CDATA[<div class="float_left">
+	{$multipage}
+</div>
+<div class="float_right">
+	{$newthread}
+</div>
+<table border="0" cellspacing="{$theme['borderwidth']}" cellpadding="{$theme['tablespace']}" class="tborder clear">
+	<tr>
+		<td class="thead" colspan="{$colspan}">
+			<div class="float_right">
+				<span class="smalltext"><strong><a href="misc.php?action=markread&amp;fid={$fid}{$post_code_string}"><i style="vertical-align: center; font-size: 15px;" class="fa fa-check fa-fw"></i> </a>   <a href="usercp2.php?action={$add_remove_subscription}subscription&amp;type=forum&amp;fid={$fid}&amp;my_post_key={$mybb->post_code}"><i style="vertical-align: center; font-size: 15px;" class="fa fa-star-o fa-fw"></i> </a>{$clearstoredpass}</strong></span>
+			</div>
+			<div>
+				<strong>{$foruminfo['name']}</strong>
+			</div>
+		</td>
+	</tr>
+	<tr>
+		<td class="tcat" colspan="3" width="66%"><span class="smalltext"><strong><a href="{$sorturl}&amp;sortby=subject&amp;order=asc">{$lang->thread}</a> {$orderarrow['subject']} / <a href="{$sorturl}&amp;sortby=starter&amp;order=asc">{$lang->author}</a> {$orderarrow['starter']}</strong></span></td>
+		<td class="tcat" align="center" width="7%"><span class="smalltext"><strong><a href="{$sorturl}&amp;sortby=replies&amp;order=desc">{$lang->replies}</a> {$orderarrow['replies']}</strong></span></td>
+		<td class="tcat" align="center" width="7%"><span class="smalltext"><strong><a href="{$sorturl}&amp;sortby=views&amp;order=desc">{$lang->views}</a> {$orderarrow['views']}</strong></span></td>
+		{$ratingcol}
+		<td class="tcat" align="right" width="20%"><span class="smalltext"><strong><a href="{$sorturl}&amp;sortby=lastpost&amp;order=desc">{$lang->lastpost}</a> {$orderarrow['lastpost']}</strong></span></td>
+		{$inlinemodcol}
+	</tr>
+	{$selectall}
+	{$announcementlist}
+	{$threads}
+	<tr>
+		<td class="tfoot" align="right" colspan="{$colspan}">
+			<form action="forumdisplay.php" method="get">
+				<input type="hidden" name="fid" value="{$fid}" />
+				<select name="sortby">
+					<option value="subject"{$sortsel['subject']}>{$lang->sort_by_subject}</option>
+					<option value="lastpost"{$sortsel['lastpost']}>{$lang->sort_by_lastpost}</option>
+					<option value="starter"{$sortsel['starter']}>{$lang->sort_by_starter}</option>
+					<option value="started"{$sortsel['started']}>{$lang->sort_by_started}</option>
+					{$ratingsort}
+					<option value="replies"{$sortsel['replies']}>{$lang->sort_by_replies}</option>
+					<option value="views"{$sortsel['views']}>{$lang->sort_by_views}</option>
+				</select>
+				<select name="order">
+					<option value="asc"{$ordersel['asc']}>{$lang->sort_order_asc}</option>
+					<option value="desc"{$ordersel['desc']}>{$lang->sort_order_desc}</option>
+				</select>
+				<select name="datecut">
+					<option value="1"{$datecutsel['1']}>{$lang->datelimit_1day}</option>
+					<option value="5"{$datecutsel['5']}>{$lang->datelimit_5days}</option>
+					<option value="10"{$datecutsel['10']}>{$lang->datelimit_10days}</option>
+					<option value="20"{$datecutsel['20']}>{$lang->datelimit_20days}</option>
+					<option value="50"{$datecutsel['50']}>{$lang->datelimit_50days}</option>
+					<option value="75"{$datecutsel['75']}>{$lang->datelimit_75days}</option>
+					<option value="100"{$datecutsel['100']}>{$lang->datelimit_100days}</option>
+					<option value="365"{$datecutsel['365']}>{$lang->datelimit_lastyear}</option>
+					<option value="9999"{$datecutsel['9999']}>{$lang->datelimit_beginning}</option>
+				</select>
+				{$prefixselect}
+				{$gobutton}
+			</form>
+		</td>
+	</tr>
+</table>
+<div class="float_left">
+	{$multipage}
+</div>
+<div class="float_right" style="margin-top: 4px;">
+	{$newthread}
+</div>
+<br class="clear" />
+<br />
+
+<div class="float_left">
+<table border="0" cellspacing="{$theme['borderwidth']}" cellpadding="{$theme['tablespace']}" class="tborder">
+<tr>
+<td class="thead"><strong>Thread Legend</strong></td>
+</tr>
+<tr>
+<td class="trow1">
+<div class="float_left">
+	<div class="float_left">
+		<dl class="thread_legend smalltext">
+			<dd><span class="thread_status newfolder" title="{$lang->new_thread}">&nbsp;</span> {$lang->new_thread}</dd>
+			<dd><span class="thread_status newhotfolder" title="{$lang->new_hot_thread}">&nbsp;</span> {$lang->new_hot_thread}</dd>
+			<dd><span class="thread_status hotfolder" title="{$lang->hot_thread}">&nbsp;</span> {$lang->hot_thread}</dd>
+		</dl>
+	</div>
+	<div class="float_left">
+		<dl class="thread_legend smalltext">
+			<dd><span class="thread_status folder" title="{$lang->no_new_thread}">&nbsp;</span> {$lang->no_new_thread}</dd>
+			<dd><span class="thread_status dot_folder" title="{$lang->posts_by_you}">&nbsp;</span> {$lang->posts_by_you}</dd>
+			<dd><span class="thread_status lockfolder" title="{$lang->locked_thread}">&nbsp;</span> {$lang->locked_thread}</dd>
+		</dl>
+	</div>
+</td>
+</tr>
+</table>
+
+	<br class="clear" />
+</div>
+<div class="float_right" style="text-align: right;">
+	{$inlinemod}
+	{$searchforum}
+	{$forumjump}
+</div>
+<br class="clear" />
+{$inline_edit_js}]]></template>
+		<template name="forumdisplay_thread_multipage" version="1812"><![CDATA[ <span class="pagination2 smalltext">{$threadpages}{$morelink}</span>]]></template>
+		<template name="forumdisplay_usersbrowsing" version="1812"><![CDATA[<br />
+<table border="0" cellspacing="{$theme['borderwidth']}" cellpadding="{$theme['tablespace']}" class="tborder">
+<tr><td class="thead"><strong>{$lang->users_browsing_forum} </strong></td></tr>
+<tr><td class="trow1">
+<span class="smalltext"> {$onlinemembers}{$onlinesep}{$invisonline}{$onlinesep2}{$guestsonline}</span>
+</td></tr>
+</table><br>]]></template>
+		<template name="global_pm_alert" version="1812"><![CDATA[<div class="wow fadeInDown box pm_alert" id="pm_notice">
+	<div class="float_right"><a href="{$mybb->settings['bburl']}/private.php?action=dismiss_notice&amp;my_post_key={$mybb->post_code}" title="{$lang->dismiss_notice}" onclick="return MyBB.dismissPMNotice('{$mybb->settings['bburl']}/')"><img src="{$theme['imgdir']}/dismiss_notice.png" alt="{$lang->dismiss_notice}" title="{$lang->dismiss_notice}" /></a></div>
+	<div>{$privatemessage_text}</div>
+</div>]]></template>
+		<template name="header" version="1812"><![CDATA[<div id="container">
+		<a name="top" id="top"></a>
+		<div id="header">
+			<div id="logo">
+				<div class="wrapper">
+					<div><a class="textlogo" href="{$mybb->settings['bburl']}/index.php"><i style="vertical-align: center; color:#ccc; font-size: 13px;" class="fa fa-code fa-fw"></i>   MyHub MyBB theme</a></div>	
+					<ul class="menu top_links">
+						<li><a href="{$mybb->settings['bburl']}index.php"> Forums</a></li>
+						{$menu_search}
+						{$menu_memberlist}
+						{$menu_calendar}
+						<li><a href="{$mybb->settings['bburl']}/misc.php?action=help" class="help">{$lang->toplinks_help}</a></li>
+					</ul>
+				</div>
+			</div>
+			<div id="panel">
+				<div class="upper">
+					<div class="wrapper">
+						{$welcomeblock}
+					<!-- </div> in header_welcomeblock_member and header_welcomeblock_guest -->
+				<!-- </div> in header_welcomeblock_member and header_welcomeblock_guest -->
+			</div>
+		</div>
+		<div id="content">
+			<div class="wrapper">
+				{$pm_notice}
+				{$remote_avatar_notice}
+				{$bannedwarning}
+				{$bbclosedwarning}
+				{$unreadreports}
+				{$pending_joinrequests}
+				{$awaitingusers}
+				<navigation>
+				<br />]]></template>
+		<template name="headerinclude" version="1812"><![CDATA[<link rel="alternate" type="application/rss+xml" title="{$lang->latest_threads} (RSS 2.0)" href="{$mybb->settings['bburl']}/syndication.php" />
+<link rel="alternate" type="application/atom+xml" title="{$lang->latest_threads} (Atom 1.0)" href="{$mybb->settings['bburl']}/syndication.php?type=atom1.0" />
+<meta http-equiv="Content-Type" content="text/html; charset={$charset}" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<script type="text/javascript" src="{$mybb->asset_url}/jscripts/jquery.js?ver=1806"></script>
+<script type="text/javascript" src="{$mybb->asset_url}/jscripts/jquery.plugins.min.js?ver=1806"></script>
+<script type="text/javascript" src="{$mybb->asset_url}/jscripts/general.js?ver=1810"></script>
+<script src="https://use.fontawesome.com/bfe64e541c.js"></script>
+<script type="text/javascript" src="images/myhub/bootstrap.min.js"></script>
+
+<!--load amimate.css from CDN-->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.4.0/animate.min.css"> 
+<!--load WOW js from CDN-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+<script> new WOW().init(); </script>
+
+{$stylesheets}
+
+<script type="text/javascript">
+<!--
+	lang.unknown_error = "{$lang->unknown_error}";
+
+	lang.select2_match = "{$lang->select2_match}";
+	lang.select2_matches = "{$lang->select2_matches}";
+	lang.select2_nomatches = "{$lang->select2_nomatches}";
+	lang.select2_inputtooshort_single = "{$lang->select2_inputtooshort_single}";
+	lang.select2_inputtooshort_plural = "{$lang->select2_inputtooshort_plural}";
+	lang.select2_inputtoolong_single = "{$lang->select2_inputtoolong_single}";
+	lang.select2_inputtoolong_plural = "{$lang->select2_inputtoolong_plural}";
+	lang.select2_selectiontoobig_single = "{$lang->select2_selectiontoobig_single}";
+	lang.select2_selectiontoobig_plural = "{$lang->select2_selectiontoobig_plural}";
+	lang.select2_loadmore = "{$lang->select2_loadmore}";
+	lang.select2_searching = "{$lang->select2_searching}";
+
+	var cookieDomain = "{$mybb->settings['cookiedomain']}";
+	var cookiePath = "{$mybb->settings['cookiepath']}";
+	var cookiePrefix = "{$mybb->settings['cookieprefix']}";
+	var cookieSecureFlag = "{$mybb->settings['cookiesecureflag']}";
+	var deleteevent_confirm = "{$lang->deleteevent_confirm}";
+	var removeattach_confirm = "{$lang->removeattach_confirm}";
+	var loading_text = '{$lang->ajax_loading}';
+	var saving_changes = '{$lang->saving_changes}';
+	var use_xmlhttprequest = "{$mybb->settings['use_xmlhttprequest']}";
+	var my_post_key = "{$mybb->post_code}";
+	var rootpath = "{$mybb->settings['bburl']}";
+	var imagepath = "{$theme['imgdir']}";
+  	var yes_confirm = "{$lang->yes}";
+	var no_confirm = "{$lang->no}";
+	var MyBBEditor = null;
+	var spinner_image = "{$theme['imgdir']}/spinner.gif";
+	var spinner = "<img src='" + spinner_image +"' alt='' />";
+	var modal_zindex = 9999;
+// -->
+</script>]]></template>
+		<template name="header_welcomeblock_guest" version="1812"><![CDATA[						<!-- Continuation of div(class="upper") as opened in the header template -->
+						<span class="welcome">{$lang->welcome_guest} 
+							
+							<a style="color:#00b200;" href="{$mybb->settings['bburl']}/member.php?action=register" class="float_right register"><i style="vertical-align: middle; color:#00b200; font-size: 13px;" class="fa fa-user-circle-o fa-fw"></i>  Sign up</a>
+
+							<a href="{$mybb->settings['bburl']}/member.php?action=login" onclick="$('#quick_login').modal({ fadeDuration: 250, keepelement: true, zIndex: (typeof modal_zindex !== 'undefined' ? modal_zindex : 9999) }); return false;" class="float_right login"><i style="vertical-align: middle; font-size: 13px;" class="fa fa-sign-in fa-fw"></i>  Sign in  &nbsp; &nbsp;</a> </span>
+					</div>
+				</div>
+<div class="wow fadeInDown box modal" id="quick_login" style="display: none;">
+					<form autocomplete="off" method="post" action="{$mybb->settings['bburl']}/member.php">
+						<input autocomplete="off" name="action" type="hidden" value="do_login" />
+						<input autocomplete="off" name="url" type="hidden" value="" />
+						<input autocomplete="off" name="quick_login" type="hidden" value="1" />
+						<table autocomplete="off" width="100%" cellspacing="{$theme['borderwidth']}" cellpadding="{$theme['tablespace']}" border="0" class="tborder">
+							<tr>
+								<td style="padding: 9px  12px;" class="thead" colspan="2">{$lang->login}</td>
+							</tr>
+							<tr class="trow1">
+								<td style="padding: 20px 90px;" class="remember_me">
+
+									<strong>{$login_username}</strong><br /> 
+									
+									<p class="field"><input style="margin-left: -3px; padding: 9px  12px;" width="100%" placeholder="Username" name="quick_username" id="quick_login_username" type="text" value="" class="textbox initial_focus" /> <i style="margin-left: -25px;" class="fa fa-user"></i></p>
+									
+									<br />
+									<strong>{$lang->password} </strong><br /> 
+									
+									<p class="field"><input style="margin-left: -2px; padding: 9px  12px;" width="100%" placeholder="Password" name="quick_password" id="quick_login_password" type="password" value="" autocomplete="off" class="textbox" /><i style="margin-left: -20px;" class="fa fa-lock"></i></p>
+									
+									<br /> 
+									<div align="center">
+									<input name="quick_remember" id="quick_login_remember" type="checkbox" value="yes" class="checkbox" checked="checked" />
+									<label for="quick_login_remember">{$lang->remember_me}</label>
+									<br /> <br /> 
+									<a href="{$mybb->settings['bburl']}/member.php?action=lostpw" class="button lost_password">{$lang->lost_password}</a>
+                                    </div>
+								</td>
+							</tr>
+							<tr>
+								<td class="trow1" colspan="2">
+								<div align="center"><strong><input style="font-weight: bold; padding: 6px  12px;" name="submit" type="submit" class="button" value="{$lang->login}" /></strong></div>
+								</td>
+							</tr>
+						</table>
+					</form>
+				</div>
+				<script type="text/javascript">
+					$("#quick_login input[name='url']").val($(location).attr('href'));
+				</script>]]></template>
+		<template name="header_welcomeblock_member" version="1812"><![CDATA[<!-- Continuation of div(class="upper") as opened in the header template -->
+	</div>
+</div>
+<div class="lower">
+	<div class="wrapper">
+		<ul class="menu panel_links">
+			{$usercplink}
+			{$modcplink}
+			{$admincplink}
+			<li><a href="{$mybb->settings['bburl']}/member.php?action=logout&amp;logoutkey={$mybb->user['logoutkey']}" class="logout"><i style="font-size: 12px;" class="fa fa-lock fa-fw"></i> {$lang->welcome_logout}</a></li>
+		</ul>
+
+		
+		
+		<ul class="menu user_links">
+			<li><a href="javascript:void(0)" onclick="MyBB.popupWindow('{$mybb->settings['bburl']}/misc.php?action=buddypopup&modal=1', null, true); return false;"><i style="font-size: 12px;" class="fa fa-user-circle-o fa-fw"></i> Friends list</a></li>
+			{$searchlink}{$pmslink}
+		</ul>
+	</div>
+	<br class="clear" />
+</div>]]></template>
+		<template name="header_welcomeblock_member_admin" version="1812"><![CDATA[<li><a href="{$mybb->settings['bburl']}/{$admin_dir}/index.php" class="admincp"><i style="font-size: 12px;" class="fa fa-dashboard fa-fw"></i> {$lang->welcome_admin}</a></li>]]></template>
+		<template name="header_welcomeblock_member_moderator" version="1812"><![CDATA[<li><a href="{$mybb->settings['bburl']}/modcp.php" class="modcp"><i style="font-size: 12px;" class="fa fa-warning fa-fw"></i> {$lang->welcome_modcp}</a></li>]]></template>
+		<template name="header_welcomeblock_member_pms" version="1812"><![CDATA[<li><a href="{$mybb->settings['bburl']}/private.php"><i style="font-size: 12px;" class="fa fa-envelope-o fa-fw"></i> </a> {$lang->welcome_pms_usage}</li>]]></template>
+		<template name="header_welcomeblock_member_search" version="1812"><![CDATA[<li><a href="{$mybb->settings['bburl']}/search.php?action=getnew"><i style="font-size: 12px;" class="fa fa-file-text-o fa-fw"></i>   New posts </a></li>
+<li><a href="{$mybb->settings['bburl']}/search.php?action=getdaily"><i style="font-size: 12px;" class="fa fa-files-o fa-fw"></i>   Todays Posts</a></li>]]></template>
+		<template name="header_welcomeblock_member_user" version="1812"><![CDATA[<li><a href="{$mybb->settings['bburl']}/usercp.php" class="usercp"><i style="font-size: 12px;" class="fa fa-gear fa-fw"></i> {$lang->welcome_usercp}</a></li>]]></template>
+		<template name="index" version="1812"><![CDATA[<html>
+<head>
+<title>{$mybb->settings['bbname']}</title>
+{$headerinclude}
+<script type="text/javascript">
+<!--
+	lang.no_new_posts = "{$lang->no_new_posts}";
+	lang.click_mark_read = "{$lang->click_mark_read}";
+// -->
+</script>
+</head>
+<body>
+{$header}
+
+<table width="100%" cellspacing="0" cellpadding="{$theme['tablespace']}" border="0">
+<tr>
+<td valign="top" width="78%">
+{$forums}
+{$boardstats}
+	
+</td>
+<td valign="top">
+
+	
+  <script type="text/javascript">
+	jQuery(function(){
+		jQuery(".latestthreads").load("{$mybb->settings['bburl']}/portal.php .latestthreads_portal");
+	});
+	</script>
+		
+<table border="0" cellspacing="{$theme['borderwidth']}" cellpadding="{$theme['tablespace']}" class="tborder2">
+<tr>
+<td class="theadm">
+<strong>Latest activity</strong> 
+</td>
+</tr>
+<td class="trowl">
+<div class="latestthreads float_left"></div>
+</td>
+</table>
+		
+  <br />
+		
+<table border="0" cellspacing="{$theme['borderwidth']}" cellpadding="{$theme['tablespace']}" class="tborder2">
+<tr>
+<td class="theadm">
+<strong>Board stats</strong>
+</td>
+</tr>
+<tr>
+<td class="trow1">
+{$forumstats}
+</td>
+</tr>
+</table>
+  <br />		
+	
+</td>
+</tr>
+</table>
+	
+<br class="clear" />
+{$footer}
+</body>
+</html>]]></template>
+		<template name="index_boardstats" version="1812"><![CDATA[<table border="0" cellspacing="{$theme['borderwidth']}" cellpadding="{$theme['tablespace']}" class="tborder">
+<thead>
+<tr>
+<td class="thead{$collapsedthead['boardstats']}">
+<div class="expcolimage"><img src="{$theme['imgdir']}/collapse{$collapsedimg['boardstats']}.png" id="boardstats_img" class="expander" alt="[-]" title="[-]" /></div>
+<div><strong>{$lang->boardstats}</strong></div>
+</td>
+</tr>
+</thead>
+<tbody style="{$collapsed['boardstats_e']}" id="boardstats_e">
+{$whosonline}
+{$birthdays}
+<tr>
+	<td class="tfoot" style="text-align: right">
+		<span class="smalltext">
+			{$logoutlink}
+			<a href="showteam.php">{$lang->forumteam}</a>
+			{$statspage}
+		</span>
+	</td>
+</tr>
+</tbody>
+</table>
+<br />]]></template>
+		<template name="index_stats" version="1812"><![CDATA[<span class="smalltext">
+<div class="float_left">Replies</div> <div class="float_right">{$stats['numposts']}</div>  <br />
+<div class="float_left">Topics</div>  <div class="float_right">{$stats['numthreads']}</div>  <br />
+<div class="float_left">Users</div>  <div class="float_right">{$stats['numusers']}</div>  <br />
+<div class="float_left">Most online</div>  <div class="float_right">{$recordcount}</div>  <br />
+<div class="float_left">Latest</div>  <div class="float_right">{$newestmember}</div> 
+</span>]]></template>
+		<template name="index_whosonline" version="1812"><![CDATA[
+<tr>
+<td class="trow1">
+<span class="smalltext">{$lang->online_note}   [<a href="online.php">{$lang->complete_list}</a>]
+<br />{$onlinemembers}</span></td>
+</tr>]]></template>
+		<template name="member_profile" version="1812"><![CDATA[<html>
+<head>
+<title>{$mybb->settings['bbname']} - {$lang->profile}</title>
+{$headerinclude}
+<script type="text/javascript" src="{$mybb->asset_url}/jscripts/report.js?ver=1804"></script>
+
+</head>
+<body>
+{$header}
+
+<div style="text-align: right">{$buddy_options}{$ignore_options}{$report_options}</div>	
+<table width="100%" cellspacing="0" cellpadding="{$theme['tablespace']}" border="0" align="center">
+<tr>
+<td valign="top">
+	
+<div align="center">	
+{$avatar}<br />
+<span class="largetext"><strong>{$formattedname}</strong></span><br />
+				<span class="smalltext">
+					({$usertitle})<br />
+					{$groupimage}
+					{$userstars}<br />
+				</span>	
+	{$profilefields}	
+</div>	
+	{$contact_details}	
+	{$modoptions}
+	{$adminoptions}			
+</td>
+<td valign="top" width="70%">
+	
+			<table border="0" cellspacing="{$theme['borderwidth']}" cellpadding="{$theme['tablespace']}" class="tborder">
+				<tr>
+					<td colspan="2" class="thead"><strong>{$lang->postbit_status}</strong> {$online_status}</td>
+				</tr>
+				<tr>
+					<td class="trow1" style="width: 30%;"><strong>{$lang->joined}</strong></td>
+					<td class="trow1">{$memregdate}</td>
+				</tr>
+				<tr>
+					<td class="trow2"><strong>{$lang->lastvisit}</strong></td>
+					<td class="trow2">{$memlastvisitdate}</td>
+				</tr>
+				<tr>
+					<td class="trow1"><strong>{$lang->total_posts}</strong></td>
+					<td class="trow1">{$memprofile['postnum']} ({$lang->ppd_percent_total}){$findposts}</td>
+				</tr>
+				<tr>
+					<td class="trow2"><strong>{$lang->total_threads}</strong></td>
+					<td class="trow2">{$memprofile['threadnum']} ({$lang->tpd_percent_total}){$findthreads}</td>
+				</tr>
+				<tr>
+					<td class="trow1"><strong>{$lang->timeonline}</strong></td>
+					<td class="trow1">{$timeonline}</td>
+				</tr>
+				{$referrals}
+				{$reputation}
+				{$warning_level}
+			</table>
+	{$signature}
+
+	
+</td>
+</tr>
+</table>
+	
+	<br />
+	
+{$footer}
+</body>
+</html>]]></template>
+		<template name="member_profile_adminoptions" version="1812"><![CDATA[<table border="0" cellspacing="{$theme['borderwidth']}" cellpadding="{$theme['tablespace']}" width="100%" class="tborder">
+
+<tr>
+<td class="trow1">
+<ul>
+<li><a href="{$mybb->settings['bburl']}/{$admin_dir}/index.php?module=user-users&amp;action=edit&amp;uid={$uid}">{$lang->admin_edit_in_acp}</a></li>
+<li><a href="{$mybb->settings['bburl']}/{$admin_dir}/index.php?module=user-banning&amp;uid={$uid}">{$lang->admin_ban_in_acp}</a></li>
+</ul>
+</td>
+</tr>
+</table>
+<br />]]></template>
+		<template name="member_profile_avatar" version="1812"><![CDATA[<img style="width:150px; height: 150px;" src="{$useravatar['image']}" alt="" {$useravatar['width_height']} />]]></template>
+		<template name="member_profile_contact_details" version="1812"><![CDATA[<br />
+<table border="0" cellspacing="{$theme['borderwidth']}" cellpadding="{$theme['tablespace']}" class="tborder tfixed">
+	<colgroup>
+	<col style="width: 10%;" />
+	</colgroup>
+	
+	{$website}
+	{$sendemail}
+	{$sendpm}
+	{$contact_fields['yahoo']}
+	{$contact_fields['skype']}
+	{$contact_fields['google']}
+</table>]]></template>
+		<template name="member_profile_contact_fields_google" version="1812"><![CDATA[<tr>
+	<td class="{$bgcolors['google']}"><i style="font-size: 13px;" class="fa fa-google"></i></td>
+	<td class="{$bgcolors['google']}">{$memprofile['google']}</td>
+</tr>]]></template>
+		<template name="member_profile_contact_fields_skype" version="1812"><![CDATA[<tr>
+	<td class="{$bgcolors['skype']}"><i style="font-size: 13px;" class="fa fa-skype"></i></td>
+	<td class="{$bgcolors['skype']}"><a href="javascript:void(0)" onclick="MyBB.popupWindow('/misc.php?action=imcenter&amp;imtype=skype&amp;uid={$uid}&amp;modal=1'); return false;">{$memprofile['skype']}</a></td>
+</tr>]]></template>
+		<template name="member_profile_contact_fields_yahoo" version="1812"><![CDATA[<tr>
+	<td class="{$bgcolors['yahoo']}"><i style="font-size: 13px;" class="fa fa-yahoo"></i></td>
+	<td class="{$bgcolors['yahoo']}"><a href="javascript:void(0)" onclick="MyBB.popupWindow('/misc.php?action=imcenter&amp;imtype=yahoo&amp;uid={$uid}&amp;modal=1'); return false;">{$memprofile['yahoo']}</a></td>
+</tr>]]></template>
+		<template name="member_profile_customfields" version="1812"><![CDATA[<br /><table border="0" cellspacing="{$theme['borderwidth']}" cellpadding="{$theme['tablespace']}" class="tborder tfixed">
+<colgroup>
+<col style="width: 30%;" />
+</colgroup>
+
+{$customfields}
+</table>]]></template>
+		<template name="member_profile_email" version="1812"><![CDATA[<tr>
+<td class="{$bgcolor}"><i style="font-size: 13px;" class="fa fa-envelope-o"></i></td>
+<td class="{$bgcolor}"><a href="member.php?action=emailuser&amp;uid={$memprofile['uid']}">{$lang->send_user_email}</a></td>
+</tr>]]></template>
+		<template name="member_profile_modoptions" version="1812"><![CDATA[<br /><table border="0" cellspacing="{$theme['borderwidth']}" cellpadding="{$theme['tablespace']}" width="100%" class="tborder">
+
+{$ipaddress}
+{$manageuser}
+<tr>
+<td class="trow2">
+{$memprofile['usernotes']}<br />
+{$editnotes}
+</td>
+</tr>
+</table>
+<br />]]></template>
+		<template name="member_profile_pm" version="1812"><![CDATA[<tr>
+	<td class="{$bgcolor}"><i style="font-size: 13px;" class="fa fa-envelope-o"></i></td>
+	<td class="{$bgcolor}"><a href="private.php?action=send&amp;uid={$memprofile['uid']}">{$lang->send_pm}</a></td>
+</tr>]]></template>
+		<template name="member_profile_signature" version="1812"><![CDATA[<br /><table border="0" cellspacing="{$theme['borderwidth']}" cellpadding="{$theme['tablespace']}" class="tborder tfixed">
+
+<tr>
+<td class="trow1 scaleimages">{$memprofile['signature']}</td>
+</tr>
+</table><br />]]></template>
+		<template name="member_profile_website" version="1812"><![CDATA[<tr>
+	<td class="{$bgcolor}"><i style="font-size: 13px;" class="fa fa-globe"></i></td>
+	<td class="{$bgcolor}"><a href="{$memprofile['website']}" target="_blank">{$memprofile['website']}</a></td>
+</tr>]]></template>
+		<template name="modcp_nav" version="1812"><![CDATA[<td width="{$lang->nav_width}" valign="top">
+<table border="0" cellspacing="{$theme['borderwidth']}" cellpadding="{$theme['tablespace']}" class="tborder">
+	<tr>
+		<td class="thead"><strong>{$lang->nav_menu}</strong></td>
+	</tr>
+	<tr><td class="trow1 smalltext"><a href="modcp.php" class="modcp_nav_item modcp_nav_home"><i style="vertical-align: center; font-size: 13px;" class="fa fa-home  fa-fw"></i>   {$lang->mcp_nav_home}</a></td></tr>
+	{$modcp_nav_forums_posts}
+	{$modcp_nav_users}
+</table>
+</td>]]></template>
+		<template name="modcp_nav_announcements" version="1812"><![CDATA[<tr><td class="trow1 smalltext"><a href="modcp.php?action=announcements" class="modcp_nav_item modcp_nav_announcements"><i style="vertical-align: center; font-size: 13px;" class="fa fa-bullhorn  fa-fw"></i>   {$lang->mcp_nav_announcements}</a></td></tr>]]></template>
+		<template name="modcp_nav_banning" version="1812"><![CDATA[<tr><td class="trow1 smalltext"><a href="modcp.php?action=banning" class="modcp_nav_item modcp_nav_banning"><i style="vertical-align: center; font-size: 13px;" class="fa fa-ban  fa-fw"></i>   {$lang->mcp_nav_banning}</a></td></tr>]]></template>
+		<template name="modcp_nav_editprofile" version="1812"><![CDATA[<tr><td class="trow1 smalltext"><a href="modcp.php?action=finduser" class="modcp_nav_item modcp_nav_editprofile"><i style="vertical-align: center; font-size: 13px;" class="fa fa-edit  fa-fw"></i>   {$lang->mcp_nav_editprofile}</a></td></tr>]]></template>
+		<template name="modcp_nav_forums_posts" version="1812"><![CDATA[	<tr>
+		<td class="thead tcat_menu tcat_collapse{$collapsedimg['modcpforums']}">
+			<div class="expcolimage"><img src="{$theme['imgdir']}/collapse{$collapsedimg['modcpforums']}.png" id="modcpforums_img" class="expander" alt="[-]" title="[-]" /></div>
+			<div><span class="smalltext"><strong>{$lang->mcp_nav_forums}</strong></span></div>
+		</td>
+	</tr>
+	<tbody style="{$collapsed['modcpforums_e']}" id="modcpforums_e">
+		{$nav_announcements}
+		{$nav_modqueue}
+		{$nav_reportcenter}
+		{$nav_modlogs}
+	</tbody>]]></template>
+		<template name="modcp_nav_ipsearch" version="1812"><![CDATA[<tr><td class="trow1 smalltext"><a href="modcp.php?action=ipsearch" class="modcp_nav_item modcp_nav_ipsearch"><i style="vertical-align: center; font-size: 13px;" class="fa fa-retweet  fa-fw"></i>   {$lang->mcp_nav_ipsearch}</a></td></tr>]]></template>
+		<template name="modcp_nav_modlogs" version="1812"><![CDATA[<tr><td class="trow1 smalltext"><a href="modcp.php?action=modlogs" class="modcp_nav_item modcp_nav_modlogs"><i style="vertical-align: center; font-size: 13px;" class="fa fa-folder-open-o  fa-fw"></i>   {$lang->mcp_nav_modlogs}</a></td></tr>]]></template>
+		<template name="modcp_nav_modqueue" version="1812"><![CDATA[<tr><td class="trow1 smalltext"><a href="modcp.php?action=modqueue" class="modcp_nav_item modcp_nav_modqueue"><i style="vertical-align: center; font-size: 13px;" class="fa fa-user  fa-fw"></i>   {$lang->mcp_nav_modqueue}</a></td></tr>]]></template>
+		<template name="modcp_nav_reportcenter" version="1812"><![CDATA[<tr><td class="trow1 smalltext"><a href="modcp.php?action=reports" class="modcp_nav_item modcp_nav_reports"><i style="vertical-align: center; font-size: 13px;" class="fa fa-exclamation-triangle  fa-fw"></i>   {$lang->mcp_nav_report_center}</a></td></tr>]]></template>
+		<template name="modcp_nav_users" version="1812"><![CDATA[	<tr>
+		<td class="thead  tcat_menu tcat_collapse{$collapsedimg['modcpusers']}">
+			<div class="expcolimage"><img src="{$theme['imgdir']}/collapse{$collapsedimg['modcpusers']}.png" id="modcpusers_img" class="expander" alt="[-]" title="[-]" /></div>
+			<div><span class="smalltext"><strong>{$lang->mcp_nav_users}</strong></span></div>
+		</td>
+	</tr>
+	<tbody style="{$collapsed['modcpusers_e']}" id="modcpusers_e">
+		{$nav_editprofile}
+		{$nav_banning}
+		{$nav_warninglogs}
+		{$nav_ipsearch}
+	</tbody>]]></template>
+		<template name="modcp_nav_warninglogs" version="1812"><![CDATA[<tr><td class="trow1 smalltext"><a href="modcp.php?action=warninglogs" class="modcp_nav_item modcp_nav_warninglogs"><i style="vertical-align: center; font-size: 13px;" class="fa fa-flash  fa-fw"></i>   {$lang->mcp_nav_warninglogs}</a></td></tr>]]></template>
+		<template name="nav" version="1812"><![CDATA[<div class="navigation">
+<div class="float_left"><i style="font-size: 12px;" class="fa fa-globe fa-fw"></i> {$nav}{$activesep}{$activebit}</div>
+	
+<div class="float_right">	
+<a class="tw" href="http://twitter.com" target="_blank"><i style="font-size: 11px;" class="fa fa-twitter fa-fw"></i></a>
+<a class="fb" href="http://facebook.com" target="_blank"><i style="font-size: 11px;" class="fa fa-facebook fa-fw"></i></a>
+<a class="yt" href="http://youtube.com" target="_blank"><i style="font-size: 11px;" class="fa fa-youtube-play fa-fw"></i></a>	
+<a class="insta" href="http://instagram.com" target="_blank"><i style="font-size: 11px;" class="fa fa-instagram fa-fw"></i></a>	
+<a class="goo" href="http://google.com" target="_blank"><i style="font-size: 11px;" class="fa fa-google-plus fa-fw"></i></a>	
+</div>		
+</div>
+<br /><br />]]></template>
+		<template name="nav_dropdown" version="1812"><![CDATA[]]></template>
+		<template name="nav_sep" version="1812"><![CDATA[  <i style="font-size: 8px;" class="fa fa-chevron-right fa-fw"></i>]]></template>
+		<template name="portal_latestthreads_thread" version="1812"><![CDATA[<tr class="latestthreads_portal">
+<td class="trows">
+
+<strong><a href="{$mybb->settings['bburl']}/{$thread['threadlink']}">{$thread['subject']}</a></strong>
+<span class="smalltext"><br />
+<a href="{$thread['lastpostlink']}">{$lang->latest_threads_lastpost}</a> {$lastposterlink}<br />
+{$lastpostdate}</span>	
+
+</td>
+</tr>]]></template>
+		<template name="postbit" version="1812"><![CDATA[<table width="100%" cellspacing="0" cellpadding="{$theme['tablespace']}" border="0">
+<tr>
+<td valign="top">
+<div class="post_author scaleimages">{$post['useravatar']}</div>
+<div class="author_statistics">{$post['user_details']}</div>
+</td>
+<td valign="top" width="92%">
+
+<table border="0" cellspacing="{$theme['borderwidth']}" cellpadding="{$theme['tablespace']}" class="tborder">
+<tr>
+<td class="thead">
+<div class="float_left"><strong><span class="largetext">{$post['profilelink']}</span></strong> {$post['onlinestatus']} </div>
+
+<div class="float_right"><span class="smalltext">{$post['usertitle']}</span> </div>
+</td>
+</tr>
+<tr>
+<td width="97%" class="trow1 scaleimages">		
+	
+
+{$ignore_bit}{$deleted_bit}
+<a name="pid{$post['pid']}" id="pid{$post['pid']}"></a>
+<div width="100%" class="post classic {$unapproved_shade}" style="{$post_visibility}" id="post_{$post['pid']}">
+
+<div class="post_content">
+	<div class="post_head">
+		{$post['posturl']}
+		{$post['icon']}
+		<span class="post_date">{$post['postdate']} <span class="post_edit" id="edited_by_{$post['pid']}">{$post['editedmsg']}</span></span>
+	{$post['subject_extra']}
+	</div>
+	<div class="post_body scaleimages" id="pid_{$post['pid']}">
+		{$post['message']}
+	</div>
+	{$post['attachments']}
+	{$post['signature']}
+	<div class="post_meta" id="post_meta_{$post['pid']}">
+		{$post['iplogged']}
+	</div>
+</div>
+	
+<div class="post_controls">
+	<div class="postbit_buttons author_buttons float_left">
+		{$post['button_email']}{$post['button_pm']}{$post['button_www']}{$post['button_find']}{$post['button_rep']}
+	</div>
+	<div class="postbit_buttons post_management_buttons float_right">
+		{$post['button_edit']}{$post['button_quickdelete']}{$post['button_quickrestore']}{$post['button_quote']}{$post['button_multiquote']}{$post['button_report']}{$post['button_warn']}{$post['button_purgespammer']}{$post['button_reply_pm']}{$post['button_replyall_pm']}{$post['button_forward_pm']}{$post['button_delete_pm']}
+	</div>
+</div>
+</div>	
+	
+		
+</tr>
+</table>
+	
+</td>
+</tr>
+</table>
+
+<br />]]></template>
+		<template name="postbit_author_user" version="1812"><![CDATA[<br />	{$post['replink']}{$post['warninglevel']}]]></template>
+		<template name="postbit_classic" version="1812"><![CDATA[<table width="100%" cellspacing="0" cellpadding="{$theme['tablespace']}" border="0">
+<tr>
+<td valign="top">
+<div class="post_author scaleimages">{$post['useravatar']}</div>
+<div class="author_statistics">{$post['user_details']}</div>
+</td>
+<td valign="top" width="92%">
+
+<table border="0" cellspacing="{$theme['borderwidth']}" cellpadding="{$theme['tablespace']}" class="tborder">
+<tr>
+<td class="thead">
+<div class="float_left"><strong><span class="largetext">{$post['profilelink']}</span></strong> {$post['onlinestatus']} </div>
+
+<div class="float_right"><span class="smalltext">{$post['usertitle']}</span> </div>
+</td>
+</tr>
+<tr>
+<td width="97%" class="trow1 scaleimages">		
+	
+
+{$ignore_bit}{$deleted_bit}
+<a name="pid{$post['pid']}" id="pid{$post['pid']}"></a>
+<div width="100%" class="post classic {$unapproved_shade}" style="{$post_visibility}" id="post_{$post['pid']}">
+
+<div class="post_content">
+	<div class="post_head">
+		{$post['posturl']}
+		{$post['icon']}
+		<span class="post_date">{$post['postdate']} <span class="post_edit" id="edited_by_{$post['pid']}">{$post['editedmsg']}</span></span>
+	{$post['subject_extra']}
+	</div>
+	<div class="post_body scaleimages" id="pid_{$post['pid']}">
+		{$post['message']}
+	</div>
+	{$post['attachments']}
+	{$post['signature']}
+	<div class="post_meta" id="post_meta_{$post['pid']}">
+		{$post['iplogged']}
+	</div>
+</div>
+	
+<div class="post_controls">
+	<div class="postbit_buttons author_buttons float_left">
+		{$post['button_email']}{$post['button_pm']}{$post['button_www']}{$post['button_find']}{$post['button_rep']}
+	</div>
+	<div class="postbit_buttons post_management_buttons float_right">
+		{$post['button_edit']}{$post['button_quickdelete']}{$post['button_quickrestore']}{$post['button_quote']}{$post['button_multiquote']}{$post['button_report']}{$post['button_warn']}{$post['button_purgespammer']}{$post['button_reply_pm']}{$post['button_replyall_pm']}{$post['button_forward_pm']}{$post['button_delete_pm']}
+	</div>
+</div>
+</div>	
+	
+		
+</tr>
+</table>
+	
+</td>
+</tr>
+</table>
+
+<br />]]></template>
+		<template name="postbit_reputation" version="1812"><![CDATA[ {$post['userreputation']}]]></template>
+		<template name="postbit_reputation_formatted_link" version="1812"><![CDATA[<a style="-moz-border-radius: 2px; -webkit-border-radius: 2px; border-radius: 2px; padding: 5px; color: #3c763d; background-color: #dff0d8; border: 1px solid #d6e9c6;" href="reputation.php?uid={$uid}"><strong class="{$reputation_class}">{$reputation}</strong></a>]]></template>
+		<template name="postbit_warninglevel" version="1812"><![CDATA[&nbsp; <a style="-moz-border-radius: 2px; -webkit-border-radius: 2px; border-radius: 2px; padding: 5px; color: #a94442; background-color: #f2dede; border: 1px soild #ebccd1;" href="{$warning_link}">{$warning_level}</a>]]></template>
+		<template name="showteam_moderators_mod" version="1812"><![CDATA[<tr>
+<td width="45%" class="{$bgcolor}"><img src="{$theme['imgdir']}/buddy_{$status}.png" title="{$lang->$status}" alt="{$lang->$status}" style="vertical-align: middle;" /><a href="{$user['profilelink']}"><strong>{$user['username']}</strong></a></td>
+<td width="30%" class="{$bgcolor}"><span class="smalltext">{$forumslist}</span></td>
+<td width="15%" class="{$bgcolor}"><div class="postbit_buttons">{$user['lastvisit']}</div></td>
+<td width="15%" class="{$bgcolor}"><div class="postbit_buttons">{$emailcode}</div></td>
+<td width="15%" class="{$bgcolor}"><div class="postbit_buttons">{$pmcode}</div></td>
+</tr>]]></template>
+		<template name="showteam_usergroup" version="1812"><![CDATA[<table border="0" cellspacing="{$theme['borderwidth']}" cellpadding="{$theme['tablespace']}" class="tborder">
+<tr>
+<td class="thead" colspan="4"><strong>{$usergroup['title']}</strong></td>
+</tr>
+
+{$usergrouprows}
+</table>
+<br />]]></template>
+		<template name="showteam_usergroup_user" version="1812"><![CDATA[<tr>
+<td width="75%" class="{$bgcolor}"><img src="{$theme['imgdir']}/buddy_{$status}.png" title="{$lang->$status}" alt="{$lang->$status}" style="vertical-align: middle;" /><a href="{$user['profilelink']}"><strong>{$user['username']}</strong></a></td>
+<td width="15%" class="{$bgcolor}">{$user['lastvisit']}</td>
+<td width="15%" class="{$bgcolor}"><div class="postbit_buttons">{$emailcode}</div></td>
+<td width="15%" class="{$bgcolor}"><div class="postbit_buttons">{$pmcode}</div></td>
+</tr>]]></template>
+		<template name="showthread" version="1812"><![CDATA[<html>
+<head>
+<title>{$thread['subject']}</title>
+{$headerinclude}
+<script type="text/javascript">
+<!--
+	var quickdelete_confirm = "{$lang->quickdelete_confirm}";
+	var quickrestore_confirm = "{$lang->quickrestore_confirm}";
+	var allowEditReason = "{$mybb->settings['alloweditreason']}";
+	lang.save_changes = "{$lang->save_changes}";
+	lang.cancel_edit = "{$lang->cancel_edit}";
+	lang.quick_edit_update_error = "{$lang->quick_edit_update_error}";
+	lang.quick_reply_post_error = "{$lang->quick_reply_post_error}";
+	lang.quick_delete_error = "{$lang->quick_delete_error}";
+	lang.quick_delete_success = "{$lang->quick_delete_success}";
+	lang.quick_delete_thread_success = "{$lang->quick_delete_thread_success}";
+	lang.quick_restore_error = "{$lang->quick_restore_error}";
+	lang.quick_restore_success = "{$lang->quick_restore_success}";
+	lang.editreason = "{$lang->postbit_editreason}";
+// -->
+</script>
+<!-- jeditable (jquery) -->
+<script type="text/javascript" src="{$mybb->asset_url}/jscripts/report.js?ver=1804"></script>
+<script src="{$mybb->asset_url}/jscripts/jeditable/jeditable.min.js"></script>
+<script type="text/javascript" src="{$mybb->asset_url}/jscripts/thread.js?ver=1809"></script>
+<style>
+.tborderposts {
+	width: 100%;
+	margin: auto auto;
+	padding: 5px;
+}
+</style>
+</head>
+<body>
+	{$header}
+	{$threadnotesbox}
+	{$pollbox}
+	<div class="float_left">
+		{$multipage}
+	</div>
+	<div class="float_right">
+		{$newreply}
+	</div>
+
+	
+	
+	<table border="0" cellspacing="{$theme['borderwidth']}" cellpadding="{$theme['tablespace']}" class="tborderposts tfixed clear">
+		<tr>
+			<td>
+		
+				
+			</td>
+		</tr>
+<tr>
+	<td id="posts_container">
+	<div id="posts">
+		{$posts}
+	</div>
+</td>
+		</tr>
+		<tr>
+			<td class="tfoot">
+				<div align="center">
+					<strong>&laquo; <a href="{$next_oldest_link}">{$lang->next_oldest}</a> | <a href="{$next_newest_link}">{$lang->next_newest}</a> &raquo;</strong>
+				</div>
+			</td>
+		</tr>
+	</table>
+	<div class="float_left">
+		{$multipage}
+	</div>
+	<div style="padding-top: 4px;" class="float_right">
+		{$newreply}
+	</div>
+	<br class="clear" />
+	{$quickreply}
+	{$threadexbox}
+	{$similarthreads}
+	<br />
+	
+
+	<div class="float_right" style="text-align: right;">
+		{$moderationoptions}
+		{$forumjump}
+	</div>
+	<br class="clear" />
+	{$usersbrowsing}
+	{$footer}
+
+	<script type="text/javascript">
+		$(".author_avatar img").error(function () {
+			$(this).unbind("error").closest('.author_avatar').remove();
+		});
+	</script>
+</body>
+</html>]]></template>
+		<template name="showthread_usersbrowsing" version="1812"><![CDATA[<br />
+<table border="0" cellspacing="{$theme['borderwidth']}" cellpadding="{$theme['tablespace']}" class="tborder">
+<tr><td class="thead"><strong>{$lang->users_browsing_thread} </strong></td></tr>
+<tr><td class="trow1">
+<span class="smalltext">{$onlinemembers}{$onlinesep}{$invisonline}{$onlinesep2}{$guestsonline}</span>
+</td></tr>
+</table>
+<br />]]></template>
+		<template name="usercp_nav_attachments" version="1812"><![CDATA[<tr><td class="trow1 smalltext"><a href="usercp.php?action=attachments" class="usercp_nav_item usercp_nav_attachments"><i style="vertical-align: center; font-size: 13px;" class="fa fa-paperclip  fa-fw"></i>   {$lang->ucp_nav_attachments}</a></td></tr>]]></template>
+		<template name="usercp_nav_changename" version="1812"><![CDATA[<div><a href="usercp.php?action=changename" class="usercp_nav_item usercp_nav_username"><i style="vertical-align: center; font-size: 13px;" class="fa fa-bold  fa-fw"></i>   {$lang->ucp_nav_change_username}</a></div>]]></template>
+		<template name="usercp_nav_editsignature" version="1812"><![CDATA[<div><a href="usercp.php?action=editsig" class="usercp_nav_item usercp_nav_editsig"><i style="vertical-align: center; font-size: 13px;" class="fa fa-image  fa-fw"></i>   {$lang->ucp_nav_edit_sig}</a></div>]]></template>
+		<template name="usercp_nav_home" version="1812"><![CDATA[<tr>
+	<td class="trow1 smalltext"><a href="usercp.php" class="usercp_nav_item usercp_nav_home"><i style="vertical-align: center; font-size: 13px;" class="fa fa-home  fa-fw"></i>   {$lang->ucp_nav_home}</a></td>
+</tr>]]></template>
+		<template name="usercp_nav_messenger" version="1812"><![CDATA[<tbody>
+<tr>
+	<td class="thead tcat_menu tcat_collapse{$collapsedimg['usercppms']}">
+		<div class="expcolimage"><img src="{$theme['imgdir']}/collapse{$collapsedimg['usercppms']}.png" id="usercppms_img" class="expander" alt="[-]"/></div>
+		<div><span class="smalltext"><strong>{$lang->ucp_nav_messenger}</strong></span></div>
+	</td>
+</tr>
+</tbody>
+<tbody style="{$collapsed['usercppms_e']}" id="usercppms_e">
+	{$ucp_nav_compose}
+	<tr>
+		<td class="trow1 smalltext">
+			{$folderlinks}
+		</td>
+	</tr>
+	{$ucp_nav_tracking}
+	<tr><td class="trow1 smalltext"><a href="private.php?action=folders" class="usercp_nav_item usercp_nav_pmfolders"><i style="vertical-align: center; font-size: 13px;" class="fa fa-edit  fa-fw"></i>   {$lang->ucp_nav_edit_folders}</a></td></tr>
+</tbody>]]></template>
+		<template name="usercp_nav_messenger_compose" version="1812"><![CDATA[<tr><td class="trow1 smalltext"><a href="private.php?action=send" class="usercp_nav_item usercp_nav_composepm"><i style="vertical-align: center; font-size: 13px;" class="fa fa-envelope-o fa-fw"></i>   {$lang->ucp_nav_compose}</a></td></tr>]]></template>
+		<template name="usercp_nav_messenger_folder" version="1812"><![CDATA[<div><a href="private.php?fid={$folder_id}" class="usercp_nav_item {$class}"><i style="vertical-align: center; font-size: 13px;" class="fa fa-folder-o  fa-fw"></i>   {$folder_name}</a></div>]]></template>
+		<template name="usercp_nav_messenger_tracking" version="1812"><![CDATA[<tr><td class="trow1 smalltext"><a href="private.php?action=tracking" class="usercp_nav_item usercp_nav_pmtracking"><i style="vertical-align: center; font-size: 13px;" class="fa fa-envelope-o  fa-fw"></i>   {$lang->ucp_nav_tracking}</a></td></tr>]]></template>
+		<template name="usercp_nav_misc" version="1812"><![CDATA[<tbody>
+<tr>
+	<td class="thead tcat_menu tcat_collapse{$collapsedimg['usercpmisc']}">
+		<div class="expcolimage"><img src="{$theme['imgdir']}/collapse{$collapsedimg['usercpmisc']}.png" id="usercpmisc_img" class="expander" alt="[-]" title="[-]" /></div>
+		<div><span class="smalltext"><strong>{$lang->ucp_nav_misc}</strong></span></div>
+	</td>
+</tr>
+</tbody>
+<tbody style="{$collapsed['usercpmisc_e']}" id="usercpmisc_e">
+	<tr><td class="trow1 smalltext"><a href="usercp.php?action=usergroups" class="usercp_nav_item usercp_nav_usergroups"><i style="vertical-align: center; font-size: 13px;" class="fa fa-user  fa-fw"></i>   {$lang->ucp_nav_usergroups}</a></td></tr>
+	<tr><td class="trow1 smalltext"><a href="usercp.php?action=editlists" class="usercp_nav_item usercp_nav_editlists"><i style="vertical-align: center; font-size: 13px;" class="fa fa-edit  fa-fw"></i>   {$lang->ucp_nav_editlists}</a></td></tr>
+	{$attachmentop}
+	<tr><td class="trow1 smalltext"><a href="usercp.php?action=drafts" class="usercp_nav_item usercp_nav_drafts"><i style="vertical-align: center; font-size: 13px;" class="fa fa-file-text-o  fa-fw"></i>   {$draftcount}</a></td></tr>
+	<tr><td class="trow1 smalltext"><a href="usercp.php?action=subscriptions" class="usercp_nav_item usercp_nav_subscriptions"><i style="vertical-align: center; font-size: 13px;" class="fa fa-star  fa-fw"></i>   {$lang->ucp_nav_subscribed_threads}</a></td></tr>
+	<tr><td class="trow1 smalltext"><a href="usercp.php?action=forumsubscriptions" class="usercp_nav_item usercp_nav_fsubscriptions"><i style="vertical-align: center; font-size: 13px;" class="fa fa-star-o  fa-fw"></i>   {$lang->ucp_nav_forum_subscriptions}</a></td></tr>
+	<tr><td class="trow1 smalltext"><a href="{$profile_link}" class="usercp_nav_item usercp_nav_viewprofile"><i style="vertical-align: center; font-size: 13px;" class="fa fa-user  fa-fw"></i>   {$lang->ucp_nav_view_profile}</a></td></tr>
+</tbody>]]></template>
+		<template name="usercp_nav_profile" version="1812"><![CDATA[<tbody>
+<tr>
+	<td class="thead tcat_menu tcat_collapse{$collapsedimg['usercpprofile']}">
+		<div class="expcolimage"><img src="{$theme['imgdir']}/collapse{$collapsedimg['usercpprofile']}.png" id="usercpprofile_img" class="expander" alt="[-]" title="[-]" /></div>
+		<div><span class="smalltext"><strong>{$lang->ucp_nav_profile}</strong></span></div>
+	</td>
+</tr>
+</tbody>
+<tbody style="{$collapsed['usercpprofile_e']}" id="usercpprofile_e">
+	<tr><td class="trow1 smalltext">
+		<div><a href="usercp.php?action=profile" class="usercp_nav_item usercp_nav_profile"><i style="vertical-align: center; font-size: 13px;" class="fa fa-edit  fa-fw"></i>   {$lang->ucp_nav_edit_profile}</a></div>
+		{$changenameop}
+		<div><a href="usercp.php?action=password" class="usercp_nav_item usercp_nav_password"><i style="vertical-align: center; font-size: 13px;" class="fa fa-key  fa-fw"></i>   {$lang->ucp_nav_change_pass}</a></div>
+		<div><a href="usercp.php?action=email" class="usercp_nav_item usercp_nav_email"><i style="vertical-align: center; font-size: 13px;" class="fa fa-envelope  fa-fw"></i>   {$lang->ucp_nav_change_email}</a></div>
+		<div><a href="usercp.php?action=avatar" class="usercp_nav_item usercp_nav_avatar"><i style="vertical-align: center; font-size: 13px;" class="fa fa-image  fa-fw"></i>   {$lang->ucp_nav_change_avatar}</a></div>
+		{$changesigop}
+	</td></tr>
+	<tr><td class="trow1 smalltext"><a href="usercp.php?action=options" class="usercp_nav_item usercp_nav_options"><i style="vertical-align: center; font-size: 13px;" class="fa fa-cog  fa-fw"></i>   {$lang->ucp_nav_edit_options}</a></td></tr>
+</tbody>]]></template>
+	</templates>
+</theme>
